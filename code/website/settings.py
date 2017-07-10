@@ -120,5 +120,25 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
-
 STATIC_URL = '/static/'
+
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/1.11/howto/static-files/
+
+STATIC_ROOT = '/home/docker/code/app/static'
+STATIC_URL = '/static/'
+
+##
+# RELOAD THE CODE...
+##
+try:
+    import uwsgi
+    from uwsgidecorators import timer
+    from django.utils import autoreload
+
+    @timer(2)
+    def change_code_gracefull_reload(sig):
+        if autoreload.code_changed():
+            uwsgi.reload()
+except:
+     pass
