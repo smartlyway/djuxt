@@ -3,3 +3,4 @@ djangorestframework
 django-rest-framework-mongoengine
 blinker
 mongoengine
+psycopg2
