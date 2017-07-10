@@ -1,0 +1,5 @@
+django
+djangorestframework
+django-rest-framework-mongoengine
+blinker
+mongoengine

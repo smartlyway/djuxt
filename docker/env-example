@@ -1,0 +1,30 @@
+############################
+# General Setup
+############################
+
+### Application Path
+# Point to your application code, will be available at `/var/www`.
+
+APPLICATION=../code/
+
+### Data Path:
+# For all storage systems.
+
+DATA_SAVE_PATH=../data/
+
+
+############################
+# Containers Customization
+############################
+
+### POSTGRES ###########################################################################################################
+
+POSTGRES_DB=default
+POSTGRES_USER=default
+POSTGRES_PASSWORD=secret
+POSTGRES_PORT=5432
+
+
+### MONGODB ############################################################################################################
+
+MONGODB_PORT=27017
