@@ -56,5 +56,7 @@ COPY . /home/docker/code/
 
 WORKDIR /home/docker/code/app/
 
+RUN pip3 install requests
+RUN pip3 install django-cors-headers
 EXPOSE 80
 CMD ["supervisord", "-n"]

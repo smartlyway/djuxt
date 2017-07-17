@@ -1,14 +1,27 @@
 from django.conf.urls import url
 from rest_framework.urlpatterns import format_suffix_patterns
-from . import views
+from . import views, serializers
+from .models import Package, Company
+from rest_framework.views import *
+from rest_framework.generics import *
 
 urlpatterns = [
     # ex: //
-    url(r'^$', views.CompanyView.as_view()),
+    # url(r'^$', views.CompanyView.as_view()),
 
-    url(r'^sub/', views.SubcontactsView.as_view()),
+    url(r'company/(?P<pk>[0-9]+)/', RetrieveUpdateDestroyAPIView.as_view(queryset=Company.objects.all(),
+                                               serializer_class=serializers.CompanyThreeSerializer)),
 
-    url(r'^create/', views.CompanyCreateAPIView.as_view())
+
+    url(r'company/all/', ListAPIView.as_view(queryset=Company.objects.all(),
+                                               serializer_class=serializers.CompanyThreeSerializer)),
+
+
+    url(r'package', RetrieveUpdateDestroyAPIView.as_view(queryset=Package.objects.all(),
+                                               serializer_class=serializers.PackageSerializer)),
+
+    url(r'package/all/', ListAPIView.as_view(queryset=Package.objects.all(),
+                                               serializer_class=serializers.PackageSerializer))
 
     # ex: /polls/5/
     #url(r'^(?P<question_id>[0-9]+)/$', views.detail, name='detail'),
@@ -19,4 +32,4 @@ urlpatterns = [
 ]
 
 
-urlpatterns = format_suffix_patterns(urlpatterns)
+# urlpatterns = format_suffix_patterns(urlpatterns)

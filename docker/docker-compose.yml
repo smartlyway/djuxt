@@ -19,6 +19,16 @@ services:
         networks:
             - backend
 
+    node:
+      build: ./node
+      ports:
+        - "${NODE_PORT}:${NODE_PORT}"
+        - "3000:3000"
+      volumes:
+        - ${APPLICATION}/nuxt:/home/docker/code/app/
+      networks:
+            - backend
+
     postgres:
         build: ./postgres
         ports:
@@ -29,7 +39,6 @@ services:
             - POSTGRES_DB=${POSTGRES_DB}
             - POSTGRES_USER=${POSTGRES_USER}
             - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
-
         networks:
             - backend
 
