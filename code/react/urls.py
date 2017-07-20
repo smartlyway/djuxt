@@ -9,12 +9,15 @@ urlpatterns = [
     # ex: //
     # url(r'^$', views.CompanyView.as_view()),
 
-    url(r'company/(?P<pk>[0-9]+)/', RetrieveUpdateDestroyAPIView.as_view(queryset=Company.objects.all(),
-                                               serializer_class=serializers.CompanyThreeSerializer)),
+    url(r'company/(?P<pk>\d+)/', RetrieveUpdateDestroyAPIView.as_view(queryset=Company.objects.all(),
+                                               serializer_class=serializers.CompanySerializer)),
 
 
-    url(r'company/all/', ListAPIView.as_view(queryset=Company.objects.all(),
-                                               serializer_class=serializers.CompanyThreeSerializer)),
+    url(r'company/all/', ListCreateAPIView.as_view(queryset=Company.objects.all(),
+                                               serializer_class=serializers.CompanySerializer)),
+
+    url(r'company/three/', ListCreateAPIView.as_view(queryset=Company.objects.all(),
+                                                   serializer_class=serializers.CompanyThreeSerializer)),
 
 
     url(r'package', RetrieveUpdateDestroyAPIView.as_view(queryset=Package.objects.all(),

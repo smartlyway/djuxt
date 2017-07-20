@@ -6,7 +6,7 @@ class Address(models.Model):
     country = models.CharField(max_length=140)
     region = models.CharField(max_length=140)
     locality = models.CharField(max_length=140)
-    steet = models.CharField(max_length=140)
+    street = models.CharField(max_length=140)
     number = models.CharField(max_length=140)
 
     def __str__(self):

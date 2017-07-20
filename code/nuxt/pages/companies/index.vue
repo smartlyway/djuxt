@@ -16,11 +16,22 @@
     <v-flex sm12 md6 v-for="company in filteredCompanies" :key="company.title">
 
       <v-card class="mb-2">
-        <v-card-title primary-title>
+        <v-card-title primary-title class="green white--text">
           <div>
-            <h3 class="headline mb-0">{{ company.name }}</h3>
+            <h3 class="headline mb-0 white--text">{{ company.name }}</h3>
             <div> {{ company.nif }}</div>
           </div>
+          <v-spacer></v-spacer>
+          <v-menu bottom right>
+            <v-btn icon slot="activator" dark>
+              <v-icon>more_vert</v-icon>
+            </v-btn>
+            <v-list>
+              <v-list-tile nuxt :to="'companies/' + company.nif + '/edit'" >
+                <v-list-tile-title> Editar </v-list-tile-title>
+              </v-list-tile>
+            </v-list>
+          </v-menu>
         </v-card-title>
 
         <v-list two-line>
@@ -119,7 +130,7 @@
         return { companies: data, search: '' }
       } else {
         let {data} = await axios.get('http://localhost/api/company/all/')
-        return { comapnies: data, search: '' }
+        return { companies: data, search: '' }
       }
     },
     methods: {
@@ -133,9 +144,11 @@
     },
     computed: {
       filteredCompanies () {
-        return this.companies.filter((company) => {
-          return company.name.toLowerCase().indexOf(this.search.toLowerCase()) >= 0
-        })
+        if (this.companies) {
+          return this.companies.filter((company) => {
+            return company.name.toLowerCase().indexOf(this.search.toLowerCase()) >= 0
+          })
+        }
       }
     },
     head () {

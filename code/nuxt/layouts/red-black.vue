@@ -4,7 +4,7 @@
 
     <cgv-main-nav :is-open="drawer"/>
 
-    <v-toolbar>
+    <v-toolbar class="red">
       <v-toolbar-title>
         <v-toolbar-side-icon @click.native.stop="drawer = !drawer"></v-toolbar-side-icon>
         <v-icon fa fa-fw class="ml-3">youtube</v-icon>

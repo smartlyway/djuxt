@@ -19,7 +19,7 @@ from .views import forward_node
 
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    # url(r'^admin/', admin.site.urls),
     url(r'^api/', include('react.urls')),
     # url(r'^.*', forward_node)
 ]

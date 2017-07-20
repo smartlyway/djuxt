@@ -12,8 +12,8 @@ module.exports = {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' },
       { rel:'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700', type:'text/css'},
-      { rel:'stylesheet', href: 'google/material-icons.css', type:'text/css'},
-      { rel:'stylesheet', href: 'vuetify/vuetify.min.css', type:'text/css'}
+      { rel:'stylesheet', href: '/google/material-icons.css', type:'text/css'},
+      { rel:'stylesheet', href: '/vuetify/vuetify.min.css', type:'text/css'}
     ]
   },
   plugins: ['~plugins/vuetify'],
