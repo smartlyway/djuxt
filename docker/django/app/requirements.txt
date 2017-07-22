@@ -1,5 +1,5 @@
 django==1.11.3
-djangorestframework==3.63
+djangorestframework==3.6.3
 django-rest-framework-mongoengine==3.3.1
 django-sentry==1.13.5
 requests==2.18.1

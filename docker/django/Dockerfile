@@ -36,8 +36,8 @@ RUN pip3 install -r /home/docker/code/app/requirements.txt
 # COPY configuration files
 #-------------------------------------------------------------------------------
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
-COPY nginx-app.conf /etc/nginx/sites-available/default
-COPY supervisor-app.conf /etc/supervisor/conf.d/
+COPY conf/nginx-app.conf /etc/nginx/sites-available/default
+COPY conf/supervisor-app.conf /etc/supervisor/conf.d/
 
 # add (the rest of) our code
 #COPY . /home/docker/code/
