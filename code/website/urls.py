@@ -14,12 +14,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url, include
-from django.contrib import admin
-from .views import forward_node
-
+from .ssr import render
 
 urlpatterns = [
     # url(r'^admin/', admin.site.urls),
-    url(r'^api/', include('react.urls')),
-    # url(r'^.*', forward_node)
+    url(r'^api/', include('api.urls')),
+    url(r'^hola/', render)
 ]

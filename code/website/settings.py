@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'react',
+    'api',
     'rest_framework',
 
     'corsheaders',
@@ -115,8 +115,10 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-# Internationalization
-# https://docs.djangoproject.com/en/1.11/topics/i18n/
+# ==============================================================================
+#  I18N - L10N - TIME
+#  Info: https://docs.djangoproject.com/en/1.11/topics/i18n/
+# ==============================================================================
 
 LANGUAGE_CODE = 'en-us'
 
@@ -128,23 +130,72 @@ USE_L10N = True
 
 USE_TZ = True
 
+# ==============================================================================
+#  REST FRAMEWORK
+# ==============================================================================
+
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': (
         'rest_framework.renderers.JSONRenderer',
     )
 }
 
+# ==============================================================================
+#  CORS
+# ==============================================================================
+
 CORS_ORIGIN_ALLOW_ALL = True
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.11/howto/static-files/
+# ==============================================================================
+#  STATIC FILES
+#  Info: https://docs.djangoproject.com/en/1.11/howto/static-files/
+# ==============================================================================
 
 STATIC_ROOT = '/home/docker/code/app/static'
 STATIC_URL = '/static/'
 
-##
-# RELOAD THE CODE...
-##
+# ==============================================================================
+#  CACHE
+# ==============================================================================
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
+    }
+}
+
+# ==============================================================================
+#  LODGING
+# ==============================================================================
+import sys
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '[django] %(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s'
+        }
+    },
+    'handlers': {
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'stream': sys.stdout,
+            'formatter': 'verbose'
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
+}
+
+# ==============================================================================
+#  AUTORELOAD
+# ==============================================================================
 try:
     import uwsgi
     from uwsgidecorators import timer
