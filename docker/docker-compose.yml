@@ -14,7 +14,7 @@ services:
         labels:
             - 'traefik.backend=django-wp'
             - 'traefik.port=80'
-            - 'traefik.frontend.rule=Host:django.localhost'
+            - 'traefik.frontend.rule=Host:www.django.localhost'
 
     mongo:
         build: ./mongo

@@ -71,6 +71,7 @@ n-project:
 dj-ngix:
 	docker-compose build django-wp
 	docker-compose up django-wp
+
 dj-man-migrate:
 	docker-compose exec django-wp python3 manage.py makemigrations
 	docker-compose exec django-wp python3 manage.py migrate
