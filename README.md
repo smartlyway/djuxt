@@ -8,6 +8,9 @@ caracteristicas:
 - Alta interactividad: se utiliza VUE.JS como framework para manejar la vista.
 - Alta escalabilidad: se utilizan contenedores docker que se pueden replicar falcilmente.
 
+# Arquitectura
+![Arquitectura](img/docker-arq.png)
+
 # Listado de commandos
 Todos los comandos de este projecto estan en un Makefile. Los comandos
 disponibles són:
