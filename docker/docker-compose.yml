@@ -16,7 +16,6 @@ services:
             - 'traefik.port=80'
             - 'traefik.frontend.rule=Host:django.localhost'
 
-
     mongo:
         build: ./mongo
         ports:

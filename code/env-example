@@ -1,0 +1,6 @@
+# POSTGRES ---------------------------------------------------------------------
+
+POSTGRES_DB=default
+POSTGRES_USER=default
+POSTGRES_PASSWORD=secret
+POSTGRES_PORT=5432
