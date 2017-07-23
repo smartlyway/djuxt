@@ -59,3 +59,9 @@ g-remove-all:
 
 g-stop-all:
 	docker rm $(docker ps -a -q)
+
+#===============================================================================
+#   NEW
+#===============================================================================
+n-project:
+	docker-compose exec django-wp django-admin.py startproject config /home/docker/code/app/

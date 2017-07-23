@@ -38,14 +38,7 @@ RUN pip3 install -r /home/docker/code/app/requirements.txt
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 COPY conf/nginx-app.conf /etc/nginx/sites-available/default
 COPY conf/supervisor-app.conf /etc/supervisor/conf.d/
-
-# add (the rest of) our code
-#COPY . /home/docker/code/
-
-# install django, normally you would remove this step because your project would
-# already
-# be installed in the code/app/ directory
-#RUN django-admin.py startproject config /home/docker/code/app/
+COPY conf/* /home/docker/code/
 
 WORKDIR /home/docker/code/app/
 
