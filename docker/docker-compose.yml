@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 
 services:
     django-wp:
@@ -11,6 +11,11 @@ services:
             - "7979:7979"
         networks:
             - backend
+        labels:
+            - 'traefik.backend=django-wp'
+            - 'traefik.port=80'
+            - 'traefik.frontend.rule=Host:django.localhost'
+
 
     mongo:
         build: ./mongo

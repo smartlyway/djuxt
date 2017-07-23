@@ -32,6 +32,16 @@ RUN pip3 install uwsgi
 COPY app/requirements.txt /home/docker/code/app/
 RUN pip3 install -r /home/docker/code/app/requirements.txt
 
+#CREATE SSL SELF SIGNED
+RUN mkdir /opt/ssl
+COPY conf/self-signed-cert.cnf /opt/ssl
+RUN cd /opt/ssl/ && \
+	openssl genrsa -des3 -passout pass:x -out server.pass.key 2048 && \
+	openssl rsa -passin pass:x -in server.pass.key -out server.key && \
+	rm server.pass.key && \
+	openssl req -new -key server.key -out server.csr -config self-signed-cert.cnf -subj "/" && \
+	openssl x509 -req -sha256 -days 300065 -extfile self-signed-cert.cnf -in server.csr -signkey server.key -out server.crt
+
 #-------------------------------------------------------------------------------
 # COPY configuration files
 #-------------------------------------------------------------------------------

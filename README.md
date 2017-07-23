@@ -8,6 +8,10 @@ caracteristicas:
 - Alta interactividad: se utiliza VUE.JS como framework para manejar la vista.
 - Alta escalabilidad: se utilizan contenedores docker que se pueden replicar falcilmente.
 
+#Acceso
+- Se utiliza un proxy revertido, para acceder al host utilizar la url: django.localhost
+- El certificado ssl es autofirmado.
+
 # Arquitectura
 ![Arquitectura](img/docker-arq.png)
 
