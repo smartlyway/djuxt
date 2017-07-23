@@ -33,10 +33,6 @@ d:
 	docker-compose down
 
 #===============================================================================
-#  NEW PROJECT
-#===============================================================================
-
-#===============================================================================
 #   SHELLS
 #===============================================================================
 s-django:
@@ -48,6 +44,9 @@ s-node:
 #===============================================================================
 #   RESTART
 #===============================================================================
+r-all:
+	docker-compose down
+	docker-compose up -d django-wp postgres mongo node
 r-django:
 	docker-compose restart django-wp
 
@@ -65,3 +64,16 @@ g-stop-all:
 #===============================================================================
 n-project:
 	docker-compose exec django-wp django-admin.py startproject config /home/docker/code/app/
+
+#===============================================================================
+#   DJANGO
+#===============================================================================
+dj-ngix:
+	docker-compose build django-wp
+	docker-compose up django-wp
+dj-man-migrate:
+	docker-compose exec django-wp python3 manage.py makemigrations
+	docker-compose exec django-wp python3 manage.py migrate
+
+dj-man-collectstatic:
+	docker-compose exec django-wp python3 manage.py collectstatic
