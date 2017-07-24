@@ -29,7 +29,9 @@ b-nginx-test:
 #   UP
 #===============================================================================
 u:
-	docker-compose up -d nginx django postgres mongo node
+	docker-compose up -d django node nginx postgres mongo
+	sleep 5
+	docker-compose up -d nginx
 
 u-node:
 	docker-compose up -d node

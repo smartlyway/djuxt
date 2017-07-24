@@ -11,5 +11,5 @@ WORKDIR /home/docker/code/app/
 
 RUN apk add --update bash && rm -rf /var/cache/apk/*
 
-CMD exec /bin/bash -c "trap : TERM INT; sleep 12000 & wait"
+STOPSIGNAL SIGTERM
 

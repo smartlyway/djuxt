@@ -12,12 +12,22 @@ services:
 
     django:
         build: ./django
-        ports:
-         - "8001:8001"
         volumes:
             - ${APPLICATION}:/home/docker/code/app/
         networks:
             - backend
+        depends_on:
+            - nginx
+
+    node:
+        build: ./node
+        volumes:
+            - ${APPLICATION}/nuxt:/home/docker/code/app/
+        networks:
+            - backend
+        command: npm run dev
+        depends_on:
+            - nginx
 
     mongo:
         build: ./mongo
@@ -27,18 +37,6 @@ services:
             - "${DATA_SAVE_PATH}/mongo:/data/db"
         networks:
             - backend
-
-
-    node:
-      build: ./node
-      ports:
-        - "3000:3000"
-      volumes:
-        - ${APPLICATION}/nuxt:/home/docker/code/app/
-      networks:
-            - backend
-      command: npm run dev
-
 
     postgres:
         build: ./postgres

@@ -25,7 +25,7 @@ SECRET_KEY = '8xw2as1o8l*n)@-c$dvrpdn^(%_x$m0o_km^88+(((-o)lm%wd'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['django.localhost', 'api.django.localhost', 'localhost']
+ALLOWED_HOSTS = ['api.djanvuex.local']
 
 
 # Application definition
