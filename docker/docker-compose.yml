@@ -1,20 +1,23 @@
-version: '3'
+version: '2'
 
 services:
-    django-wp:
-        build: ./django
-        volumes:
-            - ${APPLICATION}:/home/docker/code/app/
+
+    nginx:
+        build: ./nginx
         ports:
             - "80:80"
             - "443:443"
-            - "7979:7979"
         networks:
             - backend
-        labels:
-            - 'traefik.backend=django-wp'
-            - 'traefik.port=80'
-            - 'traefik.frontend.rule=Host:www.django.localhost'
+
+    django:
+        build: ./django
+        ports:
+         - "8001:8001"
+        volumes:
+            - ${APPLICATION}:/home/docker/code/app/
+        networks:
+            - backend
 
     mongo:
         build: ./mongo
@@ -25,15 +28,17 @@ services:
         networks:
             - backend
 
+
     node:
       build: ./node
       ports:
-        - "${NODE_PORT}:${NODE_PORT}"
         - "3000:3000"
       volumes:
         - ${APPLICATION}/nuxt:/home/docker/code/app/
       networks:
             - backend
+      command: npm run dev
+
 
     postgres:
         build: ./postgres

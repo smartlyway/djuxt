@@ -13,9 +13,7 @@ RUN apt-get update && \
 	python3-dev \
 	python3-setuptools \
 	python3-pip \
-	nginx \
-	supervisor \
-	sqlite3 && \
+	supervisor && \
 	pip3 install -U pip setuptools && \
     rm -rf /var/lib/apt/lists/*
 
@@ -32,29 +30,14 @@ RUN pip3 install uwsgi
 COPY app/requirements.txt /home/docker/code/app/
 RUN pip3 install -r /home/docker/code/app/requirements.txt
 
-#CREATE SSL SELF SIGNED
-RUN mkdir /opt/ssl
-COPY conf/self-signed-cert.cnf /opt/ssl
-RUN cd /opt/ssl/ && \
-	openssl genrsa -des3 -passout pass:x -out server.pass.key 2048 && \
-	openssl rsa -passin pass:x -in server.pass.key -out server.key && \
-	rm server.pass.key && \
-	openssl req -new -key server.key -out server.csr -config self-signed-cert.cnf -subj "/" && \
-	openssl x509 -req -sha256 -days 300065 -extfile self-signed-cert.cnf -in server.csr -signkey server.key -out server.crt
-
 #-------------------------------------------------------------------------------
 # COPY configuration files
 #-------------------------------------------------------------------------------
-RUN echo "daemon off;" >> /etc/nginx/nginx.conf
-COPY conf/nginx-app.conf /etc/nginx/sites-available/default
-COPY conf/supervisor-app.conf /etc/supervisor/conf.d/
-COPY conf/* /home/docker/code/
+COPY conf/uwsgi.ini /home/docker/code/
 
 WORKDIR /home/docker/code/app/
 
 #-------------------------------------------------------------------------------
 # EXPOSE Http and Https ports
 #-------------------------------------------------------------------------------
-EXPOSE 80 443
-
-CMD ["supervisord", "-n"]
+CMD ["uwsgi", "--ini" ,"/home/docker/code/uwsgi.ini"]

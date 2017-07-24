@@ -7,7 +7,6 @@
   "dependencies": {
     "nuxt": "latest"
   },
-
   "config": {
     "nuxt": {
       "host": "0.0.0.0",
