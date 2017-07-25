@@ -22,6 +22,12 @@ if (process.browser) {
 }
 
 // Import SSR plugins
+let plugin0 = require('~plugins/vuetify')
+plugin0 = plugin0.default || plugin0
+let plugin1 = require('~plugins/axios')
+plugin1 = plugin1.default || plugin1
+let plugin2 = require('~/plugins/i18n.js')
+plugin2 = plugin2.default || plugin2
 
 
 // Component: <nuxt-child>
@@ -115,6 +121,18 @@ async function createApp (ssrContext) {
   delete ctx.error
 
   // Inject external plugins
+  
+  if (typeof plugin0 === 'function') {
+    await plugin0(ctx)
+  }
+  
+  if (typeof plugin1 === 'function') {
+    await plugin1(ctx)
+  }
+  
+  if (typeof plugin2 === 'function') {
+    await plugin2(ctx)
+  }
   
 
   return { app, router, store }

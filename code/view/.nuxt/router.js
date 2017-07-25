@@ -8,6 +8,8 @@ Vue.use(Router)
 
 const _8e22e5b2 = () => import('/home/docker/code/app/pages/index.vue' /* webpackChunkName: "pages/index" */)
 
+const _6e7ddf7e = () => import('/home/docker/code/app/pages/login/index.vue' /* webpackChunkName: "pages/login" */)
+
 
 
 const scrollBehavior = (to, from, savedPosition) => {
@@ -46,6 +48,11 @@ export function createRouter () {
 			path: "/",
 			component: _8e22e5b2,
 			name: "index"
+		},
+		{
+			path: "/login",
+			component: _6e7ddf7e,
+			name: "login"
 		}
     ]
   })

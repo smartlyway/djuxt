@@ -13,7 +13,7 @@ services:
     django:
         build: ./django
         volumes:
-            - ${APPLICATION}:/home/docker/code/app/
+            - ${APPLICATION}/api:/home/docker/code/app/
         networks:
             - backend
         depends_on:
@@ -22,10 +22,10 @@ services:
     node:
         build: ./node
         volumes:
-            - ${APPLICATION}/nuxt:/home/docker/code/app/
+            - ${APPLICATION}/view:/home/docker/code/app/
         networks:
             - backend
-        command: npm run dev
+        command: bash -c "npm install && npm run dev"
         depends_on:
             - nginx
 
