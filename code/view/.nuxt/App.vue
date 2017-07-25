@@ -8,6 +8,8 @@
 <script>
 import NuxtLoading from './components/nuxt-loading.vue'
 
+import '~/static/css/vuetify.min.css'
+
 
 let layouts = {
 
@@ -16,7 +18,7 @@ let layouts = {
 }
 
 export default {
-  head: {"title":"starter","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","content":"djuxt"}],"link":[{"rel":"icon","type":"image/x-icon","href":"favicon.ico"},{"rel":"stylesheet","href":"https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons","type":"text/css"},{"rel":"stylesheet","href":"https://unpkg.com/vuetify/dist/vuetify.min.css","type":"text/css"}],"style":[],"script":[]},
+  head: {"title":"starter","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","content":"djuxt"}],"link":[{"rel":"icon","type":"image/x-icon","href":"favicon.ico"},{"rel":"stylesheet","href":"https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons","type":"text/css"}],"style":[],"script":[]},
   data: () => ({
     layout: null,
     layoutName: ''

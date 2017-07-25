@@ -11,10 +11,12 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons', type: 'text/css' },
-      { rel: 'stylesheet', href: 'https://unpkg.com/vuetify/dist/vuetify.min.css', type: 'text/css' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons', type: 'text/css' }
     ]
   },
+  css: [
+    '~/static/css/vuetify.min.css'
+  ],
   /*
   ** Customize the progress-bar color
   */

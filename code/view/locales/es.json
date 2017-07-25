@@ -1,5 +1,9 @@
 {
   "login": {
-    "title": "Entrar"
+    "title": "Entrar",
+    "card-title": "Inicio de sesión",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "login": "Iniciar sessión"
   }
 }
