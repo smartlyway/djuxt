@@ -36,7 +36,7 @@ RUN pip3 install -r /home/docker/code/app/requirements.txt
 COPY conf/uwsgi.ini /home/docker/code/
 
 WORKDIR /home/docker/code/app/
-
+RUN mkdir /home/docker/code/logs
 #-------------------------------------------------------------------------------
 # EXPOSE Http and Https ports
 #-------------------------------------------------------------------------------

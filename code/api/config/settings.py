@@ -31,12 +31,18 @@ ALLOWED_HOSTS = ['api.djuxt.local']
 # Application definition
 
 INSTALLED_APPS = [
+    # Default
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # Rest
+    'rest_framework',
+    'rest_framework.authtoken',
+
 ]
 
 MIDDLEWARE = [
@@ -103,6 +109,16 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+    ),
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/

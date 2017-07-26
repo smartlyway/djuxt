@@ -1,9 +1,8 @@
 django==1.11.3
 djangorestframework==3.6.3
 django-rest-framework-mongoengine==3.3.1
-django-sentry==1.13.5
-requests==2.18.1
 django-cors-headers==2.1.0
 blinker==1.4
 mongoengine==0.13.0
 psycopg2==2.7.1
+djangorestframework-jwt

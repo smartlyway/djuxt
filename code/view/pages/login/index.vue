@@ -49,10 +49,5 @@
 </script>
 
 <style>
-  .background-md {
-    background-image: url('~assets/img/md-bg.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-  }
+
 </style>

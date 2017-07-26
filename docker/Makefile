@@ -57,6 +57,8 @@ uc-django:
 d:
 	docker-compose down
 
+l-django:
+	docker-compose exec django bash -c "cd ../logs && cat uwsgi-err.log"
 #===============================================================================
 #   SHELLS
 #===============================================================================
