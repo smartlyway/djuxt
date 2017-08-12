@@ -21,13 +21,21 @@ services:
         depends_on:
             - nginx
 
-    node:
-        build: ./node
+    node-nuxt:
+        build: ./node-nuxt
         volumes:
-            - ${APPLICATION}/view:/home/docker/code/app/
+            - ${APPLICATION}/view-nuxt:/home/docker/code/app/
         networks:
             - backend
-        command: bash -c "npm install && npm run dev"
+        depends_on:
+            - nginx
+
+    node-angular:
+        build: ./node-angular
+        volumes:
+            - ${APPLICATION}/view-angular:/home/docker/code/app/
+        networks:
+            - backend
         depends_on:
             - nginx
 

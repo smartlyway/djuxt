@@ -12,7 +12,7 @@
 #   BUILD
 #===============================================================================
 b:
-	docker-compose build nginx django postgres mongo node
+	docker-compose build nginx django postgres mongo node-nuxt node-angular
 
 b-django:
 	docker-compose build django
@@ -29,27 +29,36 @@ b-nginx-test:
 #   UP
 #===============================================================================
 u:
-	docker-compose up -d django node nginx postgres mongo
+	docker-compose up -d django node-nuxt nginx postgres mongo
 	sleep 5
 	docker-compose up -d nginx
 
-u-node:
-	docker-compose up -d node
+u-node-nuxt:
+	docker-compose up -d node-nuxt
 
-uc-node:
-	docker-compose up node
+u-node-angular:
+	docker-compose up -d node-angular
 
 u-nginx:
 	docker-compose up -d nginx
 
-uc-nginx:
-	docker-compose up nginx
-
 u-django:
 	docker-compose up -d django
 
+#===============================================================================
+#   UP with console
+#===============================================================================
 uc-django:
 	docker-compose up django
+	
+uc-nginx:
+	docker-compose up nginx
+
+uc-node-nuxt:
+	docker-compose up node-nuxt
+
+uc-node-angular:
+	docker-compose up node-angular
 
 #===============================================================================
 #  DOWN
@@ -65,8 +74,11 @@ l-django:
 s-django:
 	docker-compose exec django bash
 
-s-node:
-	docker-compose exec node bash
+s-node-nuxt:
+	docker-compose exec node-nuxt bash
+
+s-node-angular:
+	docker-compose exec node-angular bash
 
 s-nginx:
 	docker-compose exec nginx bash
@@ -79,7 +91,7 @@ s-nginx-test:
 #===============================================================================
 r-all:
 	docker-compose down
-	docker-compose up -d django postgres mongo node
+	docker-compose up -d django postgres mongo node-nuxt
 
 r-nginx:
 	docker-compose build nginx
