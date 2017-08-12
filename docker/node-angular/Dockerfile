@@ -1,4 +1,4 @@
-FROM node:alpine
+FROM node:7.10.1-alpine
 
 MAINTAINER Cristian García <cgardev@gmail.com>
 

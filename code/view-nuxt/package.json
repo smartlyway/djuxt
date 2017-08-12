@@ -1,9 +1,15 @@
 {
-  "name": "nuxt",
+  "name": "view-nuxt",
   "version": "1.0.0",
-  "description": "NUXT view for DJUXT project",
+  "description": "View of djuxt project",
   "author": "Cristian García",
   "private": true,
+  "config": {
+    "nuxt": {
+      "host": "0.0.0.0",
+      "port": "3000"
+    }
+  },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
@@ -17,6 +23,8 @@
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
+    "coffee-loader": "^0.7.3",
+    "coffee-script": "^1.12.7",
     "eslint": "^4.3.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-loader": "^1.9.0",
@@ -24,6 +32,10 @@
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-node": "^5.1.1",
     "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-standard": "^3.0.1"
+    "eslint-plugin-standard": "^3.0.1",
+    "node-sass": "^4.5.3",
+    "pug": "^2.0.0-beta6",
+    "pug-loader": "^2.3.0",
+    "sass-loader": "^6.0.6"
   }
 }

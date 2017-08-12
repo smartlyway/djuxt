@@ -1,6 +1,6 @@
-# nuxt
+# view-nuxt
 
-> NUXT view for DJUXT project
+> View of djuxt project
 
 ## Build Setup
 
