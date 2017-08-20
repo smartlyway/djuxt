@@ -1,14 +1,14 @@
 // Name:            Tab
 // Description:     Component to create a tabbed navigation
 //
-// Component:       `uk-tab`
+// Component:       `dxt-tab`
 //
-// Modifiers:       `uk-tab-bottom`
-//                  `uk-tab-left`
-//                  `uk-tab-right`
+// Modifiers:       `dxt-tab-bottom`
+//                  `dxt-tab-left`
+//                  `dxt-tab-right`
 //
-// States:          `uk-active`
-//                  `uk-disabled`
+// States:          `dxt-active`
+//                  `dxt-disabled`
 //
 // ========================================================================
 
@@ -37,7 +37,7 @@ $tab-item-disabled-color:                 $global-muted-color !default;
  * 3. Reset lists
  */
 
-.uk-tab {
+.dxt-tab {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
@@ -59,7 +59,7 @@ $tab-item-disabled-color:                 $global-muted-color !default;
  * 3. Create position context for dropdowns
  */
 
-.uk-tab > * {
+.dxt-tab > * {
     /* 1 */
     -ms-flex: none;
     -webkit-flex: none;
@@ -80,7 +80,7 @@ $tab-item-disabled-color:                 $global-muted-color !default;
  * 2. Style
  */
 
-.uk-tab > * > a {
+.dxt-tab > * > a {
     /* 1 */
     display: block;
     text-align: center;
@@ -91,21 +91,21 @@ $tab-item-disabled-color:                 $global-muted-color !default;
 }
 
 /* Hover + Focus */
-.uk-tab > * > a:hover,
-.uk-tab > * > a:focus {
+.dxt-tab > * > a:hover,
+.dxt-tab > * > a:focus {
     color: $tab-item-hover-color;
     text-decoration: $tab-item-hover-text-decoration;
     @if(mixin-exists(hook-tab-item-hover)) {@include hook-tab-item-hover();}
 }
 
 /* Active */
-.uk-tab > .uk-active > a {
+.dxt-tab > .dxt-active > a {
     color: $tab-item-active-color;
     @if(mixin-exists(hook-tab-item-active)) {@include hook-tab-item-active();}
 }
 
 /* Disabled */
-.uk-tab > .uk-disabled > a {
+.dxt-tab > .dxt-disabled > a {
     color: $tab-item-disabled-color;
     @if(mixin-exists(hook-tab-item-disabled)) {@include hook-tab-item-disabled();}
 }
@@ -118,11 +118,11 @@ $tab-item-disabled-color:                 $global-muted-color !default;
  * Bottom
  */
 
-.uk-tab-bottom {
+.dxt-tab-bottom {
     @if(mixin-exists(hook-tab-bottom)) {@include hook-tab-bottom();}
 }
 
-.uk-tab-bottom > * > a {
+.dxt-tab-bottom > * > a {
     @if(mixin-exists(hook-tab-bottom-item)) {@include hook-tab-bottom-item();}
 }
 
@@ -131,8 +131,8 @@ $tab-item-disabled-color:                 $global-muted-color !default;
  * 1. Reset Gutter
  */
 
-.uk-tab-left,
-.uk-tab-right {
+.dxt-tab-left,
+.dxt-tab-right {
     -ms-flex-direction: column;
     -webkit-flex-direction: column;
     flex-direction: column;
@@ -141,23 +141,23 @@ $tab-item-disabled-color:                 $global-muted-color !default;
 }
 
 /* 1 */
-.uk-tab-left > *,
-.uk-tab-right > * { padding-left: 0; }
+.dxt-tab-left > *,
+.dxt-tab-right > * { padding-left: 0; }
 
-.uk-tab-left {
+.dxt-tab-left {
     @if(mixin-exists(hook-tab-left)) {@include hook-tab-left();}
 }
 
-.uk-tab-right {
+.dxt-tab-right {
     @if(mixin-exists(hook-tab-right)) {@include hook-tab-right();}
 }
 
-.uk-tab-left > * > a {
+.dxt-tab-left > * > a {
     text-align: right;
     @if(mixin-exists(hook-tab-left-item)) {@include hook-tab-left-item();}
 }
 
-.uk-tab-right > * > a {
+.dxt-tab-right > * > a {
     text-align: left;
     @if(mixin-exists(hook-tab-right-item)) {@include hook-tab-right-item();}
 }

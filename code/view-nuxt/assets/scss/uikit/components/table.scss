@@ -1,20 +1,20 @@
 // Name:            Table
 // Description:     Styles for tables
 //
-// Component:       `uk-table`
+// Component:       `dxt-table`
 //
-// Modifiers:       `uk-table-middle`
-//                  `uk-table-divider`
-//                  `uk-table-striped`
-//                  `uk-table-hover`
-//                  `uk-table-small`
-//                  `uk-table-justify`
-//                  `uk-table-shrink`
-//                  `uk-table-expand`
-//                  `uk-table-link`
-//                  `uk-table-responsive`
+// Modifiers:       `dxt-table-middle`
+//                  `dxt-table-divider`
+//                  `dxt-table-striped`
+//                  `dxt-table-hover`
+//                  `dxt-table-small`
+//                  `dxt-table-justify`
+//                  `dxt-table-shrink`
+//                  `dxt-table-expand`
+//                  `dxt-table-link`
+//                  `dxt-table-responsive`
 //
-// States:          `uk-active`
+// States:          `dxt-active`
 //
 // ========================================================================
 
@@ -61,7 +61,7 @@ $table-expand-min-width:                         300px !default;
  * 3. Style
  */
 
-.uk-table {
+.dxt-table {
     /* 1 */
     border-collapse: collapse;
     border-spacing: 0;
@@ -73,7 +73,7 @@ $table-expand-min-width:                         300px !default;
 }
 
 /* Add margin if adjacent element */
-* + .uk-table { margin-top: $table-margin-vertical; }
+* + .dxt-table { margin-top: $table-margin-vertical; }
 
 
 /* Header cell
@@ -83,7 +83,7 @@ $table-expand-min-width:                         300px !default;
  * 1. Style
  */
 
-.uk-table th {
+.dxt-table th {
     padding: $table-cell-padding-vertical $table-cell-padding-horizontal;
     text-align: left;
     vertical-align: bottom;
@@ -98,7 +98,7 @@ $table-expand-min-width:                         300px !default;
 /* Cell
  ========================================================================== */
 
-.uk-table td {
+.dxt-table td {
     padding: $table-cell-padding-vertical $table-cell-padding-horizontal;
     vertical-align: top;
     @if(mixin-exists(hook-table-cell)) {@include hook-table-cell();}
@@ -108,13 +108,13 @@ $table-expand-min-width:                         300px !default;
  * Remove margin from the last-child
  */
 
-.uk-table td > :last-child { margin-bottom: 0; }
+.dxt-table td > :last-child { margin-bottom: 0; }
 
 
 /* Footer
  ========================================================================== */
 
-.uk-table tfoot {
+.dxt-table tfoot {
     font-size: $table-footer-font-size;
     @if(mixin-exists(hook-table-footer)) {@include hook-table-footer();}
 }
@@ -123,7 +123,7 @@ $table-expand-min-width:                         300px !default;
 /* Caption
  ========================================================================== */
 
-.uk-table caption {
+.dxt-table caption {
     font-size: $table-caption-font-size;
     text-align: left;
     color: $table-caption-color;
@@ -134,8 +134,8 @@ $table-expand-min-width:                         300px !default;
 /* Row
  ========================================================================== */
 
-.uk-table > tr.uk-active,
-.uk-table tbody tr.uk-active {
+.dxt-table > tr.dxt-active,
+.dxt-table tbody tr.dxt-active {
     background: $table-row-active-background;
     @if(mixin-exists(hook-table-row-active)) {@include hook-table-row-active();}
 }
@@ -144,8 +144,8 @@ $table-expand-min-width:                         300px !default;
 /* Alignment modifier
  ========================================================================== */
 
-.uk-table-middle,
-.uk-table-middle td { vertical-align: middle !important; }
+.dxt-table-middle,
+.dxt-table-middle td { vertical-align: middle !important; }
 
 
 /* Style modifiers
@@ -155,9 +155,9 @@ $table-expand-min-width:                         300px !default;
  * Divider
  */
 
-.uk-table-divider > tr:not(:first-child),
-.uk-table-divider > :not(:first-child) > tr,
-.uk-table-divider > :first-child > tr:not(:first-child) {
+.dxt-table-divider > tr:not(:first-child),
+.dxt-table-divider > :not(:first-child) > tr,
+.dxt-table-divider > :first-child > tr:not(:first-child) {
     border-top: $table-divider-border-width solid $table-divider-border;
     @if(mixin-exists(hook-table-divider)) {@include hook-table-divider();}
 }
@@ -166,8 +166,8 @@ $table-expand-min-width:                         300px !default;
  * Striped
  */
 
-.uk-table-striped > tr:nth-of-type(odd),
-.uk-table-striped tbody tr:nth-of-type(odd) {
+.dxt-table-striped > tr:nth-of-type(odd),
+.dxt-table-striped tbody tr:nth-of-type(odd) {
     background: $table-striped-row-background;
     @if(mixin-exists(hook-table-striped)) {@include hook-table-striped();}
 }
@@ -176,8 +176,8 @@ $table-expand-min-width:                         300px !default;
  * Hover
  */
 
-.uk-table-hover > tr:hover,
-.uk-table-hover tbody tr:hover {
+.dxt-table-hover > tr:hover,
+.dxt-table-hover tbody tr:hover {
     background: $table-hover-row-background;
     @if(mixin-exists(hook-table-hover)) {@include hook-table-hover();}
 }
@@ -186,8 +186,8 @@ $table-expand-min-width:                         300px !default;
 /* Size modifier
  ========================================================================== */
 
-.uk-table-small th,
-.uk-table-small td {
+.dxt-table-small th,
+.dxt-table-small td {
     padding: $table-small-cell-padding-vertical $table-small-cell-padding-horizontal;
     @if(mixin-exists(hook-table-small)) {@include hook-table-small();}
 }
@@ -196,35 +196,35 @@ $table-expand-min-width:                         300px !default;
 /* Justify modifier
  ========================================================================== */
 
-.uk-table-justify th:first-child,
-.uk-table-justify td:first-child { padding-left: 0; }
+.dxt-table-justify th:first-child,
+.dxt-table-justify td:first-child { padding-left: 0; }
 
-.uk-table-justify th:last-child,
-.uk-table-justify td:last-child { padding-right: 0; }
+.dxt-table-justify th:last-child,
+.dxt-table-justify td:last-child { padding-right: 0; }
 
 
 /* Cell size modifier
  ========================================================================== */
 
-.uk-table-shrink { width: 1px; }
-.uk-table-expand { min-width: $table-expand-min-width; }
+.dxt-table-shrink { width: 1px; }
+.dxt-table-expand { min-width: $table-expand-min-width; }
 
 
 /* Cell link modifier
  ========================================================================== */
 
 /*
- * Does not work with `uk-table-justify` at the moment
+ * Does not work with `dxt-table-justify` at the moment
  */
 
-.uk-table-link { padding: 0 !important; }
+.dxt-table-link { padding: 0 !important; }
 
-.uk-table-link > a {
+.dxt-table-link > a {
     display: block;
     padding: $table-cell-padding-vertical $table-cell-padding-horizontal;
 }
 
-.uk-table-small .uk-table-link > a { padding: $table-small-cell-padding-vertical $table-small-cell-padding-horizontal; }
+.dxt-table-small .dxt-table-link > a { padding: $table-small-cell-padding-vertical $table-small-cell-padding-horizontal; }
 
 
 /* Responsive table
@@ -234,16 +234,16 @@ $table-expand-min-width:                         300px !default;
 /* Phone landscape and smaller */
 @media (max-width: $breakpoint-small-max) {
 
-    .uk-table-responsive,
-    .uk-table-responsive tbody,
-    .uk-table-responsive th,
-    .uk-table-responsive td,
-    .uk-table-responsive tr { display: block; }
+    .dxt-table-responsive,
+    .dxt-table-responsive tbody,
+    .dxt-table-responsive th,
+    .dxt-table-responsive td,
+    .dxt-table-responsive tr { display: block; }
 
-    .uk-table-responsive thead { display: none; }
+    .dxt-table-responsive thead { display: none; }
 
-    .uk-table-responsive th,
-    .uk-table-responsive td {
+    .dxt-table-responsive th,
+    .dxt-table-responsive td {
         width: auto !important;
         max-width: none !important;
         min-width: 0 !important;
@@ -251,16 +251,16 @@ $table-expand-min-width:                         300px !default;
         white-space: normal !important;
     }
 
-    .uk-table-responsive th:not(:first-child):not(.uk-table-link),
-    .uk-table-responsive td:not(:first-child):not(.uk-table-link),
-    .uk-table-responsive .uk-table-link:not(:first-child) > a { padding-top: round($table-cell-padding-vertical / 3) !important; }
+    .dxt-table-responsive th:not(:first-child):not(.dxt-table-link),
+    .dxt-table-responsive td:not(:first-child):not(.dxt-table-link),
+    .dxt-table-responsive .dxt-table-link:not(:first-child) > a { padding-top: round($table-cell-padding-vertical / 3) !important; }
 
-    .uk-table-responsive th:not(:last-child):not(.uk-table-link),
-    .uk-table-responsive td:not(:last-child):not(.uk-table-link),
-    .uk-table-responsive .uk-table-link:not(:last-child) > a { padding-bottom: round($table-cell-padding-vertical / 3) !important; }
+    .dxt-table-responsive th:not(:last-child):not(.dxt-table-link),
+    .dxt-table-responsive td:not(:last-child):not(.dxt-table-link),
+    .dxt-table-responsive .dxt-table-link:not(:last-child) > a { padding-bottom: round($table-cell-padding-vertical / 3) !important; }
 
-    .uk-table-justify.uk-table-responsive th,
-    .uk-table-justify.uk-table-responsive td {
+    .dxt-table-justify.dxt-table-responsive th,
+    .dxt-table-justify.dxt-table-responsive td {
         padding-left: 0;
         padding-right: 0;
     }

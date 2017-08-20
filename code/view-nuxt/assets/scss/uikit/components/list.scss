@@ -1,12 +1,12 @@
 // Name:            List
 // Description:     Styles for lists
 //
-// Component:       `uk-list`
+// Component:       `dxt-list`
 //
-// Modifiers:       `uk-list-divider`
-//                  `uk-list-striped`
-//                  `uk-list-bullet`
-//                  `uk-list-large`
+// Modifiers:       `dxt-list-divider`
+//                  `dxt-list-striped`
+//                  `dxt-list-bullet`
+//                  `dxt-list-large`
 //
 // ========================================================================
 
@@ -43,7 +43,7 @@ $internal-list-bullet-image: "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D
    Component: List
  ========================================================================== */
 
-.uk-list {
+.dxt-list {
     padding: 0;
     list-style: none;
 }
@@ -52,25 +52,25 @@ $internal-list-bullet-image: "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D
  * Micro clearfix
  */
 
-.uk-list > li::before,
-.uk-list > li::after {
+.dxt-list > li::before,
+.dxt-list > li::after {
     content: "";
     display: table;
 }
 
-.uk-list > li::after { clear: both; }
+.dxt-list > li::after { clear: both; }
 
 /*
  * Remove margin from the last-child
  */
 
-.uk-list > li > :last-child { margin-bottom: 0; }
+.dxt-list > li > :last-child { margin-bottom: 0; }
 
 /*
  * Nested lists
  */
 
-.uk-list ul {
+.dxt-list ul {
     margin: 0;
     padding-left: $list-nested-padding-left;
     list-style: none;
@@ -80,8 +80,8 @@ $internal-list-bullet-image: "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D
  * Style
  */
 
-.uk-list > li:nth-child(n+2),
-.uk-list > li > ul { margin-top: $list-margin-top; }
+.dxt-list > li:nth-child(n+2),
+.dxt-list > li > ul { margin-top: $list-margin-top; }
 
 
 /* Style modifiers
@@ -91,7 +91,7 @@ $internal-list-bullet-image: "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D
  * Divider
  */
 
-.uk-list-divider > li:nth-child(n+2) {
+.dxt-list-divider > li:nth-child(n+2) {
     margin-top: $list-divider-margin-top;
     padding-top: $list-divider-margin-top;
     border-top: $list-divider-border-width solid $list-divider-border;
@@ -102,25 +102,25 @@ $internal-list-bullet-image: "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D
  * Striped
  */
 
-.uk-list-striped > li {
+.dxt-list-striped > li {
     padding: $list-striped-padding-vertical $list-striped-padding-horizontal;
     @if(mixin-exists(hook-list-striped)) {@include hook-list-striped();}
 }
 
-.uk-list-striped > li:nth-of-type(odd) { background: $list-striped-background; }
+.dxt-list-striped > li:nth-of-type(odd) { background: $list-striped-background; }
 
-.uk-list-striped > li:nth-child(n+2) { margin-top: 0; }
+.dxt-list-striped > li:nth-child(n+2) { margin-top: 0; }
 
 /*
  * Bullet
  */
 
-.uk-list-bullet > li {
+.dxt-list-bullet > li {
     position: relative;
     padding-left: unquote('calc(#{$list-bullet-width} + #{$list-bullet-margin-right})');
 }
 
-.uk-list-bullet > li::before {
+.dxt-list-bullet > li::before {
     content: "";
     position: absolute;
     top: 0;
@@ -138,14 +138,14 @@ $internal-list-bullet-image: "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D
 /* Size modifier
  ========================================================================== */
 
-.uk-list-large > li:nth-child(n+2),
-.uk-list-large > li > ul { margin-top: $list-large-margin-top; }
+.dxt-list-large > li:nth-child(n+2),
+.dxt-list-large > li > ul { margin-top: $list-large-margin-top; }
 
 /*
  * Divider
  */
 
-.uk-list-large.uk-list-divider > li:nth-child(n+2) {
+.dxt-list-large.dxt-list-divider > li:nth-child(n+2) {
     margin-top: $list-large-divider-margin-top;
     padding-top: $list-large-divider-margin-top;
 }
@@ -154,12 +154,12 @@ $internal-list-bullet-image: "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D
  * Striped
  */
 
-.uk-list-large.uk-list-striped > li {
+.dxt-list-large.dxt-list-striped > li {
     padding: $list-large-striped-padding-vertical $list-large-striped-padding-horizontal;
     @if(mixin-exists(hook-list-striped)) {@include hook-list-striped();}
 }
 
-.uk-list-large.uk-list-striped > li:nth-child(n+2) { margin-top: 0; }
+.dxt-list-large.dxt-list-striped > li:nth-child(n+2) { margin-top: 0; }
 
 
 // Hooks

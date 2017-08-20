@@ -1,14 +1,14 @@
 // Name:            Visibility
 // Description:     Utilities to show or hide content on breakpoints, hover or touch
 //
-// Component:       `uk-hidden-*`
-//                  `uk-visible-*`
-//                  `uk-invisible`
-//                  `uk-visible-toggle`
-//                  `uk-hidden-hover`
-//                  `uk-invisible-hover`
-//                  `uk-invisible-touch`
-//                  `uk-invisible-notouch`
+// Component:       `dxt-hidden-*`
+//                  `dxt-visible-*`
+//                  `dxt-invisible`
+//                  `dxt-visible-toggle`
+//                  `dxt-hidden-hover`
+//                  `dxt-invisible-hover`
+//                  `dxt-invisible-touch`
+//                  `dxt-invisible-notouch`
 //
 // ========================================================================
 
@@ -23,33 +23,33 @@
  */
 
 [hidden],
-.uk-hidden { display: none !important; }
+.dxt-hidden { display: none !important; }
 
 /* Phone landscape and bigger */
 @media (min-width: $breakpoint-small) {
 
-    .uk-hidden\@s { display: none !important; }
+    .dxt-hidden\@s { display: none !important; }
 
 }
 
 /* Tablet landscape and bigger */
 @media (min-width: $breakpoint-medium) {
 
-    .uk-hidden\@m { display: none !important; }
+    .dxt-hidden\@m { display: none !important; }
 
 }
 
 /* Desktop and bigger */
 @media (min-width: $breakpoint-large) {
 
-    .uk-hidden\@l { display: none !important; }
+    .dxt-hidden\@l { display: none !important; }
 
 }
 
 /* Large screen and bigger */
 @media (min-width: $breakpoint-xlarge) {
 
-    .uk-hidden\@xl { display: none !important; }
+    .dxt-hidden\@xl { display: none !important; }
 
 }
 
@@ -60,28 +60,28 @@
 /* Phone portrait and smaller */
 @media (max-width: $breakpoint-xsmall-max) {
 
-    .uk-visible\@s { display: none !important; }
+    .dxt-visible\@s { display: none !important; }
 
 }
 
 /* Phone landscape and smaller */
 @media (max-width: $breakpoint-small-max) {
 
-    .uk-visible\@m { display: none !important; }
+    .dxt-visible\@m { display: none !important; }
 
 }
 
 /* Tablet landscape and smaller */
 @media (max-width: $breakpoint-medium-max) {
 
-    .uk-visible\@l { display: none !important; }
+    .dxt-visible\@l { display: none !important; }
 
 }
 
 /* Desktop and smaller */
 @media (max-width: $breakpoint-large-max) {
 
-    .uk-visible\@xl { display: none !important; }
+    .dxt-visible\@xl { display: none !important; }
 
 }
 
@@ -89,17 +89,17 @@
 /* Visibility
  ========================================================================== */
 
-.uk-invisible { visibility: hidden !important; }
+.dxt-invisible { visibility: hidden !important; }
 
 
 /* Hover
  ========================================================================== */
 
 /* Hidden */
-.uk-visible-toggle:not(:hover):not(.uk-hover) .uk-hidden-hover { display: none !important; }
+.dxt-visible-toggle:not(:hover):not(.dxt-hover) .dxt-hidden-hover { display: none !important; }
 
 /* Invisible */
-.uk-visible-toggle:not(:hover):not(.uk-hover) .uk-invisible-hover { visibility: hidden !important; }
+.dxt-visible-toggle:not(:hover):not(.dxt-hover) .dxt-invisible-hover { visibility: hidden !important; }
 
 
 /* Touch
@@ -111,7 +111,7 @@
  */
 
 @media (pointer: coarse) {
-    .uk-hidden-touch { display: none !important; }
+    .dxt-hidden-touch { display: none !important; }
 }
 
 /*
@@ -121,10 +121,10 @@
  */
 
 /* 1 */
-.uk-hidden-notouch { display: none !important; }
+.dxt-hidden-notouch { display: none !important; }
 
 @media (pointer: coarse) {
-    .uk-hidden-notouch { display: block !important; }
+    .dxt-hidden-notouch { display: block !important; }
 }
 
 

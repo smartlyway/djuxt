@@ -1,33 +1,33 @@
 // Name:            Form
 // Description:     Styles for forms
 //
-// Component:       `uk-form-*`
-//                  `uk-input`
-//                  `uk-select`
-//                  `uk-textarea`
-//                  `uk-radio`
-//                  `uk-checkbox`
-//                  `uk-legend`
-//                  `uk-fieldset`
+// Component:       `dxt-form-*`
+//                  `dxt-input`
+//                  `dxt-select`
+//                  `dxt-textarea`
+//                  `dxt-radio`
+//                  `dxt-checkbox`
+//                  `dxt-legend`
+//                  `dxt-fieldset`
 //
-// Sub-objects:     `uk-form-custom`
-//                  `uk-form-stacked`
-//                  `uk-form-horizontal`
-//                  `uk-form-label`
-//                  `uk-form-controls`
-//                  `uk-form-icon`
-//                  `uk-form-icon-flip`
+// Sub-objects:     `dxt-form-custom`
+//                  `dxt-form-stacked`
+//                  `dxt-form-horizontal`
+//                  `dxt-form-label`
+//                  `dxt-form-controls`
+//                  `dxt-form-icon`
+//                  `dxt-form-icon-flip`
 //
-// Modifiers:       `uk-form-small`
-//                  `uk-form-large`
-//                  `uk-form-danger`
-//                  `uk-form-success`
-//                  `uk-form-blank`
-//                  `uk-form-width-xsmall`
-//                  `uk-form-width-small`
-//                  `uk-form-width-medium`
-//                  `uk-form-width-large`
-//                  `uk-form-controls-text`
+// Modifiers:       `dxt-form-small`
+//                  `dxt-form-large`
+//                  `dxt-form-danger`
+//                  `dxt-form-success`
+//                  `dxt-form-blank`
+//                  `dxt-form-width-xsmall`
+//                  `dxt-form-width-small`
+//                  `dxt-form-width-medium`
+//                  `dxt-form-width-large`
+//                  `dxt-form-controls-text`
 //
 // ========================================================================
 
@@ -121,11 +121,11 @@ $internal-form-checkbox-indeterminate-image: "data:image/svg+xml;charset=UTF-8,%
  * 4. Change font properties to `inherit` in all browsers
  */
 
-.uk-input,
-.uk-select,
-.uk-textarea,
-.uk-radio,
-.uk-checkbox {
+.dxt-input,
+.dxt-select,
+.dxt-textarea,
+.dxt-radio,
+.dxt-checkbox {
     /* 1 */
     box-sizing: border-box;
     /* 2 */
@@ -140,13 +140,13 @@ $internal-form-checkbox-indeterminate-image: "data:image/svg+xml;charset=UTF-8,%
  * Show the overflow in Edge.
  */
 
-.uk-input { overflow: visible; }
+.dxt-input { overflow: visible; }
 
 /*
  * Remove the inheritance of text transform in Firefox.
  */
 
-.uk-select { text-transform: none; }
+.dxt-select { text-transform: none; }
 
 /*
  * 1. Change font properties to `inherit` in all browsers
@@ -154,7 +154,7 @@ $internal-form-checkbox-indeterminate-image: "data:image/svg+xml;charset=UTF-8,%
  * NOTE: Both declarations don't work in Chrome, Safari and Opera.
  */
 
-.uk-select optgroup {
+.dxt-select optgroup {
     /* 1 */
     font: inherit;
     /* 2 */
@@ -165,49 +165,49 @@ $internal-form-checkbox-indeterminate-image: "data:image/svg+xml;charset=UTF-8,%
  * Remove the default vertical scrollbar in IE.
  */
 
-.uk-textarea { overflow: auto; }
+.dxt-textarea { overflow: auto; }
 
 /*
  * Remove the inner padding and cancel buttons in Chrome on OS X and Safari on OS X.
  */
 
-.uk-input[type="search"]::-webkit-search-cancel-button,
-.uk-input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+.dxt-input[type="search"]::-webkit-search-cancel-button,
+.dxt-input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
 
 
 /*
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
 
-.uk-input[type="number"]::-webkit-inner-spin-button,
-.uk-input[type="number"]::-webkit-outer-spin-button { height: auto; }
+.dxt-input[type="number"]::-webkit-inner-spin-button,
+.dxt-input[type="number"]::-webkit-outer-spin-button { height: auto; }
 
 /*
  * Removes placeholder transparency in Firefox.
  */
 
-.uk-input::-moz-placeholder,
-.uk-textarea::-moz-placeholder { opacity: 1; }
+.dxt-input::-moz-placeholder,
+.dxt-textarea::-moz-placeholder { opacity: 1; }
 
 /*
  * Remove the padding in IE 10-.
  */
 
-.uk-radio,
-.uk-checkbox { padding: 0; }
+.dxt-radio,
+.dxt-checkbox { padding: 0; }
 
 /*
  * Improves consistency of cursor style for clickable elements
  */
 
-.uk-radio:not(:disabled),
-.uk-checkbox:not(:disabled) { cursor: pointer; }
+.dxt-radio:not(:disabled),
+.dxt-checkbox:not(:disabled) { cursor: pointer; }
 
 /*
  * Define consistent border, margin, and padding.
  */
 
-.uk-fieldset {
+.dxt-fieldset {
     border: none;
     margin: 0;
     padding: 0;
@@ -224,8 +224,8 @@ $internal-form-checkbox-indeterminate-image: "data:image/svg+xml;charset=UTF-8,%
  * Remove default style in iOS.
  */
 
-.uk-input,
-.uk-textarea { -webkit-appearance: none; }
+.dxt-input,
+.dxt-textarea { -webkit-appearance: none; }
 
 /*
  * 1. Prevent content overflow if a fixed width is used
@@ -234,9 +234,9 @@ $internal-form-checkbox-indeterminate-image: "data:image/svg+xml;charset=UTF-8,%
  * 4. Style
  */
 
-.uk-input,
-.uk-select,
-.uk-textarea {
+.dxt-input,
+.dxt-select,
+.dxt-textarea {
     /* 1 */
     max-width: 100%;
     /* 2 */
@@ -257,8 +257,8 @@ $internal-form-checkbox-indeterminate-image: "data:image/svg+xml;charset=UTF-8,%
  *    Also needed to center the text vertically
  */
 
-.uk-input,
-.uk-select:not([multiple]):not([size]) {
+.dxt-input,
+.dxt-select:not([multiple]):not([size]) {
     height: $form-height;
     vertical-align: middle;
     /* 1 */
@@ -267,16 +267,16 @@ $internal-form-checkbox-indeterminate-image: "data:image/svg+xml;charset=UTF-8,%
 }
 
 /* 2 */
-.uk-input:not(input),
-.uk-select:not(select) { line-height: $form-line-height; }
+.dxt-input:not(input),
+.dxt-select:not(select) { line-height: $form-line-height; }
 
 /*
  * Multi-line
  */
 
-.uk-select[multiple],
-.uk-select[size],
-.uk-textarea {
+.dxt-select[multiple],
+.dxt-select[size],
+.dxt-textarea {
     padding-top: $form-padding-vertical;
     padding-bottom: $form-padding-vertical;
     vertical-align: top;
@@ -284,9 +284,9 @@ $internal-form-checkbox-indeterminate-image: "data:image/svg+xml;charset=UTF-8,%
 }
 
 /* Focus */
-.uk-input:focus,
-.uk-select:focus,
-.uk-textarea:focus {
+.dxt-input:focus,
+.dxt-select:focus,
+.dxt-textarea:focus {
     outline: none;
     background-color: $form-focus-background;
     color: $form-focus-color;
@@ -294,9 +294,9 @@ $internal-form-checkbox-indeterminate-image: "data:image/svg+xml;charset=UTF-8,%
 }
 
 /* Disabled */
-.uk-input:disabled,
-.uk-select:disabled,
-.uk-textarea:disabled {
+.dxt-input:disabled,
+.dxt-select:disabled,
+.dxt-textarea:disabled {
     background-color: $form-disabled-background;
     color: $form-disabled-color;
     @if(mixin-exists(hook-form-disabled)) {@include hook-form-disabled();}
@@ -306,56 +306,56 @@ $internal-form-checkbox-indeterminate-image: "data:image/svg+xml;charset=UTF-8,%
  * Placeholder
  */
 
-.uk-input:-ms-input-placeholder { color: $form-placeholder-color !important; }
-.uk-input::-moz-placeholder { color: $form-placeholder-color; }
-.uk-input::-webkit-input-placeholder { color: $form-placeholder-color; }
+.dxt-input:-ms-input-placeholder { color: $form-placeholder-color !important; }
+.dxt-input::-moz-placeholder { color: $form-placeholder-color; }
+.dxt-input::-webkit-input-placeholder { color: $form-placeholder-color; }
 
-.uk-textarea:-ms-input-placeholder { color: $form-placeholder-color !important; }
-.uk-textarea::-moz-placeholder { color: $form-placeholder-color; }
-.uk-textarea::-webkit-input-placeholder { color: $form-placeholder-color; }
+.dxt-textarea:-ms-input-placeholder { color: $form-placeholder-color !important; }
+.dxt-textarea::-moz-placeholder { color: $form-placeholder-color; }
+.dxt-textarea::-webkit-input-placeholder { color: $form-placeholder-color; }
 
 
-/* Style modifier (`uk-input`, `uk-select` and `uk-textarea`)
+/* Style modifier (`dxt-input`, `dxt-select` and `dxt-textarea`)
  ========================================================================== */
 
 /*
  * Small
  */
 
-.uk-form-small { font-size: $form-small-font-size; }
+.dxt-form-small { font-size: $form-small-font-size; }
 
-.uk-form-small:not(textarea):not([multiple]):not([size]) {
+.dxt-form-small:not(textarea):not([multiple]):not([size]) {
     height: $form-small-height;
     padding-left: $form-small-padding-horizontal;
     padding-right: $form-small-padding-horizontal;
 }
 
-.uk-form-small:not(select):not(input):not(textarea) { line-height: $form-small-line-height; }
+.dxt-form-small:not(select):not(input):not(textarea) { line-height: $form-small-line-height; }
 
 /*
  * Large
  */
 
-.uk-form-large { font-size: $form-large-font-size; }
+.dxt-form-large { font-size: $form-large-font-size; }
 
-.uk-form-large:not(textarea):not([multiple]):not([size]) {
+.dxt-form-large:not(textarea):not([multiple]):not([size]) {
     height: $form-large-height;
     padding-left: $form-large-padding-horizontal;
     padding-right: $form-large-padding-horizontal;
 }
 
-.uk-form-large:not(select):not(input):not(textarea) { line-height: $form-large-line-height; }
+.dxt-form-large:not(select):not(input):not(textarea) { line-height: $form-large-line-height; }
 
 
-/* Style modifier (`uk-input`, `uk-select` and `uk-textarea`)
+/* Style modifier (`dxt-input`, `dxt-select` and `dxt-textarea`)
  ========================================================================== */
 
 /*
  * Error
  */
 
-.uk-form-danger,
-.uk-form-danger:focus {
+.dxt-form-danger,
+.dxt-form-danger:focus {
     color: $form-danger-color;
     @if(mixin-exists(hook-form-danger)) {@include hook-form-danger();}
 }
@@ -364,8 +364,8 @@ $internal-form-checkbox-indeterminate-image: "data:image/svg+xml;charset=UTF-8,%
  * Success
  */
 
-.uk-form-success,
-.uk-form-success:focus  {
+.dxt-form-success,
+.dxt-form-success:focus  {
     color: $form-success-color;
     @if(mixin-exists(hook-form-success)) {@include hook-form-success();}
 }
@@ -374,17 +374,17 @@ $internal-form-checkbox-indeterminate-image: "data:image/svg+xml;charset=UTF-8,%
  * Blank
  */
 
-.uk-form-blank {
+.dxt-form-blank {
     background: none;
     @if(mixin-exists(hook-form-blank)) {@include hook-form-blank();}
 }
 
-.uk-form-blank:focus {
+.dxt-form-blank:focus {
     @if(mixin-exists(hook-form-blank-focus)) {@include hook-form-blank-focus();}
 }
 
 
-/* Width modifiers (`uk-input`, `uk-select` and `uk-textarea`)
+/* Width modifiers (`dxt-input`, `dxt-select` and `dxt-textarea`)
  ========================================================================== */
 
 /*
@@ -392,15 +392,15 @@ $internal-form-checkbox-indeterminate-image: "data:image/svg+xml;charset=UTF-8,%
  * Different widths for mini sized `input` and `select` elements
  */
 
-input.uk-form-width-xsmall { width: $form-width-xsmall; }
+input.dxt-form-width-xsmall { width: $form-width-xsmall; }
 
-select.uk-form-width-xsmall { width: ($form-width-xsmall + 25px); }
+select.dxt-form-width-xsmall { width: ($form-width-xsmall + 25px); }
 
-.uk-form-width-small { width: $form-width-small; }
+.dxt-form-width-small { width: $form-width-small; }
 
-.uk-form-width-medium { width: $form-width-medium; }
+.dxt-form-width-medium { width: $form-width-medium; }
 
-.uk-form-width-large { width: $form-width-large; }
+.dxt-form-width-large { width: $form-width-large; }
 
 
 /* Select
@@ -412,7 +412,7 @@ select.uk-form-width-xsmall { width: ($form-width-xsmall + 25px); }
  * 3. Remove default style in IE 10/11
  */
 
-.uk-select:not([multiple]):not([size]) {
+.dxt-select:not([multiple]):not([size]) {
     /* 1 */
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -424,13 +424,13 @@ select.uk-form-width-xsmall { width: ($form-width-xsmall + 25px); }
 }
 
 /* 3 */
-.uk-select:not([multiple]):not([size])::-ms-expand { display: none; }
+.dxt-select:not([multiple]):not([size])::-ms-expand { display: none; }
 
 /*
  * Disabled
  */
 
-.uk-select:not([multiple]):not([size]):disabled { @include svg-fill($internal-form-select-image, "#000", $form-select-disabled-icon-color); }
+.dxt-select:not([multiple]):not([size]):disabled { @include svg-fill($internal-form-select-image, "#000", $form-select-disabled-icon-color); }
 
 
 /* Radio and checkbox
@@ -446,8 +446,8 @@ select.uk-form-width-xsmall { width: ($form-width-xsmall + 25px); }
  * 6. Center icons
  */
 
-.uk-radio,
-.uk-checkbox {
+.dxt-radio,
+.dxt-checkbox {
     /* 1 */
     display: inline-block;
     height: $form-radio-size;
@@ -467,11 +467,11 @@ select.uk-form-width-xsmall { width: ($form-width-xsmall + 25px); }
     @if(mixin-exists(hook-form-radio)) {@include hook-form-radio();}
 }
 
-.uk-radio { border-radius: 50%; }
+.dxt-radio { border-radius: 50%; }
 
 /* Focus */
-.uk-radio:focus,
-.uk-checkbox:focus {
+.dxt-radio:focus,
+.dxt-checkbox:focus {
     outline: none;
     @if(mixin-exists(hook-form-radio-focus)) {@include hook-form-radio-focus();}
 }
@@ -480,17 +480,17 @@ select.uk-form-width-xsmall { width: ($form-width-xsmall + 25px); }
  * Checked
  */
 
-.uk-radio:checked,
-.uk-checkbox:checked,
-.uk-checkbox:indeterminate {
+.dxt-radio:checked,
+.dxt-checkbox:checked,
+.dxt-checkbox:indeterminate {
     background-color: $form-radio-checked-background;
     @if(mixin-exists(hook-form-radio-checked)) {@include hook-form-radio-checked();}
 }
 
 /* Focus */
-.uk-radio:checked:focus,
-.uk-checkbox:checked:focus,
-.uk-checkbox:indeterminate:focus {
+.dxt-radio:checked:focus,
+.dxt-checkbox:checked:focus,
+.dxt-checkbox:indeterminate:focus {
     background-color: $form-radio-checked-focus-background;
     @if(mixin-exists(hook-form-radio-checked-focus)) {@include hook-form-radio-checked-focus();}
 }
@@ -499,23 +499,23 @@ select.uk-form-width-xsmall { width: ($form-width-xsmall + 25px); }
  * Icons
  */
 
-.uk-radio:checked { @include svg-fill($internal-form-radio-image, "#000", $form-radio-checked-icon-color); }
-.uk-checkbox:checked { @include svg-fill($internal-form-checkbox-image, "#000", $form-radio-checked-icon-color); }
-.uk-checkbox:indeterminate { @include svg-fill($internal-form-checkbox-indeterminate-image, "#000", $form-radio-checked-icon-color); }
+.dxt-radio:checked { @include svg-fill($internal-form-radio-image, "#000", $form-radio-checked-icon-color); }
+.dxt-checkbox:checked { @include svg-fill($internal-form-checkbox-image, "#000", $form-radio-checked-icon-color); }
+.dxt-checkbox:indeterminate { @include svg-fill($internal-form-checkbox-indeterminate-image, "#000", $form-radio-checked-icon-color); }
 
 /*
  * Disabled
  */
 
-.uk-radio:disabled,
-.uk-checkbox:disabled {
+.dxt-radio:disabled,
+.dxt-checkbox:disabled {
     background-color: $form-radio-disabled-background;
     @if(mixin-exists(hook-form-radio-disabled)) {@include hook-form-radio-disabled();}
 }
 
-.uk-radio:disabled:checked { @include svg-fill($internal-form-radio-image, "#000", $form-radio-disabled-icon-color); }
-.uk-checkbox:disabled:checked { @include svg-fill($internal-form-checkbox-image, "#000", $form-radio-disabled-icon-color); }
-.uk-checkbox:disabled:indeterminate { @include svg-fill($internal-form-checkbox-indeterminate-image, "#000", $form-radio-disabled-icon-color); }
+.dxt-radio:disabled:checked { @include svg-fill($internal-form-radio-image, "#000", $form-radio-disabled-icon-color); }
+.dxt-checkbox:disabled:checked { @include svg-fill($internal-form-checkbox-image, "#000", $form-radio-disabled-icon-color); }
+.dxt-checkbox:disabled:indeterminate { @include svg-fill($internal-form-checkbox-indeterminate-image, "#000", $form-radio-disabled-icon-color); }
 
 
 /* Legend
@@ -529,7 +529,7 @@ select.uk-form-width-xsmall { width: ($form-width-xsmall + 25px); }
  * 4. Style
  */
 
-.uk-legend {
+.dxt-legend {
     /* 1 */
     width: 100%;
     /* 2 */
@@ -553,7 +553,7 @@ select.uk-form-width-xsmall { width: ($form-width-xsmall + 25px); }
  * 4. Behave like most inline-block elements
  */
 
-.uk-form-custom {
+.dxt-form-custom {
     /* 1 */
     display: inline-block;
     /* 2 */
@@ -573,8 +573,8 @@ select.uk-form-width-xsmall { width: ($form-width-xsmall + 25px); }
  * 6. Clip height caused by 5. Needed for Webkit only
  */
 
-.uk-form-custom select,
-.uk-form-custom input[type="file"] {
+.dxt-form-custom select,
+.dxt-form-custom input[type="file"] {
     /* 1 */
     position: absolute;
     top: 0;
@@ -590,7 +590,7 @@ select.uk-form-width-xsmall { width: ($form-width-xsmall + 25px); }
     cursor: pointer;
 }
 
-.uk-form-custom input[type="file"] {
+.dxt-form-custom input[type="file"] {
     /* 5 */
     font-size: 500px;
     /* 6 */
@@ -601,7 +601,7 @@ select.uk-form-width-xsmall { width: ($form-width-xsmall + 25px); }
 /* Label
  ========================================================================== */
 
-.uk-form-label {
+.dxt-form-label {
     @if(mixin-exists(hook-form-label)) {@include hook-form-label();}
 }
 
@@ -613,7 +613,7 @@ select.uk-form-width-xsmall { width: ($form-width-xsmall + 25px); }
  * Stacked
  */
 
-.uk-form-stacked .uk-form-label {
+.dxt-form-stacked .dxt-form-label {
     display: block;
     margin-bottom: $form-stacked-margin-bottom;
     @if(mixin-exists(hook-form-stacked-label)) {@include hook-form-stacked-label();}
@@ -626,8 +626,8 @@ select.uk-form-width-xsmall { width: ($form-width-xsmall + 25px); }
 /* Tablet portrait and smaller */
 @media (max-width: $breakpoint-small-max) {
 
-    /* Behave like `uk-form-stacked` */
-    .uk-form-horizontal .uk-form-label {
+    /* Behave like `dxt-form-stacked` */
+    .dxt-form-horizontal .dxt-form-label {
         display: block;
         margin-bottom: $form-stacked-margin-bottom;
         @if(mixin-exists(hook-form-stacked-label)) {@include hook-form-stacked-label();}
@@ -638,17 +638,17 @@ select.uk-form-width-xsmall { width: ($form-width-xsmall + 25px); }
 /* Tablet landscape and bigger */
 @media (min-width: $breakpoint-medium) {
 
-    .uk-form-horizontal .uk-form-label {
+    .dxt-form-horizontal .dxt-form-label {
         width: $form-horizontal-label-width;
         margin-top: $form-horizontal-label-margin-top;
         float: left;
         @if(mixin-exists(hook-form-horizontal-label)) {@include hook-form-horizontal-label();}
     }
 
-    .uk-form-horizontal .uk-form-controls { margin-left: $form-horizontal-controls-margin-left; }
+    .dxt-form-horizontal .dxt-form-controls { margin-left: $form-horizontal-controls-margin-left; }
 
     /* Better vertical alignment if controls are checkboxes and radio buttons with text */
-    .uk-form-horizontal .uk-form-controls-text { padding-top: $form-horizontal-controls-text-padding-top; }
+    .dxt-form-horizontal .dxt-form-controls-text { padding-top: $form-horizontal-controls-text-padding-top; }
 
 }
 
@@ -663,7 +663,7 @@ select.uk-form-width-xsmall { width: ($form-width-xsmall + 25px); }
  * 4. Style
  */
 
-.uk-form-icon {
+.dxt-form-icon {
     /* 1 */
     position: absolute;
     top: 0;
@@ -689,30 +689,30 @@ select.uk-form-width-xsmall { width: ($form-width-xsmall + 25px); }
  * Required for `a`.
  */
 
-.uk-form-icon:hover { color: $form-icon-hover-color; }
+.dxt-form-icon:hover { color: $form-icon-hover-color; }
 
 /*
  * Make `input` element clickable through icon, e.g. if it's a `span`
  */
 
-.uk-form-icon:not(a):not(button):not(input) { pointer-events: none; }
+.dxt-form-icon:not(a):not(button):not(input) { pointer-events: none; }
 
 /*
  * Input padding
  */
 
-.uk-form-icon:not(.uk-form-icon-flip) + .uk-input { padding-left: $form-icon-width; }
+.dxt-form-icon:not(.dxt-form-icon-flip) + .dxt-input { padding-left: $form-icon-width; }
 
 /*
  * Position modifier
  */
 
-.uk-form-icon-flip {
+.dxt-form-icon-flip {
     right: 0;
     left: auto;
 }
 
-.uk-form-icon-flip + .uk-input { padding-right: $form-icon-width; }
+.dxt-form-icon-flip + .dxt-input { padding-right: $form-icon-width; }
 
 
 // Hooks

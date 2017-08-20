@@ -1,11 +1,11 @@
 // Name:            Heading
 // Description:     Styles for headings
 //
-// Component:       `uk-heading-primary`
-//                  `uk-heading-hero`
-//                  `uk-heading-divider`
-//                  `uk-heading-bullet`
-//                  `uk-heading-line`
+// Component:       `dxt-heading-primary`
+//                  `dxt-heading-hero`
+//                  `dxt-heading-divider`
+//                  `dxt-heading-bullet`
+//                  `dxt-heading-line`
 //
 // ========================================================================
 
@@ -52,7 +52,7 @@ $heading-line-margin-horizontal:                 0.6em !default;
 /* Primary
  ========================================================================== */
 
-.uk-heading-primary {
+.dxt-heading-primary {
     font-size: $heading-primary-font-size;
     line-height: $heading-primary-line-height;
     @if(mixin-exists(hook-heading-primary)) {@include hook-heading-primary();}
@@ -61,7 +61,7 @@ $heading-line-margin-horizontal:                 0.6em !default;
 /* Tablet landscape and bigger */
 @media (min-width: $breakpoint-medium) {
 
-    .uk-heading-primary {
+    .dxt-heading-primary {
         font-size: $heading-primary-font-size-m;
         line-height: $heading-primary-line-height-m;
     }
@@ -72,7 +72,7 @@ $heading-line-margin-horizontal:                 0.6em !default;
 /* Hero
  ========================================================================== */
 
-.uk-heading-hero {
+.dxt-heading-hero {
     font-size: $heading-hero-font-size;
     line-height: $heading-hero-line-height;
     @if(mixin-exists(hook-heading-hero)) {@include hook-heading-hero();}
@@ -81,7 +81,7 @@ $heading-line-margin-horizontal:                 0.6em !default;
 /* Phone landscape and bigger */
 @media (min-width: $breakpoint-small) {
 
-    .uk-heading-hero {
+    .dxt-heading-hero {
         font-size: $heading-hero-font-size-s;
         line-height: $heading-hero-line-height-s;
     }
@@ -91,7 +91,7 @@ $heading-line-margin-horizontal:                 0.6em !default;
 /* Tablet landscape and bigger */
 @media (min-width: $breakpoint-medium) {
 
-    .uk-heading-hero {
+    .dxt-heading-hero {
         font-size: $heading-hero-font-size-m;
         line-height: $heading-hero-line-height-m;
     }
@@ -102,7 +102,7 @@ $heading-line-margin-horizontal:                 0.6em !default;
 /* Divider
  ========================================================================== */
 
-.uk-heading-divider {
+.dxt-heading-divider {
     padding-bottom: $heading-divider-padding-bottom;
     border-bottom: $heading-divider-border-width solid $heading-divider-border;
     @if(mixin-exists(hook-heading-divider)) {@include hook-heading-divider();}
@@ -112,7 +112,7 @@ $heading-line-margin-horizontal:                 0.6em !default;
 /* Bullet
  ========================================================================== */
 
-.uk-heading-bullet { position: relative; }
+.dxt-heading-bullet { position: relative; }
 
 /*
  * 1. Using `inline-block` to make it work with text alignment
@@ -120,7 +120,7 @@ $heading-line-margin-horizontal:                 0.6em !default;
  * 3. Style
  */
 
-.uk-heading-bullet::before {
+.dxt-heading-bullet::before {
     content: "";
     /* 1 */
     display: inline-block;
@@ -143,13 +143,13 @@ $heading-line-margin-horizontal:                 0.6em !default;
  * Clip the child element
  */
 
-.uk-heading-line { overflow: hidden; }
+.dxt-heading-line { overflow: hidden; }
 
 /*
  * Extra markup is needed to make it work with text align
  */
 
-.uk-heading-line > * {
+.dxt-heading-line > * {
     display: inline-block;
     position: relative;
 }
@@ -160,8 +160,8 @@ $heading-line-margin-horizontal:                 0.6em !default;
  * 3. Style
  */
 
-.uk-heading-line > :before,
-.uk-heading-line > :after {
+.dxt-heading-line > :before,
+.dxt-heading-line > :after {
     content: "";
     /* 1 */
     position: absolute;
@@ -173,11 +173,11 @@ $heading-line-margin-horizontal:                 0.6em !default;
     @if(mixin-exists(hook-heading-line)) {@include hook-heading-line();}
 }
 
-.uk-heading-line > :before {
+.dxt-heading-line > :before {
     right: 100%;
     margin-right: $heading-line-margin-horizontal;
 }
-.uk-heading-line > :after {
+.dxt-heading-line > :after {
     left: 100%;
     margin-left: $heading-line-margin-horizontal;
 }

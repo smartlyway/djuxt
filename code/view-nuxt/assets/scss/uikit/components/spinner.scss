@@ -1,7 +1,7 @@
 // Name:            Spinner
 // Description:     Component to create a loading spinner
 //
-// Component:       `uk-spinner`
+// Component:       `dxt-spinner`
 //
 // ========================================================================
 
@@ -21,10 +21,10 @@ $spinner-duration:                               1.4s !default;
  ========================================================================== */
 
 /*
- * Adopts `uk-icon`
+ * Adopts `dxt-icon`
  */
 
-.uk-spinner {
+.dxt-spinner {
     @if(mixin-exists(hook-spinner)) {@include hook-spinner();}
 }
 
@@ -32,17 +32,17 @@ $spinner-duration:                               1.4s !default;
 /* SVG
  ========================================================================== */
 
-.uk-spinner > * {
-    -webkit-animation: uk-spinner-rotate $spinner-duration linear infinite;
-    animation: uk-spinner-rotate $spinner-duration linear infinite;
+.dxt-spinner > * {
+    -webkit-animation: dxt-spinner-rotate $spinner-duration linear infinite;
+    animation: dxt-spinner-rotate $spinner-duration linear infinite;
 }
 
-@-webkit-keyframes uk-spinner-rotate {
+@-webkit-keyframes dxt-spinner-rotate {
     0% { -webkit-transform: rotate(0deg); }
     100% { -webkit-transform: rotate(270deg); }
 }
 
-@keyframes uk-spinner-rotate {
+@keyframes dxt-spinner-rotate {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(270deg); }
 }
@@ -51,17 +51,17 @@ $spinner-duration:                               1.4s !default;
  * Circle
  */
 
-.uk-spinner > * > * {
+.dxt-spinner > * > * {
     stroke-dasharray: $spinner-circumference;
     stroke-dashoffset: 0;
     transform-origin: center;
-    -webkit-animation: uk-spinner-dash $spinner-duration ease-in-out infinite;
-    animation: uk-spinner-dash $spinner-duration ease-in-out infinite;
+    -webkit-animation: dxt-spinner-dash $spinner-duration ease-in-out infinite;
+    animation: dxt-spinner-dash $spinner-duration ease-in-out infinite;
     stroke-width: $spinner-stroke-width;
     stroke-linecap: round;
 }
 
-@-webkit-keyframes uk-spinner-dash {
+@-webkit-keyframes dxt-spinner-dash {
     0% { stroke-dashoffset: $spinner-circumference; }
     50% {
         stroke-dashoffset: $spinner-circumference/4;
@@ -73,7 +73,7 @@ $spinner-duration:                               1.4s !default;
     }
 }
 
-@keyframes uk-spinner-dash {
+@keyframes dxt-spinner-dash {
     0% { stroke-dashoffset: $spinner-circumference; }
     50% {
         stroke-dashoffset: $spinner-circumference/4;

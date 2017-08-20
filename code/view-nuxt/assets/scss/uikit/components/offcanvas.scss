@@ -1,22 +1,22 @@
 // Name:            Off-canvas
 // Description:     Component to create an off-canvas sidebar
 //
-// Component:       `uk-offcanvas`
+// Component:       `dxt-offcanvas`
 //
-// Sub-objects:     `uk-offcanvas-bar`
-//                  `uk-offcanvas-container`
-//                  `uk-offcanvas-content`
-//                  `uk-offcanvas-page`
+// Sub-objects:     `dxt-offcanvas-bar`
+//                  `dxt-offcanvas-container`
+//                  `dxt-offcanvas-content`
+//                  `dxt-offcanvas-page`
 //
-// Adopted:         `uk-offcanvas-close`
+// Adopted:         `dxt-offcanvas-close`
 //
-// Modifiers:       `uk-offcanvas-flip`
-//                  `uk-offcanvas-bar-animation`
-//                  `uk-offcanvas-reveal`
-//                  `uk-offcanvas-overlay`
-//                  `uk-offcanvas-content-animation`
+// Modifiers:       `dxt-offcanvas-flip`
+//                  `dxt-offcanvas-bar-animation`
+//                  `dxt-offcanvas-reveal`
+//                  `dxt-offcanvas-overlay`
+//                  `dxt-offcanvas-content-animation`
 //
-// States:          `uk-open`
+// States:          `dxt-open`
 //
 // ========================================================================
 
@@ -51,7 +51,7 @@ $offcanvas-overlay-background:                   rgba(0,0,0,0.1) !default;
  * 2. Set position
  */
 
-.uk-offcanvas {
+.dxt-offcanvas {
     /* 1 */
     display: none;
     /* 2 */
@@ -66,7 +66,7 @@ $offcanvas-overlay-background:                   rgba(0,0,0,0.1) !default;
  * Flip modifier
  */
 
-.uk-offcanvas-flip .uk-offcanvas {
+.dxt-offcanvas-flip .dxt-offcanvas {
     right: 0;
     left: auto;
 }
@@ -82,7 +82,7 @@ $offcanvas-overlay-background:                   rgba(0,0,0,0.1) !default;
  * 4. Transform
  */
 
-.uk-offcanvas-bar {
+.dxt-offcanvas-bar {
     /* 1 */
     position: absolute;
     top: 0;
@@ -105,7 +105,7 @@ $offcanvas-overlay-background:                   rgba(0,0,0,0.1) !default;
 /* Tablet landscape and bigger */
 @media (min-width: $breakpoint-medium) {
 
-    .uk-offcanvas-bar {
+    .dxt-offcanvas-bar {
         width: $offcanvas-bar-width-m;
         padding: $offcanvas-bar-padding-vertical-m $offcanvas-bar-padding-horizontal-m;
     }
@@ -113,11 +113,11 @@ $offcanvas-overlay-background:                   rgba(0,0,0,0.1) !default;
 }
 
 // Color Mode
-@if ( $offcanvas-bar-color-mode == light ) { .uk-offcanvas-bar { @extend .uk-light !optional;} }
-@if ( $offcanvas-bar-color-mode == dark ) { .uk-offcanvas-bar { @extend .uk-dark !optional;} }
+@if ( $offcanvas-bar-color-mode == light ) { .dxt-offcanvas-bar { @extend .dxt-light !optional;} }
+@if ( $offcanvas-bar-color-mode == dark ) { .dxt-offcanvas-bar { @extend .dxt-dark !optional;} }
 
 /* Flip modifier */
-.uk-offcanvas-flip .uk-offcanvas-bar {
+.dxt-offcanvas-flip .dxt-offcanvas-bar {
     left: auto;
     right: 0;
     -webkit-transform: translateX(100%);
@@ -128,7 +128,7 @@ $offcanvas-overlay-background:                   rgba(0,0,0,0.1) !default;
  * Open
  */
 
-.uk-open > .uk-offcanvas-bar {
+.dxt-open > .dxt-offcanvas-bar {
     -webkit-transform: translateX(0);
     transform: translateX(0);
 }
@@ -137,7 +137,7 @@ $offcanvas-overlay-background:                   rgba(0,0,0,0.1) !default;
  * Slide Animation (Used in slide and push mode)
  */
 
-.uk-offcanvas-bar-animation {
+.dxt-offcanvas-bar-animation {
     -webkit-transition: -webkit-transform 0.3s ease-out;
     transition: transform 0.3s ease-out;
 }
@@ -150,7 +150,7 @@ $offcanvas-overlay-background:                   rgba(0,0,0,0.1) !default;
  * 4. Reset transform
  */
 
-.uk-offcanvas-reveal {
+.dxt-offcanvas-reveal {
     /* 1 */
     position: absolute;
     top: 0;
@@ -164,18 +164,18 @@ $offcanvas-overlay-background:                   rgba(0,0,0,0.1) !default;
     transition: width 0.3s ease-out;
 }
 
-.uk-offcanvas-reveal .uk-offcanvas-bar {
+.dxt-offcanvas-reveal .dxt-offcanvas-bar {
     /* 4 */
     -webkit-transform: translateX(0);
     transform: translateX(0);
 }
 
-.uk-open > .uk-offcanvas-reveal { width: $offcanvas-bar-width; }
+.dxt-open > .dxt-offcanvas-reveal { width: $offcanvas-bar-width; }
 
 /* Tablet landscape and bigger */
 @media (min-width: $breakpoint-medium) {
 
-    .uk-open > .uk-offcanvas-reveal { width: $offcanvas-bar-width-m; }
+    .dxt-open > .dxt-offcanvas-reveal { width: $offcanvas-bar-width-m; }
 
 }
 
@@ -183,17 +183,17 @@ $offcanvas-overlay-background:                   rgba(0,0,0,0.1) !default;
  * Flip modifier
  */
 
-.uk-offcanvas-flip .uk-offcanvas-reveal {
+.dxt-offcanvas-flip .dxt-offcanvas-reveal {
     right: 0;
     left: auto;
 }
 
 
 /* Close
- * Adopts `uk-close`
+ * Adopts `dxt-close`
  ========================================================================== */
 
-.uk-offcanvas-close {
+.dxt-offcanvas-close {
     position: absolute;
     z-index: $offcanvas-z-index;
     top: $offcanvas-close-position;
@@ -212,7 +212,7 @@ $offcanvas-overlay-background:                   rgba(0,0,0,0.1) !default;
  * 2. Allow for closing with swipe gesture on devices with pointer events.
  */
 
-.uk-offcanvas-overlay {
+.dxt-offcanvas-overlay {
     /* 1 */
     width: 100vw;
     /* 2 */
@@ -224,7 +224,7 @@ $offcanvas-overlay-background:                   rgba(0,0,0,0.1) !default;
  * 2. Fade-in transition
  */
 
-.uk-offcanvas-overlay::before {
+.dxt-offcanvas-overlay::before {
     /* 1 */
     content: "";
     position: absolute;
@@ -240,7 +240,7 @@ $offcanvas-overlay-background:                   rgba(0,0,0,0.1) !default;
     @if(mixin-exists(hook-offcanvas-overlay)) {@include hook-offcanvas-overlay();}
 }
 
-.uk-offcanvas-overlay.uk-open::before { opacity: 1; }
+.dxt-offcanvas-overlay.dxt-open::before { opacity: 1; }
 
 
 /* Container
@@ -251,14 +251,14 @@ $offcanvas-overlay-background:                   rgba(0,0,0,0.1) !default;
  * Has to be on the `html` element too to make it work on the `body`
  */
 
-.uk-offcanvas-page,
-.uk-offcanvas-container { overflow-x: hidden; }
+.dxt-offcanvas-page,
+.dxt-offcanvas-container { overflow-x: hidden; }
 
 /*
  * Prevent all scrollbars if overlay is used
  */
 
-.uk-offcanvas-container-overlay { overflow: hidden; }
+.dxt-offcanvas-container-overlay { overflow: hidden; }
 
 
 /* Content
@@ -272,7 +272,7 @@ $offcanvas-overlay-background:                   rgba(0,0,0,0.1) !default;
  * 1. Smooth scrolling
  */
 
-.uk-offcanvas-container .uk-offcanvas-content {
+.dxt-offcanvas-container .dxt-offcanvas-content {
     position: relative;
     left: 0;
     -webkit-transition: left 0.3s ease-out;
@@ -282,22 +282,22 @@ $offcanvas-overlay-background:                   rgba(0,0,0,0.1) !default;
 }
 
 /* Disable scrolling if overlay mode */
-.uk-offcanvas-overlay .uk-offcanvas-content { overflow-y: hidden; }
+.dxt-offcanvas-overlay .dxt-offcanvas-content { overflow-y: hidden; }
 
 /*
  * Activate slide-out animation
  */
 
-:not(.uk-offcanvas-flip) > .uk-offcanvas-content-animation { left: $offcanvas-bar-width; }
+:not(.dxt-offcanvas-flip) > .dxt-offcanvas-content-animation { left: $offcanvas-bar-width; }
 
-.uk-offcanvas-flip > .uk-offcanvas-content-animation { left: (-$offcanvas-bar-width); }
+.dxt-offcanvas-flip > .dxt-offcanvas-content-animation { left: (-$offcanvas-bar-width); }
 
 /* Tablet landscape and bigger */
 @media (min-width: $breakpoint-medium) {
 
-    :not(.uk-offcanvas-flip) > .uk-offcanvas-content-animation { left: $offcanvas-bar-width-m; }
+    :not(.dxt-offcanvas-flip) > .dxt-offcanvas-content-animation { left: $offcanvas-bar-width-m; }
 
-    .uk-offcanvas-flip > .uk-offcanvas-content-animation { left: (-$offcanvas-bar-width-m); }
+    .dxt-offcanvas-flip > .dxt-offcanvas-content-animation { left: (-$offcanvas-bar-width-m); }
 
 }
 

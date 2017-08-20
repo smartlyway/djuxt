@@ -1,7 +1,7 @@
 // Name:            Totop
 // Description:     Component to create an icon to scroll back to top
 //
-// Component:       `uk-totop`
+// Component:       `dxt-totop`
 //
 // ========================================================================
 
@@ -22,25 +22,25 @@ $totop-active-color:                             $global-emphasis-color !default
  ========================================================================== */
 
 /*
- * Addopts `uk-icon`
+ * Addopts `dxt-icon`
  */
 
-.uk-totop {
+.dxt-totop {
     padding: $totop-padding;
     color: $totop-color;
     @if(mixin-exists(hook-totop)) {@include hook-totop();}
 }
 
 /* Hover + Focus */
-.uk-totop:hover,
-.uk-totop:focus {
+.dxt-totop:hover,
+.dxt-totop:focus {
     color: $totop-hover-color;
     outline: none;
     @if(mixin-exists(hook-totop-hover)) {@include hook-totop-hover();}
 }
 
 /* OnClick */
-.uk-totop:active {
+.dxt-totop:active {
     color: $totop-active-color;
     @if(mixin-exists(hook-totop-active)) {@include hook-totop-active();}
 }

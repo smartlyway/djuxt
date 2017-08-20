@@ -1,3 +1,5 @@
+![Arquitectura](img/logo.png)
+
 
 # Django SSR con postgress y mongodb (previo)
 

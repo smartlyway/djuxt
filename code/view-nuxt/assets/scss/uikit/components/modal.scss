@@ -1,24 +1,24 @@
 // Name:            Modal
 // Description:     Component to create modal dialogs
 //
-// Component:       `uk-modal`
+// Component:       `dxt-modal`
 //
-// Sub-objects:     `uk-modal-page`
-//                  `uk-modal-dialog`
-//                  `uk-modal-header`
-//                  `uk-modal-body`
-//                  `uk-modal-footer`
-//                  `uk-modal-title`
-//                  `uk-modal-close`
+// Sub-objects:     `dxt-modal-page`
+//                  `dxt-modal-dialog`
+//                  `dxt-modal-header`
+//                  `dxt-modal-body`
+//                  `dxt-modal-footer`
+//                  `dxt-modal-title`
+//                  `dxt-modal-close`
 //
-// Adopted:         `uk-modal-close-default`
-//                  `uk-modal-close-outside`
-//                  `uk-modal-close-full`
+// Adopted:         `dxt-modal-close-default`
+//                  `dxt-modal-close-outside`
+//                  `dxt-modal-close-full`
 //
-// Modifiers:       `uk-modal-container`
-//                  `uk-modal-full`
+// Modifiers:       `dxt-modal-container`
+//                  `dxt-modal-full`
 //
-// States:          `uk-open`
+// States:          `dxt-open`
 //
 // ========================================================================
 
@@ -76,7 +76,7 @@ $modal-close-outside-hover-color:                $global-inverse-color !default;
  * 6. Fade-in transition
  */
 
-.uk-modal {
+.dxt-modal {
     /* 1 */
     display: none;
     /* 2 */
@@ -103,14 +103,14 @@ $modal-close-outside-hover-color:                $global-inverse-color !default;
 /* Phone landscape and bigger */
 @media (min-width: $breakpoint-small) {
 
-    .uk-modal { padding: $modal-padding-vertical-s $modal-padding-horizontal-s; }
+    .dxt-modal { padding: $modal-padding-vertical-s $modal-padding-horizontal-s; }
 
 }
 
 /* Tablet landscape and bigger */
 @media (min-width: $breakpoint-medium) {
 
-    .uk-modal {
+    .dxt-modal {
         padding-left: $modal-padding-horizontal-m;
         padding-right: $modal-padding-horizontal-m;
     }
@@ -121,7 +121,7 @@ $modal-close-outside-hover-color:                $global-inverse-color !default;
  * Open
  */
 
-.uk-modal.uk-open { opacity: 1; }
+.dxt-modal.dxt-open { opacity: 1; }
 
 
 /* Page
@@ -131,7 +131,7 @@ $modal-close-outside-hover-color:                $global-inverse-color !default;
  * Prevent scrollbars
  */
 
-.uk-modal-page { overflow: hidden; }
+.dxt-modal-page { overflow: hidden; }
 
 
 /* Dialog
@@ -144,7 +144,7 @@ $modal-close-outside-hover-color:                $global-inverse-color !default;
  * 4. Slide-in transition
  */
 
-.uk-modal-dialog {
+.dxt-modal-dialog {
     /* 1 */
     position: relative;
     /* 2 */
@@ -169,7 +169,7 @@ $modal-close-outside-hover-color:                $global-inverse-color !default;
  * Open
  */
 
-.uk-open > .uk-modal-dialog {
+.dxt-open > .dxt-modal-dialog {
     opacity: 1;
     -webkit-transform: translateY(0);
     transform: translateY(0);
@@ -184,7 +184,7 @@ $modal-close-outside-hover-color:                $global-inverse-color !default;
  * Take the same size as the Container component
  */
 
-.uk-modal-container .uk-modal-dialog { width: $modal-container-width; }
+.dxt-modal-container .dxt-modal-dialog { width: $modal-container-width; }
 
 /*
  * Full size
@@ -193,13 +193,13 @@ $modal-close-outside-hover-color:                $global-inverse-color !default;
  */
 
 /* 1 */
-.uk-modal-full {
+.dxt-modal-full {
     padding: 0;
     background: none;
 }
 
 /* 2 */
-.uk-modal-full .uk-modal-dialog {
+.dxt-modal-full .dxt-modal-dialog {
     margin: 0;
     width: 100%;
     max-width: 100%;
@@ -212,18 +212,18 @@ $modal-close-outside-hover-color:                $global-inverse-color !default;
 /* Sections
  ========================================================================== */
 
-.uk-modal-body {
+.dxt-modal-body {
     padding: $modal-body-padding-vertical $modal-body-padding-horizontal;
     @if(mixin-exists(hook-modal-body)) {@include hook-modal-body();}
 }
 
-.uk-modal-header {
+.dxt-modal-header {
     padding: $modal-header-padding-vertical $modal-header-padding-horizontal;
     background: $modal-header-background;
     @if(mixin-exists(hook-modal-header)) {@include hook-modal-header();}
 }
 
-.uk-modal-footer {
+.dxt-modal-footer {
     padding: $modal-footer-padding-vertical $modal-footer-padding-horizontal;
     background: $modal-footer-background;
     @if(mixin-exists(hook-modal-footer)) {@include hook-modal-footer();}
@@ -233,33 +233,33 @@ $modal-close-outside-hover-color:                $global-inverse-color !default;
  * Micro clearfix
  */
 
-.uk-modal-body::before,
-.uk-modal-body::after,
-.uk-modal-header::before,
-.uk-modal-header::after,
-.uk-modal-footer::before,
-.uk-modal-footer::after {
+.dxt-modal-body::before,
+.dxt-modal-body::after,
+.dxt-modal-header::before,
+.dxt-modal-header::after,
+.dxt-modal-footer::before,
+.dxt-modal-footer::after {
     content: "";
     display: table;
 }
 
-.uk-modal-body::after,
-.uk-modal-header::after,
-.uk-modal-footer::after { clear: both; }
+.dxt-modal-body::after,
+.dxt-modal-header::after,
+.dxt-modal-footer::after { clear: both; }
 
 /*
  * Remove margin from the last-child
  */
 
-.uk-modal-body > :last-child,
-.uk-modal-header > :last-child,
-.uk-modal-footer > :last-child { margin-bottom: 0; }
+.dxt-modal-body > :last-child,
+.dxt-modal-header > :last-child,
+.dxt-modal-footer > :last-child { margin-bottom: 0; }
 
 
 /* Title
  ========================================================================== */
 
-.uk-modal-title {
+.dxt-modal-title {
     font-size: $modal-title-font-size;
     line-height: $modal-title-line-height;
     @if(mixin-exists(hook-modal-title)) {@include hook-modal-title();}
@@ -267,10 +267,10 @@ $modal-close-outside-hover-color:                $global-inverse-color !default;
 
 
 /* Close
- * Adopts `uk-close`
+ * Adopts `dxt-close`
  ========================================================================== */
 
-[class*='uk-modal-close-'] {
+[class*='dxt-modal-close-'] {
     position: absolute;
     z-index: $modal-z-index;
     top: $modal-close-position;
@@ -283,13 +283,13 @@ $modal-close-outside-hover-color:                $global-inverse-color !default;
  * Remove margin from adjacent element
  */
 
-[class*='uk-modal-close-']:first-child + * { margin-top: 0; }
+[class*='dxt-modal-close-']:first-child + * { margin-top: 0; }
 
 /*
  * Hover
  */
 
-[class*='uk-modal-close-']:hover {
+[class*='dxt-modal-close-']:hover {
     @if(mixin-exists(hook-modal-close-hover)) {@include hook-modal-close-hover();}
 }
 
@@ -297,11 +297,11 @@ $modal-close-outside-hover-color:                $global-inverse-color !default;
  * Default
  */
 
-.uk-modal-close-default {
+.dxt-modal-close-default {
     @if(mixin-exists(hook-modal-close-default)) {@include hook-modal-close-default();}
 }
 
-.uk-modal-close-default:hover {
+.dxt-modal-close-default:hover {
     @if(mixin-exists(hook-modal-close-default-hover)) {@include hook-modal-close-default-hover();}
 }
 
@@ -309,7 +309,7 @@ $modal-close-outside-hover-color:                $global-inverse-color !default;
  * Outside
  */
 
-.uk-modal-close-outside {
+.dxt-modal-close-outside {
     top: $modal-close-outside-position;
     right: $modal-close-outside-position;
     -webkit-transform: translate($modal-close-outside-translate, -($modal-close-outside-translate));
@@ -318,7 +318,7 @@ $modal-close-outside-hover-color:                $global-inverse-color !default;
     @if(mixin-exists(hook-modal-close-outside)) {@include hook-modal-close-outside();}
 }
 
-.uk-modal-close-outside:hover {
+.dxt-modal-close-outside:hover {
     color: $modal-close-outside-hover-color;
     @if(mixin-exists(hook-modal-close-outside-hover)) {@include hook-modal-close-outside-hover();}
 }
@@ -327,11 +327,11 @@ $modal-close-outside-hover-color:                $global-inverse-color !default;
  * Full
  */
 
-.uk-modal-close-full {
+.dxt-modal-close-full {
     @if(mixin-exists(hook-modal-close-full)) {@include hook-modal-close-full();}
 }
 
-.uk-modal-close-full:hover {
+.dxt-modal-close-full:hover {
     @if(mixin-exists(hook-modal-close-full-hover)) {@include hook-modal-close-full-hover();}
 }
 

@@ -1,11 +1,11 @@
 // Name:            Label
 // Description:     Component to indicate important notes
 //
-// Component:       `uk-label`
+// Component:       `dxt-label`
 //
-// Modifiers:       `uk-label-success`
-//                  `uk-label-warning`
-//                  `uk-label-danger`
+// Modifiers:       `dxt-label-success`
+//                  `dxt-label-warning`
+//                  `dxt-label-danger`
 //
 // ========================================================================
 
@@ -32,7 +32,7 @@ $label-danger-color:                             $global-inverse-color !default;
    Component: Label
  ========================================================================== */
 
-.uk-label {
+.dxt-label {
     display: inline-block;
     padding: $label-padding-vertical $label-padding-horizontal;
     background: $label-background;
@@ -52,7 +52,7 @@ $label-danger-color:                             $global-inverse-color !default;
  * Success
  */
 
-.uk-label-success {
+.dxt-label-success {
     background-color: $label-success-background;
     color: $label-success-color;
     @if(mixin-exists(hook-label-success)) {@include hook-label-success();}
@@ -62,7 +62,7 @@ $label-danger-color:                             $global-inverse-color !default;
  * Warning
  */
 
-.uk-label-warning {
+.dxt-label-warning {
     background-color: $label-warning-background;
     color: $label-warning-color;
     @if(mixin-exists(hook-label-warning)) {@include hook-label-warning();}
@@ -72,7 +72,7 @@ $label-danger-color:                             $global-inverse-color !default;
  * Danger
  */
 
-.uk-label-danger {
+.dxt-label-danger {
     background-color: $label-danger-background;
     color: $label-danger-color;
     @if(mixin-exists(hook-label-danger)) {@include hook-label-danger();}

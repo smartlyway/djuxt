@@ -1,21 +1,21 @@
 // Name:            Nav
 // Description:     Defines styles for list navigations
 //
-// Component:       `uk-nav`
+// Component:       `dxt-nav`
 //
-// Sub-objects:     `uk-nav-header`
-//                  `uk-nav-divider`
-//                  `uk-nav-sub`
+// Sub-objects:     `dxt-nav-header`
+//                  `dxt-nav-divider`
+//                  `dxt-nav-sub`
 //
-// Modifiers:       `uk-nav-parent-icon`
-//                  `uk-nav-default`
-//                  `uk-nav-primary`
-//                  `uk-nav-center`
+// Modifiers:       `dxt-nav-parent-icon`
+//                  `dxt-nav-default`
+//                  `dxt-nav-primary`
+//                  `dxt-nav-center`
 //
-// States:          `uk-active`
-//                  `uk-parent`
-//                  `uk-open`
-//                  `uk-touch`
+// States:          `dxt-active`
+//                  `dxt-parent`
+//                  `dxt-open`
+//                  `dxt-touch`
 //
 // ========================================================================
 
@@ -80,28 +80,28 @@ $internal-nav-parent-open-image: "data:image/svg+xml;charset=UTF-8,%3Csvg%20widt
  */
 
 /* 1 */
-.uk-nav,
-.uk-nav ul {
+.dxt-nav,
+.dxt-nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
 /* 2 */
-.uk-nav li > a {
+.dxt-nav li > a {
     display: block;
     text-decoration: none;
 }
 
 /* 3 */
-.uk-nav li > a:focus { outline: none; }
+.dxt-nav li > a:focus { outline: none; }
 
 /*
  * Items
  * Must target `a` elements to exclude other elements (e.g. lists)
  */
 
-.uk-nav > li > a { padding: $nav-item-padding-vertical $nav-item-padding-horizontal; }
+.dxt-nav > li > a { padding: $nav-item-padding-vertical $nav-item-padding-horizontal; }
 
 
 /* Sublists
@@ -112,7 +112,7 @@ $internal-nav-parent-open-image: "data:image/svg+xml;charset=UTF-8,%3Csvg%20widt
  * `ul` needed for higher specificity to override padding
  */
 
-ul.uk-nav-sub {
+ul.dxt-nav-sub {
     padding: $nav-sublist-padding-vertical 0 $nav-sublist-padding-vertical $nav-sublist-padding-left;
     @if(mixin-exists(hook-nav-sub)) {@include hook-nav-sub();}
 }
@@ -121,19 +121,19 @@ ul.uk-nav-sub {
  * Level 3 and deeper
  */
 
-.uk-nav-sub ul { padding-left: $nav-sublist-deeper-padding-left; }
+.dxt-nav-sub ul { padding-left: $nav-sublist-deeper-padding-left; }
 
 /*
  * Items
  */
 
-.uk-nav-sub a { padding: $nav-sublist-item-padding-vertical 0; }
+.dxt-nav-sub a { padding: $nav-sublist-item-padding-vertical 0; }
 
 
 /* Parent icon modifier
  ========================================================================== */
 
-.uk-nav-parent-icon > .uk-parent > a::after {
+.dxt-nav-parent-icon > .dxt-parent > a::after {
     content: "";
     width: $nav-parent-icon-width;
     height: $nav-parent-icon-height;
@@ -144,26 +144,26 @@ ul.uk-nav-sub {
     @if(mixin-exists(hook-nav-parent-icon)) {@include hook-nav-parent-icon();}
 }
 
-.uk-nav-parent-icon > .uk-parent.uk-open > a::after { @include svg-fill($internal-nav-parent-open-image, "#000", $nav-parent-icon-color); }
+.dxt-nav-parent-icon > .dxt-parent.dxt-open > a::after { @include svg-fill($internal-nav-parent-open-image, "#000", $nav-parent-icon-color); }
 
 
 /* Header
  ========================================================================== */
 
-.uk-nav-header {
+.dxt-nav-header {
     padding: $nav-header-padding-vertical $nav-header-padding-horizontal;
     text-transform: $nav-header-text-transform;
     font-size: $nav-header-font-size;
     @if(mixin-exists(hook-nav-header)) {@include hook-nav-header();}
 }
 
-.uk-nav-header:not(:first-child) { margin-top: $nav-header-margin-top; }
+.dxt-nav-header:not(:first-child) { margin-top: $nav-header-margin-top; }
 
 
 /* Divider
  ========================================================================== */
 
-.uk-nav-divider {
+.dxt-nav-divider {
     margin: $nav-divider-margin-vertical $nav-divider-margin-horizontal;
     @if(mixin-exists(hook-nav-divider)) {@include hook-nav-divider();}
 }
@@ -172,7 +172,7 @@ ul.uk-nav-sub {
 /* Default modifier
  ========================================================================== */
 
-.uk-nav-default {
+.dxt-nav-default {
     @if(mixin-exists(hook-nav-default)) {@include hook-nav-default();}
 }
 
@@ -180,20 +180,20 @@ ul.uk-nav-sub {
  * Items
  */
 
-.uk-nav-default > li > a {
+.dxt-nav-default > li > a {
     color: $nav-default-item-color;
     @if(mixin-exists(hook-nav-default-item)) {@include hook-nav-default-item();}
 }
 
 /* Hover + Focus */
-.uk-nav-default > li > a:hover,
-.uk-nav-default > li > a:focus {
+.dxt-nav-default > li > a:hover,
+.dxt-nav-default > li > a:focus {
     color: $nav-default-item-hover-color;
     @if(mixin-exists(hook-nav-default-item-hover)) {@include hook-nav-default-item-hover();}
 }
 
 /* Active */
-.uk-nav-default > li.uk-active > a {
+.dxt-nav-default > li.dxt-active > a {
     color: $nav-default-item-active-color;
     @if(mixin-exists(hook-nav-default-item-active)) {@include hook-nav-default-item-active();}
 }
@@ -202,7 +202,7 @@ ul.uk-nav-sub {
  * Header
  */
 
-.uk-nav-default .uk-nav-header {
+.dxt-nav-default .dxt-nav-header {
     color: $nav-default-header-color;
     @if(mixin-exists(hook-nav-default-header)) {@include hook-nav-default-header();}
 }
@@ -211,7 +211,7 @@ ul.uk-nav-sub {
  * Divider
  */
 
-.uk-nav-default .uk-nav-divider {
+.dxt-nav-default .dxt-nav-divider {
     border-top: $nav-default-divider-border-width solid $nav-default-divider-border;
     @if(mixin-exists(hook-nav-default-divider)) {@include hook-nav-default-divider();}
 }
@@ -220,16 +220,16 @@ ul.uk-nav-sub {
  * Sublists
  */
 
-.uk-nav-default .uk-nav-sub a { color: $nav-default-sublist-item-color; }
+.dxt-nav-default .dxt-nav-sub a { color: $nav-default-sublist-item-color; }
 
-.uk-nav-default .uk-nav-sub a:hover,
-.uk-nav-default .uk-nav-sub a:focus { color: $nav-default-sublist-item-hover-color; }
+.dxt-nav-default .dxt-nav-sub a:hover,
+.dxt-nav-default .dxt-nav-sub a:focus { color: $nav-default-sublist-item-hover-color; }
 
 
 /* Primary modifier
  ========================================================================== */
 
-.uk-nav-primary {
+.dxt-nav-primary {
     @if(mixin-exists(hook-nav-primary)) {@include hook-nav-primary();}
 }
 
@@ -237,7 +237,7 @@ ul.uk-nav-sub {
  * Items
  */
 
-.uk-nav-primary > li > a {
+.dxt-nav-primary > li > a {
     font-size: $nav-primary-item-font-size;
     line-height: $nav-primary-item-line-height;
     color: $nav-primary-item-color;
@@ -245,14 +245,14 @@ ul.uk-nav-sub {
 }
 
 /* Hover + Focus */
-.uk-nav-primary > li > a:hover,
-.uk-nav-primary > li > a:focus {
+.dxt-nav-primary > li > a:hover,
+.dxt-nav-primary > li > a:focus {
     color: $nav-primary-item-hover-color;
     @if(mixin-exists(hook-nav-primary-item-hover)) {@include hook-nav-primary-item-hover();}
 }
 
 /* Active */
-.uk-nav-primary > li.uk-active > a {
+.dxt-nav-primary > li.dxt-active > a {
     color: $nav-primary-item-active-color;
     @if(mixin-exists(hook-nav-primary-item-active)) {@include hook-nav-primary-item-active();}
 }
@@ -261,7 +261,7 @@ ul.uk-nav-sub {
  * Header
  */
 
-.uk-nav-primary .uk-nav-header {
+.dxt-nav-primary .dxt-nav-header {
     color: $nav-primary-header-color;
     @if(mixin-exists(hook-nav-primary-header)) {@include hook-nav-primary-header();}
 }
@@ -270,7 +270,7 @@ ul.uk-nav-sub {
  * Divider
  */
 
-.uk-nav-primary .uk-nav-divider {
+.dxt-nav-primary .dxt-nav-divider {
     border-top: $nav-primary-divider-border-width solid $nav-primary-divider-border;
     @if(mixin-exists(hook-nav-primary-divider)) {@include hook-nav-primary-divider();}
 }
@@ -279,23 +279,23 @@ ul.uk-nav-sub {
  * Sublists
  */
 
-.uk-nav-primary .uk-nav-sub a { color: $nav-primary-sublist-item-color; }
+.dxt-nav-primary .dxt-nav-sub a { color: $nav-primary-sublist-item-color; }
 
-.uk-nav-primary .uk-nav-sub a:hover,
-.uk-nav-primary .uk-nav-sub a:focus { color: $nav-primary-sublist-item-hover-color; }
+.dxt-nav-primary .dxt-nav-sub a:hover,
+.dxt-nav-primary .dxt-nav-sub a:focus { color: $nav-primary-sublist-item-hover-color; }
 
 
 /* Alignment modifier
  ========================================================================== */
 
-.uk-nav-center { text-align: center; }
+.dxt-nav-center { text-align: center; }
 
 /* Sublists */
-.uk-nav-center .uk-nav-sub,
-.uk-nav-center .uk-nav-sub ul { padding-left: 0; }
+.dxt-nav-center .dxt-nav-sub,
+.dxt-nav-center .dxt-nav-sub ul { padding-left: 0; }
 
 /* Parent icon modifier  */
-.uk-nav-center.uk-nav-parent-icon > .uk-parent > a::after { position: absolute; }
+.dxt-nav-center.dxt-nav-parent-icon > .dxt-parent > a::after { position: absolute; }
 
 
 // Hooks

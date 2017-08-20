@@ -1,23 +1,23 @@
 // Name:            Card
 // Description:     Component to create boxed content containers
 //
-// Component:       `uk-card`
+// Component:       `dxt-card`
 //
-// Sub-objects:     `uk-card-body`
-//                  `uk-card-header`
-//                  `uk-card-footer`
-//                  `uk-card-media-*`
-//                  `uk-card-title`
-//                  `uk-card-badge`
+// Sub-objects:     `dxt-card-body`
+//                  `dxt-card-header`
+//                  `dxt-card-footer`
+//                  `dxt-card-media-*`
+//                  `dxt-card-title`
+//                  `dxt-card-badge`
 //
-// Modifiers:       `uk-card-hover`
-//                  `uk-card-default`
-//                  `uk-card-primary`
-//                  `uk-card-secondary`
-//                  `uk-card-small`
-//                  `uk-card-large`
+// Modifiers:       `dxt-card-hover`
+//                  `dxt-card-default`
+//                  `dxt-card-primary`
+//                  `dxt-card-secondary`
+//                  `dxt-card-small`
+//                  `dxt-card-large`
 //
-// Uses:            `uk-grid-stack`
+// Uses:            `dxt-grid-stack`
 //
 // ========================================================================
 
@@ -87,7 +87,7 @@ $card-large-footer-padding-vertical-l:          round($global-large-gutter / 2) 
    Component: Card
  ========================================================================== */
 
-.uk-card {
+.dxt-card {
     position: relative;
     box-sizing: border-box;
     @if(mixin-exists(hook-card)) {@include hook-card();}
@@ -97,17 +97,17 @@ $card-large-footer-padding-vertical-l:          round($global-large-gutter / 2) 
 /* Sections
  ========================================================================== */
 
-.uk-card-body {
+.dxt-card-body {
     padding: $card-body-padding-vertical $card-body-padding-horizontal;
     @if(mixin-exists(hook-card-body)) {@include hook-card-body();}
 }
 
-.uk-card-header {
+.dxt-card-header {
     padding: $card-header-padding-vertical $card-header-padding-horizontal;
     @if(mixin-exists(hook-card-header)) {@include hook-card-header();}
 }
 
-.uk-card-footer {
+.dxt-card-footer {
     padding: $card-footer-padding-vertical $card-footer-padding-horizontal;
     @if(mixin-exists(hook-card-footer)) {@include hook-card-footer();}
 }
@@ -115,11 +115,11 @@ $card-large-footer-padding-vertical-l:          round($global-large-gutter / 2) 
 /* Desktop and bigger */
 @media (min-width: $breakpoint-large) {
 
-    .uk-card-body { padding: $card-body-padding-vertical-l $card-body-padding-horizontal-l; }
+    .dxt-card-body { padding: $card-body-padding-vertical-l $card-body-padding-horizontal-l; }
 
-    .uk-card-header { padding: $card-header-padding-vertical-l $card-header-padding-horizontal-l; }
+    .dxt-card-header { padding: $card-header-padding-vertical-l $card-header-padding-horizontal-l; }
 
-    .uk-card-footer { padding: $card-footer-padding-vertical-l $card-footer-padding-horizontal-l; }
+    .dxt-card-footer { padding: $card-footer-padding-vertical-l $card-footer-padding-horizontal-l; }
 
 }
 
@@ -127,27 +127,27 @@ $card-large-footer-padding-vertical-l:          round($global-large-gutter / 2) 
  * Micro clearfix
  */
 
-.uk-card-body::before,
-.uk-card-body::after,
-.uk-card-header::before,
-.uk-card-header::after,
-.uk-card-footer::before,
-.uk-card-footer::after {
+.dxt-card-body::before,
+.dxt-card-body::after,
+.dxt-card-header::before,
+.dxt-card-header::after,
+.dxt-card-footer::before,
+.dxt-card-footer::after {
     content: "";
     display: table;
 }
 
-.uk-card-body::after,
-.uk-card-header::after,
-.uk-card-footer::after { clear: both; }
+.dxt-card-body::after,
+.dxt-card-header::after,
+.dxt-card-footer::after { clear: both; }
 
 /*
  * Remove margin from the last-child
  */
 
-.uk-card-body > :last-child,
-.uk-card-header > :last-child,
-.uk-card-footer > :last-child { margin-bottom: 0; }
+.dxt-card-body > :last-child,
+.dxt-card-header > :last-child,
+.dxt-card-footer > :last-child { margin-bottom: 0; }
 
 
 /* Media
@@ -158,25 +158,25 @@ $card-large-footer-padding-vertical-l:          round($global-large-gutter / 2) 
  * Implemented by the theme
  */
 
-[class*='uk-card-media'] {
+[class*='dxt-card-media'] {
     @if(mixin-exists(hook-card-media)) {@include hook-card-media();}
 }
 
-.uk-card-media-top,
-.uk-grid-stack > .uk-card-media-left,
-.uk-grid-stack > .uk-card-media-right  {
+.dxt-card-media-top,
+.dxt-grid-stack > .dxt-card-media-left,
+.dxt-grid-stack > .dxt-card-media-right  {
     @if(mixin-exists(hook-card-media-top)) {@include hook-card-media-top();}
 }
 
-.uk-card-media-bottom {
+.dxt-card-media-bottom {
     @if(mixin-exists(hook-card-media-bottom)) {@include hook-card-media-bottom();}
 }
 
-:not(.uk-grid-stack) > .uk-card-media-left {
+:not(.dxt-grid-stack) > .dxt-card-media-left {
     @if(mixin-exists(hook-card-media-left)) {@include hook-card-media-left();}
 }
 
-:not(.uk-grid-stack) > .uk-card-media-right {
+:not(.dxt-grid-stack) > .dxt-card-media-right {
     @if(mixin-exists(hook-card-media-right)) {@include hook-card-media-right();}
 }
 
@@ -184,7 +184,7 @@ $card-large-footer-padding-vertical-l:          round($global-large-gutter / 2) 
 /* Title
  ========================================================================== */
 
-.uk-card-title {
+.dxt-card-title {
     font-size: $card-title-font-size;
     line-height: $card-title-line-height;
     @if(mixin-exists(hook-card-title)) {@include hook-card-title();}
@@ -194,7 +194,7 @@ $card-large-footer-padding-vertical-l:          round($global-large-gutter / 2) 
 /* Badge
  ========================================================================== */
 
-.uk-card-badge {
+.dxt-card-badge {
     position: absolute;
     top: $card-badge-top;
     right: $card-badge-right;
@@ -206,13 +206,13 @@ $card-large-footer-padding-vertical-l:          round($global-large-gutter / 2) 
  * Remove margin from adjacent element
  */
 
-.uk-card-badge:first-child + * { margin-top: 0; }
+.dxt-card-badge:first-child + * { margin-top: 0; }
 
 
 /* Hover modifier
  ========================================================================== */
 
-.uk-card-hover:not(.uk-card-default):not(.uk-card-primary):not(.uk-card-secondary):hover {
+.dxt-card-hover:not(.dxt-card-default):not(.dxt-card-primary):not(.dxt-card-secondary):hover {
     background: $card-hover-background;
     @if(mixin-exists(hook-card-hover)) {@include hook-card-hover();}
 }
@@ -226,27 +226,27 @@ $card-large-footer-padding-vertical-l:          round($global-large-gutter / 2) 
  * Note: Header and Footer are only implemented for the default style
  */
 
-.uk-card-default {
+.dxt-card-default {
     background: $card-default-background;
     color: $card-default-color;
     @if(mixin-exists(hook-card-default)) {@include hook-card-default();}
 }
 
-.uk-card-default .uk-card-title {
+.dxt-card-default .dxt-card-title {
     color: $card-default-title-color;
     @if(mixin-exists(hook-card-default-title)) {@include hook-card-default-title();}
 }
 
-.uk-card-default.uk-card-hover:hover {
+.dxt-card-default.dxt-card-hover:hover {
     background-color: $card-default-hover-background;
     @if(mixin-exists(hook-card-default-hover)) {@include hook-card-default-hover();}
 }
 
-.uk-card-default .uk-card-header {
+.dxt-card-default .dxt-card-header {
     @if(mixin-exists(hook-card-default-header)) {@include hook-card-default-header();}
 }
 
-.uk-card-default .uk-card-footer {
+.dxt-card-default .dxt-card-footer {
     @if(mixin-exists(hook-card-default-footer)) {@include hook-card-default-footer();}
 }
 
@@ -254,53 +254,53 @@ $card-large-footer-padding-vertical-l:          round($global-large-gutter / 2) 
  * Primary
  */
 
-.uk-card-primary {
+.dxt-card-primary {
     background: $card-primary-background;
     color: $card-primary-color;
     @if(mixin-exists(hook-card-primary)) {@include hook-card-primary();}
 }
 
-.uk-card-primary .uk-card-title {
+.dxt-card-primary .dxt-card-title {
     color: $card-primary-title-color;
     @if(mixin-exists(hook-card-primary-title)) {@include hook-card-primary-title();}
 }
 
-.uk-card-primary.uk-card-hover:hover {
+.dxt-card-primary.dxt-card-hover:hover {
     background-color: $card-primary-hover-background;
     @if(mixin-exists(hook-card-primary-hover)) {@include hook-card-primary-hover();}
 }
 
 // Color Mode
-@if ( $card-primary-color-mode == light ) { .uk-card-primary.uk-card-body { @extend .uk-light !optional;} }
-@if ( $card-primary-color-mode == light ) { .uk-card-primary > :not([class*='uk-card-media']) { @extend .uk-light !optional;} }
-@if ( $card-primary-color-mode == dark ) { .uk-card-primary.uk-card-body { @extend .uk-dark !optional;} }
-@if ( $card-primary-color-mode == dark ) { .uk-card-primary > :not([class*='uk-card-media']) { @extend .uk-dark !optional;} }
+@if ( $card-primary-color-mode == light ) { .dxt-card-primary.dxt-card-body { @extend .dxt-light !optional;} }
+@if ( $card-primary-color-mode == light ) { .dxt-card-primary > :not([class*='dxt-card-media']) { @extend .dxt-light !optional;} }
+@if ( $card-primary-color-mode == dark ) { .dxt-card-primary.dxt-card-body { @extend .dxt-dark !optional;} }
+@if ( $card-primary-color-mode == dark ) { .dxt-card-primary > :not([class*='dxt-card-media']) { @extend .dxt-dark !optional;} }
 
 /*
  * Secondary
  */
 
-.uk-card-secondary {
+.dxt-card-secondary {
     background: $card-secondary-background;
     color: $card-secondary-color;
     @if(mixin-exists(hook-card-secondary)) {@include hook-card-secondary();}
 }
 
-.uk-card-secondary .uk-card-title {
+.dxt-card-secondary .dxt-card-title {
     color: $card-secondary-title-color;
     @if(mixin-exists(hook-card-secondary-title)) {@include hook-card-secondary-title();}
 }
 
-.uk-card-secondary.uk-card-hover:hover {
+.dxt-card-secondary.dxt-card-hover:hover {
     background-color: $card-secondary-hover-background;
     @if(mixin-exists(hook-card-secondary-hover)) {@include hook-card-secondary-hover();}
 }
 
 // Color Mode
-@if ( $card-secondary-color-mode == light ) { .uk-card-secondary.uk-card-body { @extend .uk-light !optional;} }
-@if ( $card-secondary-color-mode == light ) { .uk-card-secondary > :not([class*='uk-card-media']) { @extend .uk-light !optional;} }
-@if ( $card-secondary-color-mode == dark ) { .uk-card-secondary.uk-card-body { @extend .uk-dark !optional;} }
-@if ( $card-secondary-color-mode == dark ) { .uk-card-secondary > :not([class*='uk-card-media']) { @extend .uk-dark !optional;} }
+@if ( $card-secondary-color-mode == light ) { .dxt-card-secondary.dxt-card-body { @extend .dxt-light !optional;} }
+@if ( $card-secondary-color-mode == light ) { .dxt-card-secondary > :not([class*='dxt-card-media']) { @extend .dxt-light !optional;} }
+@if ( $card-secondary-color-mode == dark ) { .dxt-card-secondary.dxt-card-body { @extend .dxt-dark !optional;} }
+@if ( $card-secondary-color-mode == dark ) { .dxt-card-secondary > :not([class*='dxt-card-media']) { @extend .dxt-dark !optional;} }
 
 
 /* Size modifier
@@ -310,11 +310,11 @@ $card-large-footer-padding-vertical-l:          round($global-large-gutter / 2) 
  * Small
  */
 
-.uk-card-small.uk-card-body,
-.uk-card-small .uk-card-body { padding: $card-small-body-padding-vertical $card-small-body-padding-horizontal; }
+.dxt-card-small.dxt-card-body,
+.dxt-card-small .dxt-card-body { padding: $card-small-body-padding-vertical $card-small-body-padding-horizontal; }
 
-.uk-card-small .uk-card-header { padding: $card-small-header-padding-vertical $card-small-header-padding-horizontal; }
-.uk-card-small .uk-card-footer { padding: $card-small-footer-padding-vertical $card-small-footer-padding-horizontal; }
+.dxt-card-small .dxt-card-header { padding: $card-small-header-padding-vertical $card-small-header-padding-horizontal; }
+.dxt-card-small .dxt-card-footer { padding: $card-small-footer-padding-vertical $card-small-footer-padding-horizontal; }
 
 /*
  * Large
@@ -323,11 +323,11 @@ $card-large-footer-padding-vertical-l:          round($global-large-gutter / 2) 
 /* Desktop and bigger */
 @media (min-width: $breakpoint-large) {
 
-    .uk-card-large.uk-card-body,
-    .uk-card-large .uk-card-body { padding: $card-large-body-padding-vertical-l $card-large-body-padding-horizontal-l; }
+    .dxt-card-large.dxt-card-body,
+    .dxt-card-large .dxt-card-body { padding: $card-large-body-padding-vertical-l $card-large-body-padding-horizontal-l; }
 
-    .uk-card-large .uk-card-header { padding: $card-large-header-padding-vertical-l $card-large-header-padding-horizontal-l; }
-    .uk-card-large .uk-card-footer { padding: $card-large-footer-padding-vertical-l $card-large-footer-padding-horizontal-l; }
+    .dxt-card-large .dxt-card-header { padding: $card-large-header-padding-vertical-l $card-large-header-padding-horizontal-l; }
+    .dxt-card-large .dxt-card-footer { padding: $card-large-footer-padding-vertical-l $card-large-footer-padding-horizontal-l; }
 
 }
 

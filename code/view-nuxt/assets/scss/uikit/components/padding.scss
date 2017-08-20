@@ -1,9 +1,9 @@
 // Name:            Padding
 // Description:     Utilities for padding
 //
-// Component:       `uk-padding`
-//                  `uk-padding-large`
-//                  `uk-padding-remove-*`
+// Component:       `dxt-padding`
+//                  `dxt-padding-large`
+//                  `dxt-padding-remove-*`
 //
 // ========================================================================
 
@@ -24,12 +24,12 @@ $padding-large-padding-l:                                $global-large-gutter !d
    Component: Padding
  ========================================================================== */
 
-.uk-padding { padding: $padding-padding; }
+.dxt-padding { padding: $padding-padding; }
 
 /* Desktop and bigger */
 @media (min-width: $breakpoint-large) {
 
-    .uk-padding { padding: $padding-padding-l; }
+    .dxt-padding { padding: $padding-padding-l; }
 
 }
 
@@ -37,18 +37,18 @@ $padding-large-padding-l:                                $global-large-gutter !d
 /* Small
  ========================================================================== */
 
-.uk-padding-small { padding: $padding-small-padding; }
+.dxt-padding-small { padding: $padding-small-padding; }
 
 
 /* Large
  ========================================================================== */
 
-.uk-padding-large { padding: $padding-large-padding; }
+.dxt-padding-large { padding: $padding-large-padding; }
 
 /* Desktop and bigger */
 @media (min-width: $breakpoint-large) {
 
-    .uk-padding-large { padding: $padding-large-padding-l; }
+    .dxt-padding-large { padding: $padding-large-padding-l; }
 
 }
 
@@ -56,18 +56,18 @@ $padding-large-padding-l:                                $global-large-gutter !d
 /* Remove
  ========================================================================== */
 
-.uk-padding-remove { padding: 0 !important; }
-.uk-padding-remove-top { padding-top: 0 !important; }
-.uk-padding-remove-bottom { padding-bottom: 0 !important; }
-.uk-padding-remove-left { padding-left: 0 !important; }
-.uk-padding-remove-right { padding-right: 0 !important; }
+.dxt-padding-remove { padding: 0 !important; }
+.dxt-padding-remove-top { padding-top: 0 !important; }
+.dxt-padding-remove-bottom { padding-bottom: 0 !important; }
+.dxt-padding-remove-left { padding-left: 0 !important; }
+.dxt-padding-remove-right { padding-right: 0 !important; }
 
-.uk-padding-remove-vertical {
+.dxt-padding-remove-vertical {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
 }
 
-.uk-padding-remove-horizontal {
+.dxt-padding-remove-horizontal {
     padding-left: 0 !important;
     padding-right: 0 !important;
 }

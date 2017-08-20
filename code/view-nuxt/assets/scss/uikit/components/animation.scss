@@ -1,23 +1,23 @@
 // Name:            Animation
 // Description:     Utilities for keyframe animations
 //
-// Component:       `uk-animation-*`
+// Component:       `dxt-animation-*`
 //
-// Modifiers:       `uk-animation-reverse`
-//                  `uk-animation-fast`
-//                  `uk-animation-fade`
-//                  `uk-animation-scale-up`
-//                  `uk-animation-scale-down`
-//                  `uk-animation-slide-top-*`
-//                  `uk-animation-slide-bottom-*`
-//                  `uk-animation-slide-left-*`
-//                  `uk-animation-slide-right-*`
-//                  `uk-animation-kenburns`
-//                  `uk-animation-shake`
+// Modifiers:       `dxt-animation-reverse`
+//                  `dxt-animation-fast`
+//                  `dxt-animation-fade`
+//                  `dxt-animation-scale-up`
+//                  `dxt-animation-scale-down`
+//                  `dxt-animation-slide-top-*`
+//                  `dxt-animation-slide-bottom-*`
+//                  `dxt-animation-slide-left-*`
+//                  `dxt-animation-slide-right-*`
+//                  `dxt-animation-kenburns`
+//                  `dxt-animation-shake`
 //
-// Sub-objects:     `uk-animation-toggle`
+// Sub-objects:     `dxt-animation-toggle`
 //
-// States:          `uk-hover`
+// States:          `dxt-hover`
 //
 // ========================================================================
 
@@ -38,7 +38,7 @@ $animation-slide-medium-translate:               50px !default;
    Component: Animation
  ========================================================================== */
 
-[class*='uk-animation-'] {
+[class*='dxt-animation-'] {
     -webkit-animation-duration: $animation-duration;
     animation-duration: $animation-duration;
     -webkit-animation-timing-function: ease-out;
@@ -51,7 +51,7 @@ $animation-slide-medium-translate:               50px !default;
 /* Direction modifier
  ========================================================================== */
 
-.uk-animation-reverse {
+.dxt-animation-reverse {
     -webkit-animation-direction: reverse;
     animation-direction: reverse;
     -webkit-animation-timing-function: ease-in;
@@ -66,9 +66,9 @@ $animation-slide-medium-translate:               50px !default;
  * Fade
  */
 
-.uk-animation-fade {
-    -webkit-animation-name: uk-fade;
-    animation-name: uk-fade;
+.dxt-animation-fade {
+    -webkit-animation-name: dxt-fade;
+    animation-name: dxt-fade;
     -webkit-animation-duration: $animation-fade-duration;
     animation-duration: $animation-fade-duration;
     -webkit-animation-timing-function: linear;
@@ -79,95 +79,95 @@ $animation-slide-medium-translate:               50px !default;
  * Scale
  */
 
-.uk-animation-scale-up {
-    -webkit-animation-name: uk-fade-scale-02;
-    animation-name: uk-fade-scale-02;
+.dxt-animation-scale-up {
+    -webkit-animation-name: dxt-fade-scale-02;
+    animation-name: dxt-fade-scale-02;
 }
 
-.uk-animation-scale-down {
-    -webkit-animation-name: uk-fade-scale-18;
-    animation-name: uk-fade-scale-18;
+.dxt-animation-scale-down {
+    -webkit-animation-name: dxt-fade-scale-18;
+    animation-name: dxt-fade-scale-18;
 }
 
 /*
  * Slide
  */
 
-.uk-animation-slide-top {
-    -webkit-animation-name: uk-fade-top;
-    animation-name: uk-fade-top;
+.dxt-animation-slide-top {
+    -webkit-animation-name: dxt-fade-top;
+    animation-name: dxt-fade-top;
 }
 
-.uk-animation-slide-bottom {
-    -webkit-animation-name: uk-fade-bottom;
-    animation-name: uk-fade-bottom;
+.dxt-animation-slide-bottom {
+    -webkit-animation-name: dxt-fade-bottom;
+    animation-name: dxt-fade-bottom;
 }
 
-.uk-animation-slide-left {
-    -webkit-animation-name: uk-fade-left;
-    animation-name: uk-fade-left;
+.dxt-animation-slide-left {
+    -webkit-animation-name: dxt-fade-left;
+    animation-name: dxt-fade-left;
 }
 
-.uk-animation-slide-right {
-    -webkit-animation-name: uk-fade-right;
-    animation-name: uk-fade-right;
+.dxt-animation-slide-right {
+    -webkit-animation-name: dxt-fade-right;
+    animation-name: dxt-fade-right;
 }
 
 /*
  * Slide Small
  */
 
-.uk-animation-slide-top-small {
-    -webkit-animation-name: uk-fade-top-small;
-    animation-name: uk-fade-top-small;
+.dxt-animation-slide-top-small {
+    -webkit-animation-name: dxt-fade-top-small;
+    animation-name: dxt-fade-top-small;
 }
 
-.uk-animation-slide-bottom-small {
-    -webkit-animation-name: uk-fade-bottom-small;
-    animation-name: uk-fade-bottom-small;
+.dxt-animation-slide-bottom-small {
+    -webkit-animation-name: dxt-fade-bottom-small;
+    animation-name: dxt-fade-bottom-small;
 }
 
-.uk-animation-slide-left-small {
-    -webkit-animation-name: uk-fade-left-small;
-    animation-name: uk-fade-left-small;
+.dxt-animation-slide-left-small {
+    -webkit-animation-name: dxt-fade-left-small;
+    animation-name: dxt-fade-left-small;
 }
 
-.uk-animation-slide-right-small {
-    -webkit-animation-name: uk-fade-right-small;
-    animation-name: uk-fade-right-small;
+.dxt-animation-slide-right-small {
+    -webkit-animation-name: dxt-fade-right-small;
+    animation-name: dxt-fade-right-small;
 }
 
 /*
  * Slide Medium
  */
 
-.uk-animation-slide-top-medium {
-    -webkit-animation-name: uk-fade-top-medium;
-    animation-name: uk-fade-top-medium;
+.dxt-animation-slide-top-medium {
+    -webkit-animation-name: dxt-fade-top-medium;
+    animation-name: dxt-fade-top-medium;
 }
 
-.uk-animation-slide-bottom-medium {
-    -webkit-animation-name: uk-fade-bottom-medium;
-    animation-name: uk-fade-bottom-medium;
+.dxt-animation-slide-bottom-medium {
+    -webkit-animation-name: dxt-fade-bottom-medium;
+    animation-name: dxt-fade-bottom-medium;
 }
 
-.uk-animation-slide-left-medium {
-    -webkit-animation-name: uk-fade-left-medium;
-    animation-name: uk-fade-left-medium;
+.dxt-animation-slide-left-medium {
+    -webkit-animation-name: dxt-fade-left-medium;
+    animation-name: dxt-fade-left-medium;
 }
 
-.uk-animation-slide-right-medium {
-    -webkit-animation-name: uk-fade-right-medium;
-    animation-name: uk-fade-right-medium;
+.dxt-animation-slide-right-medium {
+    -webkit-animation-name: dxt-fade-right-medium;
+    animation-name: dxt-fade-right-medium;
 }
 
 /*
  * Kenburns
  */
 
-.uk-animation-kenburns {
-    -webkit-animation-name: uk-scale-kenburns;
-    animation-name: uk-scale-kenburns;
+.dxt-animation-kenburns {
+    -webkit-animation-name: dxt-scale-kenburns;
+    animation-name: dxt-scale-kenburns;
     -webkit-animation-duration: $animation-kenburns-duration;
     animation-duration: $animation-kenburns-duration;
 }
@@ -176,16 +176,16 @@ $animation-slide-medium-translate:               50px !default;
  * Shake
  */
 
-.uk-animation-shake {
-    -webkit-animation-name: uk-shake;
-    animation-name: uk-shake;
+.dxt-animation-shake {
+    -webkit-animation-name: dxt-shake;
+    animation-name: dxt-shake;
 }
 
 
 /* Duration modifier
  ========================================================================== */
 
-.uk-animation-fast {
+.dxt-animation-fast {
     -webkit-animation-duration: $animation-fast-duration;
     animation-duration: $animation-fast-duration;
 }
@@ -198,7 +198,7 @@ $animation-slide-medium-translate:               50px !default;
  * Note: Firefox and IE needs this because animations are not triggered when switching between display `none` and `block`
  */
 
-.uk-animation-toggle:not(:hover):not(.uk-hover) [class*='uk-animation-'] {
+.dxt-animation-toggle:not(:hover):not(.dxt-hover) [class*='dxt-animation-'] {
     -webkit-animation-name: none;
     animation-name: none;
 }
@@ -211,12 +211,12 @@ $animation-slide-medium-translate:               50px !default;
  * Fade
  */
 
-@-webkit-keyframes uk-fade {
+@-webkit-keyframes dxt-fade {
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
 
-@keyframes uk-fade {
+@keyframes dxt-fade {
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
@@ -225,7 +225,7 @@ $animation-slide-medium-translate:               50px !default;
  * Slide Top
  */
 
-@-webkit-keyframes uk-fade-top {
+@-webkit-keyframes dxt-fade-top {
     0% {
         opacity: 0;
         -webkit-transform: translateY(-100%);
@@ -236,7 +236,7 @@ $animation-slide-medium-translate:               50px !default;
     }
 }
 
-@keyframes uk-fade-top {
+@keyframes dxt-fade-top {
     0% {
         opacity: 0;
         transform: translateY(-100%);
@@ -251,7 +251,7 @@ $animation-slide-medium-translate:               50px !default;
  * Slide Bottom
  */
 
-@-webkit-keyframes uk-fade-bottom {
+@-webkit-keyframes dxt-fade-bottom {
     0% {
         opacity: 0;
         -webkit-transform: translateY(100%);
@@ -262,7 +262,7 @@ $animation-slide-medium-translate:               50px !default;
     }
 }
 
-@keyframes uk-fade-bottom {
+@keyframes dxt-fade-bottom {
     0% {
         opacity: 0;
         transform: translateY(100%);
@@ -277,7 +277,7 @@ $animation-slide-medium-translate:               50px !default;
  * Slide Left
  */
 
-@-webkit-keyframes uk-fade-left {
+@-webkit-keyframes dxt-fade-left {
     0% {
         opacity: 0;
         -webkit-transform: translateX(-100%);
@@ -288,7 +288,7 @@ $animation-slide-medium-translate:               50px !default;
     }
 }
 
-@keyframes uk-fade-left {
+@keyframes dxt-fade-left {
     0% {
         opacity: 0;
         transform: translateX(-100%);
@@ -303,7 +303,7 @@ $animation-slide-medium-translate:               50px !default;
  * Slide Right
  */
 
-@-webkit-keyframes uk-fade-right {
+@-webkit-keyframes dxt-fade-right {
     0% {
         opacity: 0;
         -webkit-transform: translateX(100%);
@@ -314,7 +314,7 @@ $animation-slide-medium-translate:               50px !default;
     }
 }
 
-@keyframes uk-fade-right {
+@keyframes dxt-fade-right {
     0% {
         opacity: 0;
         transform: translateX(100%);
@@ -329,7 +329,7 @@ $animation-slide-medium-translate:               50px !default;
  * Slide Top Small
  */
 
-@-webkit-keyframes uk-fade-top-small {
+@-webkit-keyframes dxt-fade-top-small {
     0% {
         opacity: 0;
         -webkit-transform: translateY(-$animation-slide-small-translate);
@@ -340,7 +340,7 @@ $animation-slide-medium-translate:               50px !default;
     }
 }
 
-@keyframes uk-fade-top-small {
+@keyframes dxt-fade-top-small {
     0% {
         opacity: 0;
         transform: translateY(-$animation-slide-small-translate);
@@ -355,7 +355,7 @@ $animation-slide-medium-translate:               50px !default;
  * Slide Bottom Small
  */
 
-@-webkit-keyframes uk-fade-bottom-small {
+@-webkit-keyframes dxt-fade-bottom-small {
     0% {
         opacity: 0;
         -webkit-transform: translateY($animation-slide-small-translate);
@@ -366,7 +366,7 @@ $animation-slide-medium-translate:               50px !default;
     }
 }
 
-@keyframes uk-fade-bottom-small {
+@keyframes dxt-fade-bottom-small {
     0% {
         opacity: 0;
         transform: translateY($animation-slide-small-translate);
@@ -381,7 +381,7 @@ $animation-slide-medium-translate:               50px !default;
  * Slide Left Small
  */
 
-@-webkit-keyframes uk-fade-left-small {
+@-webkit-keyframes dxt-fade-left-small {
     0% {
         opacity: 0;
         -webkit-transform: translateX(-$animation-slide-small-translate);
@@ -392,7 +392,7 @@ $animation-slide-medium-translate:               50px !default;
     }
 }
 
-@keyframes uk-fade-left-small {
+@keyframes dxt-fade-left-small {
     0% {
         opacity: 0;
         transform: translateX(-$animation-slide-small-translate);
@@ -407,7 +407,7 @@ $animation-slide-medium-translate:               50px !default;
  * Slide Right Small
  */
 
-@-webkit-keyframes uk-fade-right-small {
+@-webkit-keyframes dxt-fade-right-small {
     0% {
         opacity: 0;
         -webkit-transform: translateX($animation-slide-small-translate);
@@ -418,7 +418,7 @@ $animation-slide-medium-translate:               50px !default;
     }
 }
 
-@keyframes uk-fade-right-small {
+@keyframes dxt-fade-right-small {
     0% {
         opacity: 0;
         transform: translateX($animation-slide-small-translate);
@@ -433,7 +433,7 @@ $animation-slide-medium-translate:               50px !default;
  * Slide Top Medium
  */
 
-@-webkit-keyframes uk-fade-top-medium {
+@-webkit-keyframes dxt-fade-top-medium {
     0% {
         opacity: 0;
         -webkit-transform: translateY(-$animation-slide-medium-translate);
@@ -444,7 +444,7 @@ $animation-slide-medium-translate:               50px !default;
     }
 }
 
-@keyframes uk-fade-top-medium {
+@keyframes dxt-fade-top-medium {
     0% {
         opacity: 0;
         transform: translateY(-$animation-slide-medium-translate);
@@ -459,7 +459,7 @@ $animation-slide-medium-translate:               50px !default;
  * Slide Bottom Medium
  */
 
-@-webkit-keyframes uk-fade-bottom-medium {
+@-webkit-keyframes dxt-fade-bottom-medium {
     0% {
         opacity: 0;
         -webkit-transform: translateY($animation-slide-medium-translate);
@@ -470,7 +470,7 @@ $animation-slide-medium-translate:               50px !default;
     }
 }
 
-@keyframes uk-fade-bottom-medium {
+@keyframes dxt-fade-bottom-medium {
     0% {
         opacity: 0;
         transform: translateY($animation-slide-medium-translate);
@@ -485,7 +485,7 @@ $animation-slide-medium-translate:               50px !default;
  * Slide Left Medium
  */
 
-@-webkit-keyframes uk-fade-left-medium {
+@-webkit-keyframes dxt-fade-left-medium {
     0% {
         opacity: 0;
         -webkit-transform: translateX(-$animation-slide-medium-translate);
@@ -496,7 +496,7 @@ $animation-slide-medium-translate:               50px !default;
     }
 }
 
-@keyframes uk-fade-left-medium {
+@keyframes dxt-fade-left-medium {
     0% {
         opacity: 0;
         transform: translateX(-$animation-slide-medium-translate);
@@ -511,7 +511,7 @@ $animation-slide-medium-translate:               50px !default;
  * Slide Right Medium
  */
 
-@-webkit-keyframes uk-fade-right-medium {
+@-webkit-keyframes dxt-fade-right-medium {
     0% {
         opacity: 0;
         -webkit-transform: translateX($animation-slide-medium-translate);
@@ -522,7 +522,7 @@ $animation-slide-medium-translate:               50px !default;
     }
 }
 
-@keyframes uk-fade-right-medium {
+@keyframes dxt-fade-right-medium {
     0% {
         opacity: 0;
         transform: translateX($animation-slide-medium-translate);
@@ -537,7 +537,7 @@ $animation-slide-medium-translate:               50px !default;
  * Scale Up
  */
 
-@-webkit-keyframes uk-fade-scale-02 {
+@-webkit-keyframes dxt-fade-scale-02 {
     0% {
         opacity: 0;
         -webkit-transform: scale(0.2);
@@ -548,7 +548,7 @@ $animation-slide-medium-translate:               50px !default;
     }
 }
 
-@keyframes uk-fade-scale-02 {
+@keyframes dxt-fade-scale-02 {
     0% {
         opacity: 0;
         transform: scale(0.2);
@@ -563,7 +563,7 @@ $animation-slide-medium-translate:               50px !default;
  * Scale Down
  */
 
-@-webkit-keyframes uk-fade-scale-18 {
+@-webkit-keyframes dxt-fade-scale-18 {
     0% {
         opacity: 0;
         -webkit-transform: scale(1.8);
@@ -574,7 +574,7 @@ $animation-slide-medium-translate:               50px !default;
     }
 }
 
-@keyframes uk-fade-scale-18 {
+@keyframes dxt-fade-scale-18 {
     0% {
         opacity: 0;
         transform: scale(1.8);
@@ -589,12 +589,12 @@ $animation-slide-medium-translate:               50px !default;
  * Kenburns
  */
 
-@-webkit-keyframes uk-scale-kenburns {
+@-webkit-keyframes dxt-scale-kenburns {
     0% { -webkit-transform: scale(1); }
     100% { -webkit-transform: scale(1.2); }
 }
 
-@keyframes uk-scale-kenburns {
+@keyframes dxt-scale-kenburns {
     0% { transform: scale(1); }
     100% { transform: scale(1.2); }
 }
@@ -603,7 +603,7 @@ $animation-slide-medium-translate:               50px !default;
  * Shake
  */
 
-@-webkit-keyframes uk-shake {
+@-webkit-keyframes dxt-shake {
     0%, 100% { -webkit-transform: translateX(0); }
     10% { -webkit-transform: translateX(-9px); }
     20% { -webkit-transform: translateX(8px); }
@@ -616,7 +616,7 @@ $animation-slide-medium-translate:               50px !default;
     90% { -webkit-transform: translateX(-1px); }
 }
 
-@keyframes uk-shake {
+@keyframes dxt-shake {
     0%, 100% { transform: translateX(0); }
     10% { transform: translateX(-9px); }
     20% { transform: translateX(8px); }

@@ -1,9 +1,9 @@
 // Name:            Cover
 // Description:     Utilities to let embedded content cover their container in a centered position
 //
-// Component:       `uk-cover`
+// Component:       `dxt-cover`
 //
-// Sub-object:      `uk-cover-container`
+// Sub-object:      `dxt-cover-container`
 //
 // ========================================================================
 
@@ -20,7 +20,7 @@
  *       is absolute positioned or if the container has a height
  */
 
-.uk-cover {
+.dxt-cover {
     /* 1 */
     max-width: none;
     /* 2 */
@@ -40,7 +40,7 @@
  * 2. Needed if the child is positioned absolute. See note above
  */
 
-.uk-cover-container {
+.dxt-cover-container {
     /* 1 */
     overflow: hidden;
     /* 2 */

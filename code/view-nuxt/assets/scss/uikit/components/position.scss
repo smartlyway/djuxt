@@ -1,26 +1,26 @@
 // Name:            Position
 // Description:     Utilities to position content
 //
-// Component:       `uk-position-absolute`
-//                  `uk-position-relative`
-//                  `uk-position-z-index`
-//                  `uk-position-top`
-//                  `uk-position-bottom`
-//                  `uk-position-left`
-//                  `uk-position-right`
-//                  `uk-position-top-left`
-//                  `uk-position-top-center`
-//                  `uk-position-top-right`
-//                  `uk-position-bottom-left`
-//                  `uk-position-bottom-center`
-//                  `uk-position-bottom-right`
-//                  `uk-position-center`
-//                  `uk-position-center-left`
-//                  `uk-position-center-right`
-//                  `uk-position-cover`
+// Component:       `dxt-position-absolute`
+//                  `dxt-position-relative`
+//                  `dxt-position-z-index`
+//                  `dxt-position-top`
+//                  `dxt-position-bottom`
+//                  `dxt-position-left`
+//                  `dxt-position-right`
+//                  `dxt-position-top-left`
+//                  `dxt-position-top-center`
+//                  `dxt-position-top-right`
+//                  `dxt-position-bottom-left`
+//                  `dxt-position-bottom-center`
+//                  `dxt-position-bottom-right`
+//                  `dxt-position-center`
+//                  `dxt-position-center-left`
+//                  `dxt-position-center-right`
+//                  `dxt-position-cover`
 //
-// Modifiers:       `uk-position-small`
-//                  `uk-position-medium`
+// Modifiers:       `dxt-position-small`
+//                  `dxt-position-medium`
 //
 // ========================================================================
 
@@ -40,36 +40,36 @@ $position-medium-margin:                                $global-gutter !default;
 /* Directions
  ========================================================================== */
 
-[class*='uk-position-top'],
-[class*='uk-position-bottom'],
-[class*='uk-position-left'],
-[class*='uk-position-right'],
-[class*='uk-position-center'] { position: absolute !important; }
+[class*='dxt-position-top'],
+[class*='dxt-position-bottom'],
+[class*='dxt-position-left'],
+[class*='dxt-position-right'],
+[class*='dxt-position-center'] { position: absolute !important; }
 
 
 /* Edges
  ========================================================================== */
 
 /* Don't use `width: 100%` because it is wrong if the parent has padding. */
-.uk-position-top {
+.dxt-position-top {
     top: 0;
     left: 0;
     right: 0;
 }
 
-.uk-position-bottom {
+.dxt-position-bottom {
     bottom: 0;
     left: 0;
     right: 0;
 }
 
-.uk-position-left {
+.dxt-position-left {
     top: 0;
     bottom: 0;
     left: 0;
 }
 
-.uk-position-right {
+.dxt-position-right {
     top: 0;
     bottom: 0;
     right: 0;
@@ -79,22 +79,22 @@ $position-medium-margin:                                $global-gutter !default;
 /* Corners
  ========================================================================== */
 
-.uk-position-top-left {
+.dxt-position-top-left {
     top: 0;
     left: 0;
 }
 
-.uk-position-top-right {
+.dxt-position-top-right {
     top: 0;
     right: 0;
 }
 
-.uk-position-bottom-left {
+.dxt-position-bottom-left {
     bottom: 0;
     left: 0;
 }
 
-.uk-position-bottom-right {
+.dxt-position-bottom-right {
     bottom: 0;
     right: 0;
 }
@@ -105,7 +105,7 @@ $position-medium-margin:                                $global-gutter !default;
  * 2. Fix text wrapping for Firefox
  */
 
-.uk-position-center {
+.dxt-position-center {
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%,-50%);
@@ -118,19 +118,19 @@ $position-medium-margin:                                $global-gutter !default;
 }
 
 /* Vertical */
-.uk-position-center-left,
-.uk-position-center-right {
+.dxt-position-center-left,
+.dxt-position-center-right {
     top: 50%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 }
 
-.uk-position-center-left { left: 0; }
-.uk-position-center-right { right: 0; }
+.dxt-position-center-left { left: 0; }
+.dxt-position-center-right { right: 0; }
 
 /* Horizontal */
-.uk-position-top-center,
-.uk-position-bottom-center {
+.dxt-position-top-center,
+.dxt-position-bottom-center {
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
@@ -138,14 +138,14 @@ $position-medium-margin:                                $global-gutter !default;
     display: table;
 }
 
-.uk-position-top-center { top: 0; }
-.uk-position-bottom-center { bottom: 0; }
+.dxt-position-top-center { top: 0; }
+.dxt-position-bottom-center { bottom: 0; }
 
 
 /* Cover
  ========================================================================== */
 
-.uk-position-cover {
+.dxt-position-cover {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -157,13 +157,13 @@ $position-medium-margin:                                $global-gutter !default;
 /* Utility
  ========================================================================== */
 
-.uk-position-relative { position: relative !important; }
+.dxt-position-relative { position: relative !important; }
 
-.uk-position-absolute { position: absolute !important; }
+.dxt-position-absolute { position: absolute !important; }
 
-.uk-position-fixed { position: fixed !important; }
+.dxt-position-fixed { position: fixed !important; }
 
-.uk-position-z-index { z-index: 1; }
+.dxt-position-z-index { z-index: 1; }
 
 
 
@@ -174,21 +174,21 @@ $position-medium-margin:                                $global-gutter !default;
  * Small
  */
 
-.uk-position-small { margin: $position-small-margin; }
+.dxt-position-small { margin: $position-small-margin; }
 
-.uk-position-small.uk-position-center {
+.dxt-position-small.dxt-position-center {
     -webkit-transform: translate(-50%, -50%) translate(-$position-small-margin, (-$position-small-margin));
     transform: translate(-50%, -50%) translate(-$position-small-margin, (-$position-small-margin));
 }
 
-.uk-position-small.uk-position-center-left,
-.uk-position-small.uk-position-center-right {
+.dxt-position-small.dxt-position-center-left,
+.dxt-position-small.dxt-position-center-right {
     -webkit-transform: translateY(-50%) translateY(-$position-small-margin);
     transform: translateY(-50%) translateY(-$position-small-margin);
 }
 
-.uk-position-small.uk-position-top-center,
-.uk-position-small.uk-position-bottom-center {
+.dxt-position-small.dxt-position-top-center,
+.dxt-position-small.dxt-position-bottom-center {
     -webkit-transform: translateX(-50%) translateX(-$position-small-margin);
     transform: translateX(-50%) translateX(-$position-small-margin);
 }
@@ -197,21 +197,21 @@ $position-medium-margin:                                $global-gutter !default;
  * Medium
  */
 
-.uk-position-medium { margin: $position-medium-margin; }
+.dxt-position-medium { margin: $position-medium-margin; }
 
-.uk-position-medium.uk-position-center {
+.dxt-position-medium.dxt-position-center {
     -webkit-transform: translate(-50%, -50%) translate(-$position-medium-margin, (-$position-medium-margin));
     transform: translate(-50%, -50%) translate(-$position-medium-margin, (-$position-medium-margin));
 }
 
-.uk-position-medium.uk-position-center-left,
-.uk-position-medium.uk-position-center-right {
+.dxt-position-medium.dxt-position-center-left,
+.dxt-position-medium.dxt-position-center-right {
     -webkit-transform: translateY(-50%) translateY(-$position-medium-margin);
     transform: translateY(-50%) translateY(-$position-medium-margin);
 }
 
-.uk-position-medium.uk-position-top-center,
-.uk-position-medium.uk-position-bottom-center {
+.dxt-position-medium.dxt-position-top-center,
+.dxt-position-medium.dxt-position-bottom-center {
     -webkit-transform: translateX(-50%) translateX(-$position-medium-margin);
     transform: translateX(-50%) translateX(-$position-medium-margin);
 }

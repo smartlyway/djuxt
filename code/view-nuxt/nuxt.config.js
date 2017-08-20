@@ -19,7 +19,7 @@ module.exports = {
   loading: { color: '#3B8070' },
 
    css: [
-    '@/assets/scss/uikit/main.scss'
+    '@/assets/scss/uikit/dxt-main.scss'
   ],
 
   /*

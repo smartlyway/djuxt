@@ -1,11 +1,11 @@
 // Name:            Countdown
 // Description:     Component to create countdown timers
 //
-// Component:       `uk-countdown`
+// Component:       `dxt-countdown`
 //
-// Sub-objects:     `uk-countdown-number`
-//                  `uk-countdown-separator`
-//                  `uk-countdown-label`
+// Sub-objects:     `dxt-countdown-number`
+//                  `dxt-countdown-separator`
+//                  `dxt-countdown-label`
 //
 // ========================================================================
 
@@ -28,7 +28,7 @@ $countdown-separator-font-size-m:                3rem !default; // 48px
    Component: Countdown
  ========================================================================== */
 
-.uk-countdown {
+.dxt-countdown {
     @if(mixin-exists(hook-countdown)) {@include hook-countdown();}
 }
 
@@ -40,8 +40,8 @@ $countdown-separator-font-size-m:                3rem !default; // 48px
  * 1. Center numbers and separators vertically
  */
 
-.uk-countdown-number,
-.uk-countdown-separator {
+.dxt-countdown-number,
+.dxt-countdown-separator {
     /* 1 */
     line-height: $countdown-item-line-height;
     @if(mixin-exists(hook-countdown-item)) {@include hook-countdown-item();}
@@ -51,7 +51,7 @@ $countdown-separator-font-size-m:                3rem !default; // 48px
 /* Number
  ========================================================================== */
 
-.uk-countdown-number {
+.dxt-countdown-number {
     font-size: $countdown-number-font-size;
     @if(mixin-exists(hook-countdown-number)) {@include hook-countdown-number();}
 }
@@ -59,14 +59,14 @@ $countdown-separator-font-size-m:                3rem !default; // 48px
 /* Phone landscape and bigger */
 @media (min-width: $breakpoint-small) {
 
-    .uk-countdown-number { font-size: $countdown-number-font-size-s; }
+    .dxt-countdown-number { font-size: $countdown-number-font-size-s; }
 
 }
 
 /* Tablet landscape and bigger */
 @media (min-width: $breakpoint-medium) {
 
-    .uk-countdown-number { font-size: $countdown-number-font-size-m; }
+    .dxt-countdown-number { font-size: $countdown-number-font-size-m; }
 
 }
 
@@ -74,7 +74,7 @@ $countdown-separator-font-size-m:                3rem !default; // 48px
 /* Separator
  ========================================================================== */
 
-.uk-countdown-separator {
+.dxt-countdown-separator {
     font-size: $countdown-separator-font-size;
     @if(mixin-exists(hook-countdown-separator)) {@include hook-countdown-separator();}
 }
@@ -82,14 +82,14 @@ $countdown-separator-font-size-m:                3rem !default; // 48px
 /* Phone landscape and bigger */
 @media (min-width: $breakpoint-small) {
 
-    .uk-countdown-separator { font-size: $countdown-separator-font-size-s; }
+    .dxt-countdown-separator { font-size: $countdown-separator-font-size-s; }
 
 }
 
 /* Tablet landscape and bigger */
 @media (min-width: $breakpoint-medium) {
 
-    .uk-countdown-separator { font-size: $countdown-separator-font-size-m; }
+    .dxt-countdown-separator { font-size: $countdown-separator-font-size-m; }
 
 }
 
@@ -97,7 +97,7 @@ $countdown-separator-font-size-m:                3rem !default; // 48px
 /* Label
  ========================================================================== */
 
-.uk-countdown-label {
+.dxt-countdown-label {
     @if(mixin-exists(hook-countdown-label)) {@include hook-countdown-label();}
 }
 

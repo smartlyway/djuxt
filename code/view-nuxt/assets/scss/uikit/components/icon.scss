@@ -1,13 +1,13 @@
 // Name:            Icon
 // Description:     Component to create icons
 //
-// Component:       `uk-icon`
+// Component:       `dxt-icon`
 //
-// Modifiers:       `uk-icon-image`
-//                  `uk-icon-link`
-//                  `uk-icon-button`
+// Modifiers:       `dxt-icon-image`
+//                  `dxt-icon-link`
+//                  `dxt-icon-button`
 //
-// States:          `uk-preserve`
+// States:          `dxt-preserve`
 //
 // ========================================================================
 
@@ -50,7 +50,7 @@ $icon-button-active-color:                       $global-color !default;
  * 9. Let the container fit the height of the icon
  */
 
-.uk-icon {
+.dxt-icon {
     /* 1 */
     margin: 0;
     /* 2 */
@@ -74,13 +74,13 @@ $icon-button-active-color:                       $global-color !default;
 }
 
 /* Required for `button`. */
-button.uk-icon:not(:disabled) { cursor: pointer; }
+button.dxt-icon:not(:disabled) { cursor: pointer; }
 
 /*
  * Remove the inner border and padding in Firefox.
  */
 
-.uk-icon::-moz-focus-inner {
+.dxt-icon::-moz-focus-inner {
     border: 0;
     padding: 0;
 }
@@ -90,16 +90,16 @@ button.uk-icon:not(:disabled) { cursor: pointer; }
  * 1. Fix for uppercase attribute names in Edge. Will be fixed in Windows 10 builds 16251+
  */
 
-.uk-icon [fill*='#']:not(.uk-preserve),
-.uk-icon [FILL*='#']:not(.uk-preserve) { fill: currentcolor; } // 1
-.uk-icon [stroke*='#']:not(.uk-preserve),
-.uk-icon [STROKE*='#']:not(.uk-preserve) { stroke: currentcolor; } // 1
+.dxt-icon [fill*='#']:not(.dxt-preserve),
+.dxt-icon [FILL*='#']:not(.dxt-preserve) { fill: currentcolor; } // 1
+.dxt-icon [stroke*='#']:not(.dxt-preserve),
+.dxt-icon [STROKE*='#']:not(.dxt-preserve) { stroke: currentcolor; } // 1
 
 /*
  * Fix Firefox blurry SVG rendering: https://bugzilla.mozilla.org/show_bug.cgi?id=1046835
  */
 
-.uk-icon > * { transform: translate(0,0); }
+.dxt-icon > * { transform: translate(0,0); }
 
 
 /* Image modifier
@@ -109,7 +109,7 @@ button.uk-icon:not(:disabled) { cursor: pointer; }
  * Display images in icon dimensions
  */
 
-.uk-icon-image {
+.dxt-icon-image {
     width: $icon-image-size;
     height: $icon-image-size;
     background-position: 50% 50%;
@@ -126,21 +126,21 @@ button.uk-icon:not(:disabled) { cursor: pointer; }
  * Link
  */
 
-.uk-icon-link {
+.dxt-icon-link {
     color: $icon-link-color;
     @if(mixin-exists(hook-icon-link)) {@include hook-icon-link();}
 }
 
-.uk-icon-link:hover,
-.uk-icon-link:focus {
+.dxt-icon-link:hover,
+.dxt-icon-link:focus {
     color: $icon-link-hover-color;
     outline: none;
     @if(mixin-exists(hook-icon-link-hover)) {@include hook-icon-link-hover();}
 }
 
 /* OnClick + Active */
-.uk-icon-link:active,
-.uk-active > .uk-icon-link {
+.dxt-icon-link:active,
+.dxt-active > .dxt-icon-link {
     color: $icon-link-active-color;
     @if(mixin-exists(hook-icon-link-active)) {@include hook-icon-link-active();}
 }
@@ -150,7 +150,7 @@ button.uk-icon:not(:disabled) { cursor: pointer; }
  * 1. Center icon vertically and horizontally
  */
 
-.uk-icon-button {
+.dxt-icon-button {
     box-sizing: border-box;
     width: $icon-button-size;
     height: $icon-button-size;
@@ -172,8 +172,8 @@ button.uk-icon:not(:disabled) { cursor: pointer; }
 }
 
 /* Hover + Focus */
-.uk-icon-button:hover,
-.uk-icon-button:focus {
+.dxt-icon-button:hover,
+.dxt-icon-button:focus {
     background-color: $icon-button-hover-background;
     color: $icon-button-hover-color;
     outline: none;
@@ -181,8 +181,8 @@ button.uk-icon:not(:disabled) { cursor: pointer; }
 }
 
 /* OnClick + Active */
-.uk-icon-button:active,
-.uk-active > .uk-icon-button {
+.dxt-icon-button:active,
+.dxt-active > .dxt-icon-button {
     background-color: $icon-button-active-background;
     color: $icon-button-active-color;
     @if(mixin-exists(hook-icon-button-active)) {@include hook-icon-button-active();}

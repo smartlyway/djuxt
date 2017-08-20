@@ -1,13 +1,13 @@
 // Name:            Subnav
 // Description:     Component to create a sub navigation
 //
-// Component:       `uk-subnav`
+// Component:       `dxt-subnav`
 //
-// Modifiers:       `uk-subnav-divider`
-//                  `uk-subnav-pill`
+// Modifiers:       `dxt-subnav-divider`
+//                  `dxt-subnav-pill`
 //
-// States:          `uk-active`
-//                  `uk-first-column`
+// States:          `dxt-active`
+//                  `dxt-first-column`
 //
 // ========================================================================
 
@@ -51,7 +51,7 @@ $subnav-item-disabled-color:                     $global-muted-color !default;
  * 3. Reset lists
  */
 
-.uk-subnav {
+.dxt-subnav {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
@@ -73,7 +73,7 @@ $subnav-item-disabled-color:                     $global-muted-color !default;
  * 3. Create position context for dropdowns
  */
 
-.uk-subnav > * {
+.dxt-subnav > * {
     /* 1 */
     -ms-flex: none;
     -webkit-flex: none;
@@ -95,7 +95,7 @@ $subnav-item-disabled-color:                     $global-muted-color !default;
  * 2. Style
  */
 
-.uk-subnav > * > :first-child {
+.dxt-subnav > * > :first-child {
     /* 1 */
     display: block;
     /* 2 */
@@ -104,8 +104,8 @@ $subnav-item-disabled-color:                     $global-muted-color !default;
 }
 
 /* Hover + Focus */
-.uk-subnav > * > a:hover,
-.uk-subnav > * > a:focus {
+.dxt-subnav > * > a:hover,
+.dxt-subnav > * > a:focus {
     color: $subnav-item-hover-color;
     text-decoration: $subnav-item-hover-text-decoration;
     outline: none;
@@ -113,7 +113,7 @@ $subnav-item-disabled-color:                     $global-muted-color !default;
 }
 
 /* Active */
-.uk-subnav > .uk-active > a {
+.dxt-subnav > .dxt-active > a {
     color: $subnav-item-active-color;
     @if(mixin-exists(hook-subnav-item-active)) {@include hook-subnav-item-active();}
 }
@@ -126,7 +126,7 @@ $subnav-item-disabled-color:                     $global-muted-color !default;
  * 1. Align items and divider vertically
  */
 
-.uk-subnav-divider > * {
+.dxt-subnav-divider > * {
     /* 1 */
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -141,7 +141,7 @@ $subnav-item-disabled-color:                     $global-muted-color !default;
  * `nth-child` makes it also work without JS if it's only one row
  */
 
-.uk-subnav-divider > :nth-child(n+2):not(.uk-first-column)::before {
+.dxt-subnav-divider > :nth-child(n+2):not(.dxt-first-column)::before {
     content: "";
     height: $subnav-divider-border-height;
     margin-left: ($subnav-divider-margin-horizontal - $subnav-margin-horizontal);
@@ -154,7 +154,7 @@ $subnav-item-disabled-color:                     $global-muted-color !default;
 /* Pill modifier
  ========================================================================== */
 
-.uk-subnav-pill > * > :first-child {
+.dxt-subnav-pill > * > :first-child {
     padding: $subnav-pill-item-padding-vertical $subnav-pill-item-padding-horizontal;
     background: $subnav-pill-item-background;
     color: $subnav-pill-item-color;
@@ -162,22 +162,22 @@ $subnav-item-disabled-color:                     $global-muted-color !default;
 }
 
 /* Hover + Focus */
-.uk-subnav-pill > * > a:hover,
-.uk-subnav-pill > * > a:focus {
+.dxt-subnav-pill > * > a:hover,
+.dxt-subnav-pill > * > a:focus {
     background-color: $subnav-pill-item-hover-background;
     color: $subnav-pill-item-hover-color;
     @if(mixin-exists(hook-subnav-pill-item-hover)) {@include hook-subnav-pill-item-hover();}
 }
 
 /* OnClick */
-.uk-subnav-pill > * > a:active {
+.dxt-subnav-pill > * > a:active {
     background-color: $subnav-pill-item-onclick-background;
     color: $subnav-pill-item-onclick-color;
     @if(mixin-exists(hook-subnav-pill-item-onclick)) {@include hook-subnav-pill-item-onclick();}
 }
 
 /* Active */
-.uk-subnav-pill > .uk-active > a {
+.dxt-subnav-pill > .dxt-active > a {
     background-color: $subnav-pill-item-active-background;
     color: $subnav-pill-item-active-color;
     @if(mixin-exists(hook-subnav-pill-item-active)) {@include hook-subnav-pill-item-active();}
@@ -188,7 +188,7 @@ $subnav-item-disabled-color:                     $global-muted-color !default;
  * The same for all style modifiers
  ========================================================================== */
 
-.uk-subnav > .uk-disabled > a {
+.dxt-subnav > .dxt-disabled > a {
     color: $subnav-item-disabled-color;
     @if(mixin-exists(hook-subnav-item-disabled)) {@include hook-subnav-item-disabled();}
 }

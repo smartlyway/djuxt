@@ -1,7 +1,7 @@
 // Name:            Badge
 // Description:     Component to create notification badges
 
-// Component:       `uk-badge`
+// Component:       `dxt-badge`
 //
 // ========================================================================
 
@@ -29,7 +29,7 @@ $badge-hover-color:                              $global-inverse-color !default;
  * 2. Center child vertically and horizontally
  */
 
-.uk-badge {
+.dxt-badge {
     box-sizing: border-box;
     min-width: $badge-size;
     height: $badge-size;
@@ -58,8 +58,8 @@ $badge-hover-color:                              $global-inverse-color !default;
  * Required for `a`
  */
 
-.uk-badge:hover,
-.uk-badge:focus {
+.dxt-badge:hover,
+.dxt-badge:focus {
     color: $badge-hover-color;
     text-decoration: none;
     outline: none;

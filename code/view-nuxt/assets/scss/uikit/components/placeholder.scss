@@ -1,7 +1,7 @@
 // Name:            Placeholder
 // Description:     Component to create placeholder boxes
 //
-// Component:       `uk-placeholder`
+// Component:       `dxt-placeholder`
 //
 // ========================================================================
 
@@ -19,7 +19,7 @@ $placeholder-background:                         $global-muted-background !defau
    Component: Placeholder
  ========================================================================== */
 
-.uk-placeholder {
+.dxt-placeholder {
     margin-bottom: $placeholder-margin-vertical;
     padding: $placeholder-padding-vertical $placeholder-padding-horizontal;
     background: $placeholder-background;
@@ -27,13 +27,13 @@ $placeholder-background:                         $global-muted-background !defau
 }
 
 /* Add margin if adjacent element */
-* + .uk-placeholder { margin-top: $placeholder-margin-vertical; }
+* + .dxt-placeholder { margin-top: $placeholder-margin-vertical; }
 
 /*
  * Remove margin from the last-child
  */
 
-.uk-placeholder > :last-child { margin-bottom: 0; }
+.dxt-placeholder > :last-child { margin-bottom: 0; }
 
 
 // Hooks

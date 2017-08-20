@@ -1,16 +1,16 @@
 // Name:            Comment
 // Description:     Component to create nested comments
 //
-// Component:       `uk-comment`
+// Component:       `dxt-comment`
 //
-// Sub-objects:     `uk-comment-body`
-//                  `uk-comment-header`
-//                  `uk-comment-title`
-//                  `uk-comment-meta`
-//                  `uk-comment-avatar`
-//                  `uk-comment-list`
+// Sub-objects:     `dxt-comment-body`
+//                  `dxt-comment-header`
+//                  `dxt-comment-title`
+//                  `dxt-comment-meta`
+//                  `dxt-comment-avatar`
+//                  `dxt-comment-list`
 //
-// Modifier:        `uk-comment-primary`
+// Modifier:        `dxt-comment-primary`
 //
 // ========================================================================
 
@@ -36,7 +36,7 @@ $comment-list-padding-left-m:                    100px !default;
    Component: Comment
  ========================================================================== */
 
-.uk-comment {
+.dxt-comment {
     @if(mixin-exists(hook-comment)) {@include hook-comment();}
 }
 
@@ -44,11 +44,11 @@ $comment-list-padding-left-m:                    100px !default;
 /* Sections
  ========================================================================== */
 
-.uk-comment-body {
+.dxt-comment-body {
     @if(mixin-exists(hook-comment-body)) {@include hook-comment-body();}
 }
 
-.uk-comment-header {
+.dxt-comment-header {
     margin-bottom: $comment-header-margin-bottom;
     @if(mixin-exists(hook-comment-header)) {@include hook-comment-header();}
 }
@@ -57,29 +57,29 @@ $comment-list-padding-left-m:                    100px !default;
  * Micro clearfix
  */
 
-.uk-comment-body::before,
-.uk-comment-body::after,
-.uk-comment-header::before,
-.uk-comment-header::after {
+.dxt-comment-body::before,
+.dxt-comment-body::after,
+.dxt-comment-header::before,
+.dxt-comment-header::after {
     content: "";
     display: table;
 }
 
-.uk-comment-body::after,
-.uk-comment-header::after { clear: both; }
+.dxt-comment-body::after,
+.dxt-comment-header::after { clear: both; }
 
 /*
  * Remove margin from the last-child
  */
 
-.uk-comment-body > :last-child,
-.uk-comment-header > :last-child { margin-bottom: 0; }
+.dxt-comment-body > :last-child,
+.dxt-comment-header > :last-child { margin-bottom: 0; }
 
 
 /* Title
  ========================================================================== */
 
-.uk-comment-title {
+.dxt-comment-title {
     font-size: $comment-title-font-size;
     line-height: $comment-title-line-height;
     @if(mixin-exists(hook-comment-title)) {@include hook-comment-title();}
@@ -89,7 +89,7 @@ $comment-list-padding-left-m:                    100px !default;
 /* Meta
  ========================================================================== */
 
-.uk-comment-meta {
+.dxt-comment-meta {
     font-size: $comment-meta-font-size;
     line-height: $comment-meta-line-height;
     color: $comment-meta-color;
@@ -100,7 +100,7 @@ $comment-list-padding-left-m:                    100px !default;
 /* Avatar
  ========================================================================== */
 
-.uk-comment-avatar {
+.dxt-comment-avatar {
     @if(mixin-exists(hook-comment-avatar)) {@include hook-comment-avatar();}
 }
 
@@ -108,13 +108,13 @@ $comment-list-padding-left-m:                    100px !default;
 /* List
  ========================================================================== */
 
-.uk-comment-list {
+.dxt-comment-list {
     padding: 0;
     list-style: none;
 }
 
 /* Adjacent siblings */
-.uk-comment-list > :nth-child(n+2) {
+.dxt-comment-list > :nth-child(n+2) {
     margin-top: $comment-list-margin-top;
     @if(mixin-exists(hook-comment-list-adjacent)) {@include hook-comment-list-adjacent();}
 }
@@ -124,7 +124,7 @@ $comment-list-padding-left-m:                    100px !default;
  * Note: General sibling selector allows reply block between comment and sublist
  */
 
-.uk-comment-list .uk-comment ~ ul {
+.dxt-comment-list .dxt-comment ~ ul {
     margin: $comment-list-margin-top 0 0 0;
     padding-left: $comment-list-padding-left;
     list-style: none;
@@ -134,12 +134,12 @@ $comment-list-padding-left-m:                    100px !default;
 /* Tablet and bigger */
 @media (min-width: $breakpoint-medium) {
 
-    .uk-comment-list .uk-comment ~ ul { padding-left: $comment-list-padding-left-m; }
+    .dxt-comment-list .dxt-comment ~ ul { padding-left: $comment-list-padding-left-m; }
 
 }
 
 /* Adjacent siblings */
-.uk-comment-list .uk-comment ~ ul > :nth-child(n+2) {
+.dxt-comment-list .dxt-comment ~ ul > :nth-child(n+2) {
     margin-top: $comment-list-margin-top;
     @if(mixin-exists(hook-comment-list-sub-adjacent)) {@include hook-comment-list-sub-adjacent();}
 }
@@ -148,7 +148,7 @@ $comment-list-padding-left-m:                    100px !default;
 /* Style modifier
  ========================================================================== */
 
-.uk-comment-primary {
+.dxt-comment-primary {
     @if(mixin-exists(hook-comment-primary)) {@include hook-comment-primary();}
 }
 

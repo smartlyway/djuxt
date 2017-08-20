@@ -1,13 +1,13 @@
 // Name:            Pagination
 // Description:     Component to create a page navigation
 //
-// Component:       `uk-pagination`
+// Component:       `dxt-pagination`
 //
-// Adopted:         `uk-pagination-next`
-//                  `uk-pagination-previous`
+// Adopted:         `dxt-pagination-next`
+//                  `dxt-pagination-previous`
 //
-// States:          `uk-active`
-//                  `uk-disabled`
+// States:          `dxt-active`
+//                  `dxt-disabled`
 //
 // ========================================================================
 
@@ -34,7 +34,7 @@ $pagination-item-disabled-color:                 $global-muted-color !default;
  * 3. Reset lists
  */
 
-.uk-pagination {
+.dxt-pagination {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
@@ -56,7 +56,7 @@ $pagination-item-disabled-color:                 $global-muted-color !default;
  * 3. Create position context for dropdowns
  */
 
-.uk-pagination > * {
+.dxt-pagination > * {
     /* 1 */
     -ms-flex: none;
     -webkit-flex: none;
@@ -76,7 +76,7 @@ $pagination-item-disabled-color:                 $global-muted-color !default;
  * 2. Style
  */
 
-.uk-pagination > * > * {
+.dxt-pagination > * > * {
     /* 1 */
     display: block;
     /* 2 */
@@ -85,21 +85,21 @@ $pagination-item-disabled-color:                 $global-muted-color !default;
 }
 
 /* Hover + Focus */
-.uk-pagination > * > :hover,
-.uk-pagination > * > :focus {
+.dxt-pagination > * > :hover,
+.dxt-pagination > * > :focus {
     color: $pagination-item-hover-color;
     text-decoration: $pagination-item-hover-text-decoration;
     @if(mixin-exists(hook-pagination-item-hover)) {@include hook-pagination-item-hover();}
 }
 
 /* Active */
-.uk-pagination > .uk-active > * {
+.dxt-pagination > .dxt-active > * {
     color: $pagination-item-active-color;
     @if(mixin-exists(hook-pagination-item-active)) {@include hook-pagination-item-active();}
 }
 
 /* Disabled */
-.uk-pagination > .uk-disabled > * {
+.dxt-pagination > .dxt-disabled > * {
     color: $pagination-item-disabled-color;
     @if(mixin-exists(hook-pagination-item-disabled)) {@include hook-pagination-item-disabled();}
 }

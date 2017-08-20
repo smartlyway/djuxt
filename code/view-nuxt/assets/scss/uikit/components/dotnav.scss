@@ -1,11 +1,11 @@
 // Name:            Dotnav
 // Description:     Component to create dot navigations
 //
-// Component:       `uk-dotnav`
+// Component:       `dxt-dotnav`
 //
-// Modifier:        `uk-dotnav-vertical`
+// Modifier:        `dxt-dotnav-vertical`
 //
-// States:          `uk-active`
+// States:          `dxt-active`
 //
 // ========================================================================
 
@@ -38,7 +38,7 @@ $dotnav-item-active-background:                  fade-out($global-color, 0.6) !d
  * 3. Gutter
  */
 
-.uk-dotnav {
+.dxt-dotnav {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
@@ -60,7 +60,7 @@ $dotnav-item-active-background:                  fade-out($global-color, 0.6) !d
  * 2. Gutter
  */
 
-.uk-dotnav > * {
+.dxt-dotnav > * {
     /* 1 */
     -ms-flex: none;
     -webkit-flex: none;
@@ -78,7 +78,7 @@ $dotnav-item-active-background:                  fade-out($global-color, 0.6) !d
  * 1. Hide text if present
  */
 
-.uk-dotnav > * > * {
+.dxt-dotnav > * > * {
     display: block;
     box-sizing: content-box;
     width: $dotnav-item-width;
@@ -93,27 +93,27 @@ $dotnav-item-active-background:                  fade-out($global-color, 0.6) !d
 }
 
 /* Hover + Focus */
-.uk-dotnav > * > :hover,
-.uk-dotnav > * > :focus {
+.dxt-dotnav > * > :hover,
+.dxt-dotnav > * > :focus {
     background-color: $dotnav-item-hover-background;
     outline: none;
     @if(mixin-exists(hook-dotnav-item-hover)) {@include hook-dotnav-item-hover();}
 }
 
 /* OnClick */
-.uk-dotnav > * > :active {
+.dxt-dotnav > * > :active {
     background-color: $dotnav-item-onclick-background;
     @if(mixin-exists(hook-dotnav-item-onclick)) {@include hook-dotnav-item-onclick();}
 }
 
 /* Active */
-.uk-dotnav > .uk-active > * {
+.dxt-dotnav > .dxt-active > * {
     background-color: $dotnav-item-active-background;
     @if(mixin-exists(hook-dotnav-item-active)) {@include hook-dotnav-item-active();}
 }
 
 
-/* Modifier: 'uk-dotnav-vertical'
+/* Modifier: 'dxt-dotnav-vertical'
  ========================================================================== */
 
 /*
@@ -121,7 +121,7 @@ $dotnav-item-active-background:                  fade-out($global-color, 0.6) !d
  * 2. Gutter
  */
 
-.uk-dotnav-vertical {
+.dxt-dotnav-vertical {
     /* 1 */
     -ms-flex-direction: column;
     -webkit-flex-direction: column;
@@ -132,7 +132,7 @@ $dotnav-item-active-background:                  fade-out($global-color, 0.6) !d
 }
 
 /* 2 */
-.uk-dotnav-vertical > * {
+.dxt-dotnav-vertical > * {
     padding-left: 0;
     padding-top: $dotnav-margin-vertical;
 }

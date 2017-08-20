@@ -1,7 +1,7 @@
 // Name:            Text
 // Description:     Utilities for text
 //
-// Component:       `uk-text-*`
+// Component:       `dxt-text-*`
 //
 // ========================================================================
 
@@ -40,14 +40,14 @@ $text-background-color:                          $global-primary-background !def
 /* Style modifiers
  ========================================================================== */
 
-.uk-text-lead {
+.dxt-text-lead {
     font-size: $text-lead-font-size;
     line-height: $text-lead-line-height;
     color: $text-lead-color;
     @if(mixin-exists(hook-text-lead)) {@include hook-text-lead();}
 }
 
-.uk-text-meta {
+.dxt-text-meta {
     font-size: $text-meta-font-size;
     line-height: $text-meta-line-height;
     color: $text-meta-color;
@@ -58,13 +58,13 @@ $text-background-color:                          $global-primary-background !def
 /* Size modifiers
  ========================================================================== */
 
-.uk-text-small {
+.dxt-text-small {
     font-size: $text-small-font-size;
     line-height: $text-small-line-height;
     @if(mixin-exists(hook-text-small)) {@include hook-text-small();}
 }
 
-.uk-text-large {
+.dxt-text-large {
     font-size: $text-large-font-size;
     line-height: $text-large-line-height;
     @if(mixin-exists(hook-text-large)) {@include hook-text-large();}
@@ -74,25 +74,25 @@ $text-background-color:                          $global-primary-background !def
 /* Weight modifier
  ========================================================================== */
 
-.uk-text-bold { font-weight: bolder; }
+.dxt-text-bold { font-weight: bolder; }
 
 
 /* Transform modifier
  ========================================================================== */
 
-.uk-text-uppercase { text-transform: uppercase !important; }
-.uk-text-capitalize { text-transform: capitalize !important; }
-.uk-text-lowercase { text-transform: lowercase !important; }
+.dxt-text-uppercase { text-transform: uppercase !important; }
+.dxt-text-capitalize { text-transform: capitalize !important; }
+.dxt-text-lowercase { text-transform: lowercase !important; }
 
 
 /* Color modifiers
  ========================================================================== */
 
-.uk-text-muted { color: $text-muted-color !important; }
-.uk-text-primary { color: $text-primary-color !important; }
-.uk-text-success { color: $text-success-color !important; }
-.uk-text-warning { color: $text-warning-color !important; }
-.uk-text-danger { color: $text-danger-color !important; }
+.dxt-text-muted { color: $text-muted-color !important; }
+.dxt-text-primary { color: $text-primary-color !important; }
+.dxt-text-success { color: $text-success-color !important; }
+.dxt-text-warning { color: $text-warning-color !important; }
+.dxt-text-danger { color: $text-danger-color !important; }
 
 
 /* Background modifier
@@ -105,7 +105,7 @@ $text-background-color:                          $global-primary-background !def
  * 3. Fallback color for IE11
  */
 
-.uk-text-background {
+.dxt-text-background {
     /* 1 */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -117,7 +117,7 @@ $text-background-color:                          $global-primary-background !def
 
 @supports (-webkit-background-clip: text) {
 
-    .uk-text-background {
+    .dxt-text-background {
         background-color: $text-background-color;
         @if(mixin-exists(hook-text-background)) {@include hook-text-background();}
     }
@@ -128,44 +128,44 @@ $text-background-color:                          $global-primary-background !def
 /* Alignment modifiers
  ========================================================================== */
 
-.uk-text-left { text-align: left !important; }
-.uk-text-right { text-align: right !important; }
-.uk-text-center { text-align: center !important; }
-.uk-text-justify { text-align: justify !important; }
+.dxt-text-left { text-align: left !important; }
+.dxt-text-right { text-align: right !important; }
+.dxt-text-center { text-align: center !important; }
+.dxt-text-justify { text-align: justify !important; }
 
 /* Phone landscape and bigger */
 @media (min-width: $breakpoint-small) {
 
-    .uk-text-left\@s { text-align: left !important; }
-    .uk-text-right\@s { text-align: right !important; }
-    .uk-text-center\@s { text-align: center !important; }
+    .dxt-text-left\@s { text-align: left !important; }
+    .dxt-text-right\@s { text-align: right !important; }
+    .dxt-text-center\@s { text-align: center !important; }
 
 }
 
 /* Tablet landscape and bigger */
 @media (min-width: $breakpoint-medium) {
 
-    .uk-text-left\@m { text-align: left !important; }
-    .uk-text-right\@m { text-align: right !important; }
-    .uk-text-center\@m { text-align: center !important; }
+    .dxt-text-left\@m { text-align: left !important; }
+    .dxt-text-right\@m { text-align: right !important; }
+    .dxt-text-center\@m { text-align: center !important; }
 
 }
 
 /* Desktop and bigger */
 @media (min-width: $breakpoint-large) {
 
-    .uk-text-left\@l { text-align: left !important; }
-    .uk-text-right\@l { text-align: right !important; }
-    .uk-text-center\@l { text-align: center !important; }
+    .dxt-text-left\@l { text-align: left !important; }
+    .dxt-text-right\@l { text-align: right !important; }
+    .dxt-text-center\@l { text-align: center !important; }
 
 }
 
 /* Large screen and bigger */
 @media (min-width: $breakpoint-xlarge) {
 
-    .uk-text-left\@xl { text-align: left !important; }
-    .uk-text-right\@xl { text-align: right !important; }
-    .uk-text-center\@xl { text-align: center !important; }
+    .dxt-text-left\@xl { text-align: left !important; }
+    .dxt-text-right\@xl { text-align: right !important; }
+    .dxt-text-center\@xl { text-align: center !important; }
 
 }
 
@@ -173,10 +173,10 @@ $text-background-color:                          $global-primary-background !def
  * Vertical
  */
 
-.uk-text-top { vertical-align: top !important; }
-.uk-text-middle { vertical-align: middle !important; }
-.uk-text-bottom { vertical-align: bottom !important; }
-.uk-text-baseline { vertical-align: baseline !important; }
+.dxt-text-top { vertical-align: top !important; }
+.dxt-text-middle { vertical-align: middle !important; }
+.dxt-text-bottom { vertical-align: bottom !important; }
+.dxt-text-baseline { vertical-align: baseline !important; }
 
 
 /* Wrap modifiers
@@ -186,7 +186,7 @@ $text-background-color:                          $global-primary-background !def
  * Prevent text from wrapping onto multiple lines
  */
 
-.uk-text-nowrap { white-space: nowrap; }
+.dxt-text-nowrap { white-space: nowrap; }
 
 /*
  * 1. Make sure a max-width is set after which truncation can occur
@@ -194,7 +194,7 @@ $text-background-color:                          $global-primary-background !def
  * 3. Fix for table cells
  */
 
-.uk-text-truncate {
+.dxt-text-truncate {
     /* 1 */
     max-width: 100%;
     /* 2 */
@@ -204,8 +204,8 @@ $text-background-color:                          $global-primary-background !def
 }
 
 /* 2 */
-th.uk-text-truncate,
-td.uk-text-truncate { max-width: 0; }
+th.dxt-text-truncate,
+td.dxt-text-truncate { max-width: 0; }
 
 
 /*
@@ -216,7 +216,7 @@ td.uk-text-truncate { max-width: 0; }
  *    Must use `break-all` to support IE11 and Edge
  */
 
-.uk-text-break {
+.dxt-text-break {
     /* 1 */
     overflow-wrap: break-word;
     /* 2 */
@@ -229,8 +229,8 @@ td.uk-text-truncate { max-width: 0; }
 }
 
 /* 4 */
-th.uk-text-break,
-td.uk-text-break { word-break: break-all; }
+th.dxt-text-break,
+td.dxt-text-break { word-break: break-all; }
 
 
 

@@ -1,15 +1,15 @@
 // Name:            Sortable
 // Description:     Component to create sortable grids and lists
 //
-// Component:       `uk-sortable`
+// Component:       `dxt-sortable`
 //
-// Sub-objects:     `uk-sortable-drag`
-//                  `uk-sortable-placeholder`
-//                  `uk-sortable-handle`
+// Sub-objects:     `dxt-sortable-drag`
+//                  `dxt-sortable-placeholder`
+//                  `dxt-sortable-handle`
 //
-// Modifiers:       `uk-sortable-empty`
+// Modifiers:       `dxt-sortable-empty`
 //
-// States:          `uk-drag`
+// States:          `dxt-drag`
 //
 // ========================================================================
 
@@ -28,7 +28,7 @@ $sortable-empty-height:                          50px !default;
    Component: Sortable
  ========================================================================== */
 
-.uk-sortable {
+.dxt-sortable {
     position: relative;
     @if(mixin-exists(hook-sortable)) {@include hook-sortable();}
 }
@@ -37,25 +37,25 @@ $sortable-empty-height:                          50px !default;
  * Deactivate browser touch actions in IE11
  */
 
-.uk-sortable > * { touch-action: none; }
+.dxt-sortable > * { touch-action: none; }
 
 /*
  * Deactivate pointer-events on SVGs in Safari
  */
 
-.uk-sortable svg { pointer-events: none; }
+.dxt-sortable svg { pointer-events: none; }
 
 /*
  * Remove margin from the last-child
  */
 
-.uk-sortable > :last-child { margin-bottom: 0; }
+.dxt-sortable > :last-child { margin-bottom: 0; }
 
 
 /* Drag
  ========================================================================== */
 
-.uk-sortable-drag {
+.dxt-sortable-drag {
     position: absolute !important;
     z-index: $sortable-dragged-z-index !important;
     pointer-events: none;
@@ -66,7 +66,7 @@ $sortable-empty-height:                          50px !default;
 /* Placeholder
  ========================================================================== */
 
-.uk-sortable-placeholder {
+.dxt-sortable-placeholder {
     opacity: $sortable-placeholder-opacity;
     @if(mixin-exists(hook-sortable-placeholder)) {@include hook-sortable-placeholder();}
 }
@@ -75,7 +75,7 @@ $sortable-empty-height:                          50px !default;
 /* Empty modifier
  ========================================================================== */
 
-.uk-sortable-empty {
+.dxt-sortable-empty {
     min-height: $sortable-empty-height;
     @if(mixin-exists(hook-sortable-empty)) {@include hook-sortable-empty();}
 }
@@ -85,7 +85,7 @@ $sortable-empty-height:                          50px !default;
  ========================================================================== */
 
 /* Hover */
-.uk-sortable-handle:hover { cursor: move; }
+.dxt-sortable-handle:hover { cursor: move; }
 
 
 

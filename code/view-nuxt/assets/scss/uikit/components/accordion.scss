@@ -1,10 +1,10 @@
 // Name:            Accordion
 // Description:     Component to create accordions
 //
-// Component:       `uk-accordion`
+// Component:       `dxt-accordion`
 //
-// Sub-objects:     `uk-accordion-title`
-//                  `uk-accordion-content`
+// Sub-objects:     `dxt-accordion-title`
+//                  `dxt-accordion-content`
 //
 // ========================================================================
 
@@ -24,7 +24,7 @@ $accordion-content-margin-top:                  $global-margin !default;
    Component: Accordion
  ========================================================================== */
 
-.uk-accordion {
+.dxt-accordion {
     padding: 0;
     list-style: none;
     @if(mixin-exists(hook-accordion)) {@include hook-accordion();}
@@ -34,7 +34,7 @@ $accordion-content-margin-top:                  $global-margin !default;
 /* Item
  ========================================================================== */
 
-.uk-accordion > :nth-child(n+2) {
+.dxt-accordion > :nth-child(n+2) {
     margin-top: $accordion-item-margin-top;
     @if(mixin-exists(hook-accordion-item)) {@include hook-accordion-item();}
 }
@@ -43,7 +43,7 @@ $accordion-content-margin-top:                  $global-margin !default;
 /* Title
  ========================================================================== */
 
-.uk-accordion-title {
+.dxt-accordion-title {
     margin: 0;
     font-size: $accordion-title-font-size;
     line-height: $accordion-title-line-height;
@@ -55,7 +55,7 @@ $accordion-content-margin-top:                  $global-margin !default;
 /* Content
  ========================================================================== */
 
-.uk-accordion-content {
+.dxt-accordion-content {
     margin-top: $accordion-content-margin-top;
     @if(mixin-exists(hook-accordion-content)) {@include hook-accordion-content();}
 }
@@ -64,19 +64,19 @@ $accordion-content-margin-top:                  $global-margin !default;
  * Micro clearfix
  */
 
-.uk-accordion-content:before,
-.uk-accordion-content:after {
+.dxt-accordion-content:before,
+.dxt-accordion-content:after {
     content: "";
     display: table;
 }
 
-.uk-accordion-content:after { clear: both; }
+.dxt-accordion-content:after { clear: both; }
 
 /*
  * Remove margin from the last-child
  */
 
- .uk-accordion-content > :last-child { margin-bottom: 0; }
+ .dxt-accordion-content > :last-child { margin-bottom: 0; }
 
 
 // Hooks

@@ -1,17 +1,17 @@
 // Name:            Lightbox
 // Description:     Component to create an lightbox image gallery
 //
-// Component:       `uk-lightbox`
+// Component:       `dxt-lightbox`
 //
-// Sub-objects:     `uk-lightbox-page`
-//                  `uk-lightbox-item`
-//                  `uk-lightbox-toolbar`
-//                  `uk-lightbox-toolbar-icon`
-//                  `uk-lightbox-button`
-//                  `uk-lightbox-caption`
-//                  `uk-lightbox-iframe`
+// Sub-objects:     `dxt-lightbox-page`
+//                  `dxt-lightbox-item`
+//                  `dxt-lightbox-toolbar`
+//                  `dxt-lightbox-toolbar-icon`
+//                  `dxt-lightbox-button`
+//                  `dxt-lightbox-caption`
+//                  `dxt-lightbox-iframe`
 //
-// States:          `uk-open`
+// States:          `dxt-open`
 //
 // ========================================================================
 
@@ -54,7 +54,7 @@ $lightbox-button-hover-color:                    #fff !default;
  * 6. Fade-in transition
  */
 
-.uk-lightbox {
+.dxt-lightbox {
     /* 1 */
     display: none;
     /* 2 */
@@ -79,7 +79,7 @@ $lightbox-button-hover-color:                    #fff !default;
  * 2. Fade-in
  */
 
-.uk-lightbox.uk-open {
+.dxt-lightbox.dxt-open {
     display: block;
     /* 2 */
     opacity: 1;
@@ -93,7 +93,7 @@ $lightbox-button-hover-color:                    #fff !default;
  * Prevent scrollbars
  */
 
-.uk-lightbox-page { overflow: hidden; }
+.dxt-lightbox-page { overflow: hidden; }
 
 
 /* Item
@@ -108,7 +108,7 @@ $lightbox-button-hover-color:                    #fff !default;
  *    Using `vh` and `vw` to make responsive image work in IE11
  */
 
-.uk-lightbox-item {
+.dxt-lightbox-item {
     /* 1 */
     position: absolute;
     top: 0;
@@ -129,17 +129,17 @@ $lightbox-button-hover-color:                    #fff !default;
 }
 
 /* 4 */
-.uk-lightbox-item > * {
+.dxt-lightbox-item > * {
     max-width: 100vw;
     max-height: 100vh;
 }
 
-.uk-lightbox-item > :not(iframe) {
+.dxt-lightbox-item > :not(iframe) {
     width: auto;
     height: auto;
 }
 
-.uk-lightbox-item.uk-active {
+.dxt-lightbox-item.dxt-active {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
@@ -148,20 +148,20 @@ $lightbox-button-hover-color:                    #fff !default;
 /* Toolbar
  ========================================================================== */
 
-.uk-lightbox-toolbar {
+.dxt-lightbox-toolbar {
     padding: $lightbox-toolbar-padding-vertical $lightbox-toolbar-padding-horizontal;
     background: $lightbox-toolbar-background;
     color: $lightbox-toolbar-color;
     @if(mixin-exists(hook-lightbox-toolbar)) {@include hook-lightbox-toolbar();}
 }
 
-.uk-lightbox-toolbar * { color: $lightbox-toolbar-color; }
+.dxt-lightbox-toolbar * { color: $lightbox-toolbar-color; }
 
 
 /* Toolbar Icon (Close)
  ========================================================================== */
 
-.uk-lightbox-toolbar-icon {
+.dxt-lightbox-toolbar-icon {
     padding: $lightbox-toolbar-icon-padding;
     color: $lightbox-toolbar-icon-color;
     @if(mixin-exists(hook-lightbox-toolbar-icon)) {@include hook-lightbox-toolbar-icon();}
@@ -171,7 +171,7 @@ $lightbox-button-hover-color:                    #fff !default;
  * Hover
  */
 
-.uk-lightbox-toolbar-icon:hover {
+.dxt-lightbox-toolbar-icon:hover {
     color: $lightbox-toolbar-icon-hover-color;
     @if(mixin-exists(hook-lightbox-toolbar-icon-hover)) {@include hook-lightbox-toolbar-icon-hover();}
 }
@@ -185,7 +185,7 @@ $lightbox-button-hover-color:                    #fff !default;
  * 1. Center icon vertically and horizontally
  */
 
-.uk-lightbox-button {
+.dxt-lightbox-button {
     box-sizing: border-box;
     width: $lightbox-button-size;
     height: $lightbox-button-size;
@@ -208,7 +208,7 @@ $lightbox-button-hover-color:                    #fff !default;
  * Hover
  */
 
-.uk-lightbox-button:hover {
+.dxt-lightbox-button:hover {
     color: $lightbox-button-hover-color;
     @if(mixin-exists(hook-lightbox-button-hover)) {@include hook-lightbox-button-hover();}
 }
@@ -217,13 +217,13 @@ $lightbox-button-hover-color:                    #fff !default;
 /* Caption
  ========================================================================== */
 
-.uk-lightbox-caption {}
+.dxt-lightbox-caption {}
 
 
 /* Iframe
  ========================================================================== */
 
-.uk-lightbox-iframe {
+.dxt-lightbox-iframe {
     width: 80%;
     height: 80%;
 }

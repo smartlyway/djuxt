@@ -1,9 +1,9 @@
 // Name:            Base
 // Description:     Default values for HTML elements
 //
-// Component:       `uk-link`
-//                  `uk-h1`, `uk-h2`, `uk-h3`, `uk-h4`, `uk-h5`, `uk-h6`
-//                  `uk-hr`
+// Component:       `dxt-link`
+//                  `dxt-h1`, `dxt-h2`, `dxt-h3`, `dxt-h4`, `dxt-h5`, `dxt-h6`
+//                  `dxt-hr`
 //
 // ========================================================================
 
@@ -137,7 +137,7 @@ a:hover { outline: none; }
  */
 
 a,
-.uk-link {
+.dxt-link {
     color: $base-link-color;
     text-decoration: $base-link-text-decoration;
     cursor: pointer;
@@ -145,7 +145,7 @@ a,
 }
 
 a:hover,
-.uk-link:hover {
+.dxt-link:hover {
     color: $base-link-hover-color;
     text-decoration: $base-link-hover-text-decoration;
     @if(mixin-exists(hook-base-link-hover)) {@include hook-base-link-hover();}
@@ -328,12 +328,12 @@ figure { margin: 0 0 $base-margin-vertical 0; }
 /* Headings
  ========================================================================== */
 
-h1, .uk-h1,
-h2, .uk-h2,
-h3, .uk-h3,
-h4, .uk-h4,
-h5, .uk-h5,
-h6, .uk-h6 {
+h1, .dxt-h1,
+h2, .dxt-h2,
+h3, .dxt-h3,
+h4, .dxt-h4,
+h5, .dxt-h5,
+h6, .dxt-h6 {
     margin: 0 0 $base-margin-vertical 0;
     font-family: $base-heading-font-family;
     font-weight: $base-heading-font-weight;
@@ -343,48 +343,48 @@ h6, .uk-h6 {
 }
 
 /* Add margin if adjacent element */
-* + h1, * + .uk-h1,
-* + h2, * + .uk-h2,
-* + h3, * + .uk-h3,
-* + h4, * + .uk-h4,
-* + h5, * + .uk-h5,
-* + h6, * + .uk-h6 { margin-top: $base-heading-margin-top; }
+* + h1, * + .dxt-h1,
+* + h2, * + .dxt-h2,
+* + h3, * + .dxt-h3,
+* + h4, * + .dxt-h4,
+* + h5, * + .dxt-h5,
+* + h6, * + .dxt-h6 { margin-top: $base-heading-margin-top; }
 
 /*
  * Sizes
  */
 
-h1, .uk-h1 {
+h1, .dxt-h1 {
     font-size: $base-h1-font-size;
     line-height: $base-h1-line-height;
     @if(mixin-exists(hook-base-h1)) {@include hook-base-h1();}
 }
 
-h2, .uk-h2 {
+h2, .dxt-h2 {
     font-size: $base-h2-font-size;
     line-height: $base-h2-line-height;
     @if(mixin-exists(hook-base-h2)) {@include hook-base-h2();}
 }
 
-h3, .uk-h3 {
+h3, .dxt-h3 {
     font-size: $base-h3-font-size;
     line-height: $base-h3-line-height;
     @if(mixin-exists(hook-base-h3)) {@include hook-base-h3();}
 }
 
-h4, .uk-h4 {
+h4, .dxt-h4 {
     font-size: $base-h4-font-size;
     line-height: $base-h4-line-height;
     @if(mixin-exists(hook-base-h4)) {@include hook-base-h4();}
 }
 
-h5, .uk-h5 {
+h5, .dxt-h5 {
     font-size: $base-h5-font-size;
     line-height: $base-h5-line-height;
     @if(mixin-exists(hook-base-h5)) {@include hook-base-h5();}
 }
 
-h6, .uk-h6 {
+h6, .dxt-h6 {
     font-size: $base-h6-font-size;
     line-height: $base-h6-line-height;
     @if(mixin-exists(hook-base-h6)) {@include hook-base-h6();}
@@ -424,7 +424,7 @@ dd { margin-left: 0; }
  * 4. Style
  */
 
-hr, .uk-hr {
+hr, .dxt-hr {
     /* 1 */
     box-sizing: content-box;
     height: 0;
@@ -441,7 +441,7 @@ hr, .uk-hr {
 
 /* Add margin if adjacent element */
 * + hr,
-* + .uk-hr { margin-top: $base-hr-margin-vertical }
+* + .dxt-hr { margin-top: $base-hr-margin-vertical }
 
 
 /* Address

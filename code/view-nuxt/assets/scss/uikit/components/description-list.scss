@@ -1,9 +1,9 @@
 // Name:            Description list
 // Description:     Styles for description lists
 //
-// Component:       `uk-description-list`
+// Component:       `dxt-description-list`
 //
-// Modifiers:       `uk-description-list-divider`
+// Modifiers:       `dxt-description-list-divider`
 //
 // ========================================================================
 
@@ -27,12 +27,12 @@ $description-list-divider-term-border:           $global-border !default;
  * Term
  */
 
-.uk-description-list > dt {
+.dxt-description-list > dt {
     color: $description-list-term-color;
     @if(mixin-exists(hook-description-list-term)) {@include hook-description-list-term();}
 }
 
-.uk-description-list > dt:nth-child(n+2) {
+.dxt-description-list > dt:nth-child(n+2) {
     margin-top: $description-list-term-margin-top;
 }
 
@@ -40,7 +40,7 @@ $description-list-divider-term-border:           $global-border !default;
  * Description
  */
 
-.uk-description-list > dd {
+.dxt-description-list > dd {
     @if(mixin-exists(hook-description-list-description)) {@include hook-description-list-description();}
 }
 
@@ -52,7 +52,7 @@ $description-list-divider-term-border:           $global-border !default;
  * Line
  */
 
-.uk-description-list-divider > dt:nth-child(n+2) {
+.dxt-description-list-divider > dt:nth-child(n+2) {
     margin-top: $description-list-divider-term-margin-top;
     padding-top: $description-list-divider-term-margin-top;
     border-top: $description-list-divider-term-border-width solid $description-list-divider-term-border;

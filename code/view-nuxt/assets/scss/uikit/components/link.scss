@@ -1,9 +1,9 @@
 // Name:            Link
 // Description:     Styles for links
 //
-// Component:       `uk-link-muted`
-//                  `uk-link-text`
-//                  `uk-link-reset`
+// Component:       `dxt-link-muted`
+//                  `dxt-link-text`
+//                  `dxt-link-reset`
 //
 // ========================================================================
 
@@ -25,14 +25,14 @@ $link-text-hover-color:                          $global-muted-color !default;
 /* Muted
  ========================================================================== */
 
-a.uk-link-muted,
-.uk-link-muted a {
+a.dxt-link-muted,
+.dxt-link-muted a {
     color: $link-muted-color;
     @if(mixin-exists(hook-link-muted)) {@include hook-link-muted();}
 }
 
-a.uk-link-muted:hover,
-.uk-link-muted a:hover {
+a.dxt-link-muted:hover,
+.dxt-link-muted a:hover {
     color: $link-muted-hover-color;
     @if(mixin-exists(hook-link-muted-hover)) {@include hook-link-muted-hover();}
 }
@@ -45,14 +45,14 @@ a.uk-link-muted:hover,
  * `!important` needed to override inverse component
  */
 
-a.uk-link-text:not(:hover),
-.uk-link-text a:not(:hover) {
+a.dxt-link-text:not(:hover),
+.dxt-link-text a:not(:hover) {
     color: inherit !important;
     @if(mixin-exists(hook-link-text)) {@include hook-link-text();}
 }
 
-a.uk-link-text:hover,
-.uk-link-text a:hover {
+a.dxt-link-text:hover,
+.dxt-link-text a:hover {
     color: $link-text-hover-color;
     @if(mixin-exists(hook-link-text-hover)) {@include hook-link-text-hover();}
 }
@@ -65,10 +65,10 @@ a.uk-link-text:hover,
  * `!important` needed to override inverse component
  */
 
-a.uk-link-reset,
-a.uk-link-reset:hover,
-.uk-link-reset a,
-.uk-link-reset a:hover {
+a.dxt-link-reset,
+a.dxt-link-reset:hover,
+.dxt-link-reset a,
+.dxt-link-reset a:hover {
     color: inherit !important;
     text-decoration: none !important;
     @if(mixin-exists(hook-link-reset)) {@include hook-link-reset();}

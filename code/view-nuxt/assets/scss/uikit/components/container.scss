@@ -1,11 +1,11 @@
 // Name:            Container
 // Description:     Component to align and center your site and grid content
 //
-// Component:       `uk-container`
+// Component:       `dxt-container`
 //
-// Modifier:        `uk-container-small`
-//                  `uk-container-large`
-//                  `uk-container-expand`
+// Modifier:        `dxt-container-small`
+//                  `dxt-container-large`
+//                  `dxt-container-expand`
 //
 // ========================================================================
 
@@ -31,7 +31,7 @@ $container-padding-horizontal-m:         $global-medium-gutter !default;
  *    unaffected by the padding on different breakpoints. It's important for the size modifiers.
  */
 
-.uk-container {
+.dxt-container {
     box-sizing: content-box; /* 1 */
     max-width: $container-max-width;
     margin-left: auto;
@@ -43,7 +43,7 @@ $container-padding-horizontal-m:         $global-medium-gutter !default;
 /* Phone landscape and bigger */
 @media (min-width: $breakpoint-small) {
 
-    .uk-container {
+    .dxt-container {
         padding-left: $container-padding-horizontal-s;
         padding-right: $container-padding-horizontal-s;
     }
@@ -53,7 +53,7 @@ $container-padding-horizontal-m:         $global-medium-gutter !default;
 /* Tablet landscape and bigger */
 @media (min-width: $breakpoint-medium) {
 
-    .uk-container {
+    .dxt-container {
         padding-left: $container-padding-horizontal-m;
         padding-right: $container-padding-horizontal-m;
     }
@@ -64,25 +64,25 @@ $container-padding-horizontal-m:         $global-medium-gutter !default;
  * Micro clearfix
  */
 
-.uk-container::before,
-.uk-container::after {
+.dxt-container::before,
+.dxt-container::after {
     content: "";
     display: table;
 }
 
-.uk-container::after { clear: both; }
+.dxt-container::after { clear: both; }
 
 /*
  * Remove margin from the last-child
  */
 
-.uk-container > :last-child { margin-bottom: 0; }
+.dxt-container > :last-child { margin-bottom: 0; }
 
 /*
  * Remove padding from nested containers
  */
 
-.uk-container .uk-container {
+.dxt-container .dxt-container {
     padding-left: 0;
     padding-right: 0;
 }
@@ -91,11 +91,11 @@ $container-padding-horizontal-m:         $global-medium-gutter !default;
 /* Size modifier
  ========================================================================== */
 
-.uk-container-small { max-width: $container-small-max-width; }
+.dxt-container-small { max-width: $container-small-max-width; }
 
-.uk-container-large { max-width: $container-large-max-width; }
+.dxt-container-large { max-width: $container-large-max-width; }
 
-.uk-container-expand { max-width: none; }
+.dxt-container-expand { max-width: none; }
 
 
 // Hooks

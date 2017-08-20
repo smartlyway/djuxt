@@ -1,7 +1,7 @@
 // Name:            Marker
 // Description:     Component to create a marker icon
 //
-// Component:       `uk-marker`
+// Component:       `dxt-marker`
 //
 // ========================================================================
 
@@ -21,10 +21,10 @@ $marker-hover-color:                              $global-inverse-color !default
  ========================================================================== */
 
 /*
- * Addopts `uk-icon`
+ * Addopts `dxt-icon`
  */
 
-.uk-marker {
+.dxt-marker {
     padding: $marker-padding;
     background: $marker-background;
     color: $marker-color;
@@ -32,8 +32,8 @@ $marker-hover-color:                              $global-inverse-color !default
 }
 
 /* Hover + Focus */
-.uk-marker:hover,
-.uk-marker:focus {
+.dxt-marker:hover,
+.dxt-marker:focus {
     color: $marker-hover-color;
     outline: none;
     @if(mixin-exists(hook-marker-hover)) {@include hook-marker-hover();}

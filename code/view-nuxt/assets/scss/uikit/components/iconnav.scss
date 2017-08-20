@@ -1,11 +1,11 @@
 // Name:            Iconnav
 // Description:     Component to create icon navigations
 //
-// Component:       `uk-iconnav`
+// Component:       `dxt-iconnav`
 //
-// Modifier:        `uk-iconnav-vertical`
+// Modifier:        `dxt-iconnav-vertical`
 //
-// States:          `uk-active`
+// States:          `dxt-active`
 //
 // ========================================================================
 
@@ -33,7 +33,7 @@ $iconnav-item-active-color:                       $global-color !default;
  * 3. Gutter
  */
 
-.uk-iconnav {
+.dxt-iconnav {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
@@ -55,7 +55,7 @@ $iconnav-item-active-color:                       $global-color !default;
  * 2. Gutter
  */
 
-.uk-iconnav > * {
+.dxt-iconnav > * {
     /* 1 */
     -ms-flex: none;
     -webkit-flex: none;
@@ -74,7 +74,7 @@ $iconnav-item-active-color:                       $global-color !default;
  * 2. Style
  */
 
-.uk-iconnav > * > * {
+.dxt-iconnav > * > * {
     /* 1 */
     display: block;
     /* 2 */
@@ -83,21 +83,21 @@ $iconnav-item-active-color:                       $global-color !default;
 }
 
 /* Hover + Focus */
-.uk-iconnav > * > :hover,
-.uk-iconnav > * > :focus {
+.dxt-iconnav > * > :hover,
+.dxt-iconnav > * > :focus {
     color: $iconnav-item-hover-color;
     outline: none;
     @if(mixin-exists(hook-iconnav-item-hover)) {@include hook-iconnav-item-hover();}
 }
 
 /* Active */
-.uk-iconnav > .uk-active > * {
+.dxt-iconnav > .dxt-active > * {
     color: $iconnav-item-active-color;
     @if(mixin-exists(hook-iconnav-item-active)) {@include hook-iconnav-item-active();}
 }
 
 
-/* Modifier: 'uk-iconnav-vertical'
+/* Modifier: 'dxt-iconnav-vertical'
  ========================================================================== */
 
 /*
@@ -105,7 +105,7 @@ $iconnav-item-active-color:                       $global-color !default;
  * 2. Gutter
  */
 
-.uk-iconnav-vertical {
+.dxt-iconnav-vertical {
     /* 1 */
     -ms-flex-direction: column;
     -webkit-flex-direction: column;
@@ -116,7 +116,7 @@ $iconnav-item-active-color:                       $global-color !default;
 }
 
 /* 2 */
-.uk-iconnav-vertical > * {
+.dxt-iconnav-vertical > * {
     padding-left: 0;
     padding-top: $iconnav-margin-vertical;
 }

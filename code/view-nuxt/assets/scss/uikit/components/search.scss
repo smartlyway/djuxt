@@ -1,16 +1,16 @@
 // Name:            Search
 // Description:     Component to create the search
 //
-// Component:       `uk-search`
+// Component:       `dxt-search`
 //
-// Sub-objects:     `uk-search-input`
-//                  `uk-search-toggle`
+// Sub-objects:     `dxt-search-input`
+//                  `dxt-search-toggle`
 //
-// Adopted:         `uk-search-icon`
+// Adopted:         `dxt-search-icon`
 //
-// Modifier:        `uk-search-default`
-//                  `uk-search-navbar`
-//                  `uk-search-large`
+// Modifier:        `dxt-search-default`
+//                  `dxt-search-navbar`
+//                  `dxt-search-large`
 //
 // ========================================================================
 
@@ -60,7 +60,7 @@ $search-toggle-hover-color:                          $global-color !default;
  * 4. Reset `form`
  */
 
-.uk-search {
+.dxt-search {
     /* 1 */
     display: inline-block;
     /* 2 */
@@ -79,14 +79,14 @@ $search-toggle-hover-color:                          $global-color !default;
  * Remove the inner padding and cancel buttons in Chrome on OS X and Safari on OS X.
  */
 
-.uk-search-input::-webkit-search-cancel-button,
-.uk-search-input::-webkit-search-decoration { -webkit-appearance: none; }
+.dxt-search-input::-webkit-search-cancel-button,
+.dxt-search-input::-webkit-search-decoration { -webkit-appearance: none; }
 
 /*
  * Removes placeholder transparency in Firefox.
  */
 
-.uk-search-input::-moz-placeholder { opacity: 1; }
+.dxt-search-input::-moz-placeholder { opacity: 1; }
 
 /*
  * 1. Define consistent box sizing.
@@ -100,7 +100,7 @@ $search-toggle-hover-color:                          $global-color !default;
  * 9. Style
  */
 
-.uk-search-input {
+.dxt-search-input {
     /* 1 */
     box-sizing: border-box;
     /* 2 */
@@ -123,19 +123,19 @@ $search-toggle-hover-color:                          $global-color !default;
     @if(mixin-exists(hook-search-input)) {@include hook-search-input();}
 }
 
-.uk-search-input:focus { outline: none; }
+.dxt-search-input:focus { outline: none; }
 
 /* Placeholder */
-.uk-search-input:-ms-input-placeholder { color: $search-placeholder-color !important; }
-.uk-search-input::-moz-placeholder { color: $search-placeholder-color; }
-.uk-search-input::-webkit-input-placeholder { color: $search-placeholder-color; }
+.dxt-search-input:-ms-input-placeholder { color: $search-placeholder-color !important; }
+.dxt-search-input::-moz-placeholder { color: $search-placeholder-color; }
+.dxt-search-input::-webkit-input-placeholder { color: $search-placeholder-color; }
 
 
 /* Icon
  ========================================================================== */
 
 /*
- * Adopts `uk-icon`
+ * Adopts `dxt-icon`
  * Required for `button`
  * 1. Remove margins in Chrome, Safari and Opera.
  * 2. Remove borders for `button`.
@@ -146,7 +146,7 @@ $search-toggle-hover-color:                          $global-color !default;
  * 7. Required for `button`.
  */
 
-.uk-search-icon {
+.dxt-search-icon {
     /* 1 */
     margin: 0;
     /* 2 */
@@ -169,7 +169,7 @@ $search-toggle-hover-color:                          $global-color !default;
  * Remove the inner border and padding in Firefox. Required for `button`.
  */
 
-.uk-search-icon::-moz-focus-inner {
+.dxt-search-icon::-moz-focus-inner {
     border: 0;
     padding: 0;
 }
@@ -178,7 +178,7 @@ $search-toggle-hover-color:                          $global-color !default;
  * Remove default focus style
  */
 
-.uk-search-icon:focus { outline: none; }
+.dxt-search-icon:focus { outline: none; }
 
 /*
  * Position above input
@@ -187,7 +187,7 @@ $search-toggle-hover-color:                          $global-color !default;
  * 3. Style
  */
 
-.uk-search .uk-search-icon {
+.dxt-search .dxt-search-icon {
     /* 1 */
     position: absolute;
     top: 0;
@@ -211,19 +211,19 @@ $search-toggle-hover-color:                          $global-color !default;
  * Required for `a`.
  */
 
-.uk-search .uk-search-icon:hover { color: $search-icon-color; }
+.dxt-search .dxt-search-icon:hover { color: $search-icon-color; }
 
 /*
  * Make `input` element clickable through icon, e.g. if it's a `span`
  */
 
-.uk-search .uk-search-icon:not(a):not(button):not(input) { pointer-events: none; }
+.dxt-search .dxt-search-icon:not(a):not(button):not(input) { pointer-events: none; }
 
 /*
  * Position modifier
  */
 
-.uk-search .uk-search-icon-flip {
+.dxt-search .dxt-search-icon-flip {
     right: 0;
     left: auto;
 }
@@ -232,13 +232,13 @@ $search-toggle-hover-color:                          $global-color !default;
 /* Default modifier
  ========================================================================== */
 
-.uk-search-default { width: $search-default-width; }
+.dxt-search-default { width: $search-default-width; }
 
 /*
  * Input
  */
 
-.uk-search-default .uk-search-input {
+.dxt-search-default .dxt-search-input {
     height: $search-default-height;
     padding-left: $search-default-padding-horizontal;
     padding-right: $search-default-padding-horizontal;
@@ -247,7 +247,7 @@ $search-toggle-hover-color:                          $global-color !default;
 }
 
 /* Focus */
-.uk-search-default .uk-search-input:focus {
+.dxt-search-default .dxt-search-input:focus {
     background-color: $search-default-focus-background;
     @if(mixin-exists(hook-search-default-input-focus)) {@include hook-search-default-input-focus();}
 }
@@ -256,22 +256,22 @@ $search-toggle-hover-color:                          $global-color !default;
  * Icon
  */
 
-.uk-search-default .uk-search-icon { width: $search-default-icon-width; }
+.dxt-search-default .dxt-search-icon { width: $search-default-icon-width; }
 
-.uk-search-default .uk-search-icon:not(.uk-search-icon-flip) + .uk-search-input { padding-left: ($search-default-icon-width); }
-.uk-search-default .uk-search-icon-flip + .uk-search-input { padding-right: ($search-default-icon-width); }
+.dxt-search-default .dxt-search-icon:not(.dxt-search-icon-flip) + .dxt-search-input { padding-left: ($search-default-icon-width); }
+.dxt-search-default .dxt-search-icon-flip + .dxt-search-input { padding-right: ($search-default-icon-width); }
 
 
 /* Navbar modifier
  ========================================================================== */
 
-.uk-search-navbar { width: $search-navbar-width; }
+.dxt-search-navbar { width: $search-navbar-width; }
 
 /*
  * Input
  */
 
-.uk-search-navbar .uk-search-input {
+.dxt-search-navbar .dxt-search-input {
     height: $search-navbar-height;
     background: $search-navbar-background;
     font-size: $search-navbar-font-size;
@@ -282,22 +282,22 @@ $search-toggle-hover-color:                          $global-color !default;
  * Icon
  */
 
-.uk-search-navbar .uk-search-icon { width: $search-navbar-icon-width; }
+.dxt-search-navbar .dxt-search-icon { width: $search-navbar-icon-width; }
 
-.uk-search-navbar .uk-search-icon:not(.uk-search-icon-flip) + .uk-search-input { padding-left: ($search-navbar-icon-width); }
-.uk-search-navbar .uk-search-icon-flip + .uk-search-input { padding-right: ($search-navbar-icon-width); }
+.dxt-search-navbar .dxt-search-icon:not(.dxt-search-icon-flip) + .dxt-search-input { padding-left: ($search-navbar-icon-width); }
+.dxt-search-navbar .dxt-search-icon-flip + .dxt-search-input { padding-right: ($search-navbar-icon-width); }
 
 
 /* Large modifier
  ========================================================================== */
 
-.uk-search-large { width: $search-large-width; }
+.dxt-search-large { width: $search-large-width; }
 
 /*
  * Input
  */
 
-.uk-search-large .uk-search-input {
+.dxt-search-large .dxt-search-input {
     height: $search-large-height;
     background: $search-large-background;
     font-size: $search-large-font-size;
@@ -308,23 +308,23 @@ $search-toggle-hover-color:                          $global-color !default;
  * Icon
  */
 
-.uk-search-large .uk-search-icon { width: $search-large-icon-width; }
+.dxt-search-large .dxt-search-icon { width: $search-large-icon-width; }
 
-.uk-search-large .uk-search-icon:not(.uk-search-icon-flip) + .uk-search-input { padding-left: ($search-large-icon-width); }
-.uk-search-large .uk-search-icon-flip + .uk-search-input { padding-right: ($search-large-icon-width); }
+.dxt-search-large .dxt-search-icon:not(.dxt-search-icon-flip) + .dxt-search-input { padding-left: ($search-large-icon-width); }
+.dxt-search-large .dxt-search-icon-flip + .dxt-search-input { padding-right: ($search-large-icon-width); }
 
 
 /* Toggle
  ========================================================================== */
 
-.uk-search-toggle {
+.dxt-search-toggle {
     color: $search-toggle-color;
     @if(mixin-exists(hook-search-toggle)) {@include hook-search-toggle();}
 }
 
 /* Hover + Focus */
-.uk-search-toggle:hover,
-.uk-search-toggle:focus {
+.dxt-search-toggle:hover,
+.dxt-search-toggle:focus {
     color: $search-toggle-hover-color;
     @if(mixin-exists(hook-search-toggle-hover)) {@include hook-search-toggle-hover();}
 }

@@ -1,12 +1,12 @@
 // Name:            Slidenav
 // Description:     Component to create previous/next icon navigations
 //
-// Component:       `uk-slidenav`
+// Component:       `dxt-slidenav`
 //
-// Sub-objects:     `uk-slidenav-container`
+// Sub-objects:     `dxt-slidenav-container`
 //
-// Modifiers:       `uk-slidenav-previous`
-//                  `uk-slidenav-next`
+// Modifiers:       `dxt-slidenav-previous`
+//                  `dxt-slidenav-next`
 //
 // ========================================================================
 
@@ -27,25 +27,25 @@ $slidenav-active-color:                          fade-out($global-color, 0.1) !d
  ========================================================================== */
 
 /*
- * Adopts `uk-icon`
+ * Adopts `dxt-icon`
  */
 
-.uk-slidenav {
+.dxt-slidenav {
     padding: $slidenav-padding;
     color: $slidenav-color;
     @if(mixin-exists(hook-slidenav)) {@include hook-slidenav();}
 }
 
 /* Hover + Focus */
-.uk-slidenav:hover,
-.uk-slidenav:focus {
+.dxt-slidenav:hover,
+.dxt-slidenav:focus {
     color: $slidenav-hover-color;
     outline: none;
     @if(mixin-exists(hook-slidenav-hover)) {@include hook-slidenav-hover();}
 }
 
 /* OnClick */
-.uk-slidenav:active {
+.dxt-slidenav:active {
     color: $slidenav-active-color;
     @if(mixin-exists(hook-slidenav-active)) {@include hook-slidenav-active();}
 }
@@ -58,7 +58,7 @@ $slidenav-active-color:                          fade-out($global-color, 0.1) !d
  * Previous
  */
 
-.uk-slidenav-previous {
+.dxt-slidenav-previous {
     @if(mixin-exists(hook-slidenav-previous)) {@include hook-slidenav-previous();}
 }
 
@@ -66,7 +66,7 @@ $slidenav-active-color:                          fade-out($global-color, 0.1) !d
  * Next
  */
 
-.uk-slidenav-next {
+.dxt-slidenav-next {
     @if(mixin-exists(hook-slidenav-next)) {@include hook-slidenav-next();}
 }
 
@@ -74,7 +74,7 @@ $slidenav-active-color:                          fade-out($global-color, 0.1) !d
 /* Container
  ========================================================================== */
 
-.uk-slidenav-container {
+.dxt-slidenav-container {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
