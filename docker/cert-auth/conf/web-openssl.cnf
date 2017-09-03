@@ -81,10 +81,10 @@ emailAddress                    = Email Address
 # Optionally, specify some defaults.
 countryName_default             = ES
 stateOrProvinceName_default     = Barcelona
-localityName_default            = Mollet del Vallès
-0.organizationName_default      = Safegardev Ltd
-organizationalUnitName_default  = Safegardev Ltd Certificate Authority
-commonName_default              = Safegardev Ltd Intermediate CA
+localityName_default            = Barcelona
+0.organizationName_default      = SmartlyWay
+organizationalUnitName_default  = SmartlyWay
+commonName_default              = *.djuxt.local
 emailAddress_default            =
 
 [ v3_ca ]

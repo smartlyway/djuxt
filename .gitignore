@@ -3,6 +3,6 @@ data/
 .idea
 node_modules/
 
-.pen
+.pem
 .cert
 .key

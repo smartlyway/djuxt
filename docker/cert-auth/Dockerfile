@@ -16,8 +16,7 @@ RUN apt-get update && \
 
 #   ROOT CA
 #-----------------------------------------------------
-RUN mkdir /root/ &&
-    mkdir /root/ca/ && \
+RUN mkdir -p /root/ca/ && \
     cd /root/ca && \
     mkdir certs crl newcerts private && \
     chmod 700 private && \
@@ -40,10 +39,8 @@ COPY conf/intermediate-openssl.cnf /root/ca/intermediate/openssl.cnf
 
 #   WEB CONFIG
 #-----------------------------------------------------
-COPY conf/web-openssl.cnf /root/ca/web-openssl.cnf
+COPY conf/web-openssl.cnf /root/ca/intermediate/web-openssl.cnf
 
-RUN mkdir /home/ && \
-    mkdir /home/export
 
 COPY scripts/* /home/
 

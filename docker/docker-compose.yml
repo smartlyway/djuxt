@@ -64,13 +64,7 @@ services:
     cert-auth:
         build: ./cert-auth
         volumes:
-            - cert-auth/exported:/home/export
-        ports:
-            - "80:80"
-            - "443:443"
-        networks:
-            - backend
-
+            - ./cert-auth/exported:/home/export
 networks:
     backend:
         driver: "bridge"
