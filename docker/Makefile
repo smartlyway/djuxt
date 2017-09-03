@@ -20,6 +20,9 @@ b-django:
 b-nginx:
 	docker-compose build nginx
 
+b-ca:
+	docker-compose build cert-auth
+
 b-nginx-test:
 	docker-compose build nginx
 	docker-compose up -d nginx
@@ -32,6 +35,9 @@ u:
 	docker-compose up -d django node-nuxt nginx postgres mongo
 	sleep 5
 	docker-compose up -d nginx
+
+u-ca:
+	docker-compose up -d cert-auth
 
 u-node-nuxt:
 	docker-compose up -d node-nuxt
@@ -73,6 +79,9 @@ l-django:
 #===============================================================================
 s-django:
 	docker-compose exec django bash
+
+s-ca:
+	docker-compose exec cert-auth bash
 
 s-node-nuxt:
 	docker-compose exec node-nuxt bash

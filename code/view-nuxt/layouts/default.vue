@@ -1,6 +1,5 @@
 <template>
   <div class="dxt-container">
-    <h1 class="uk-heading-primary">Hola mundo!</h1>
     <div class="dxt-navbar-container dxt-sticky">
       <div class="dxt-container">
         <div class="dxt-navbar">
@@ -15,7 +14,7 @@
                 </ul>
               </div>
             </div>
-            <a> Hola </a>
+            <a> <img src="~assets/img/logos/logo.png" width="100px"></a>
             <div class="dxt-navbar-center-right">
 
             </div>

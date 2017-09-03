@@ -2,3 +2,7 @@ data/
 .env
 .idea
 node_modules/
+
+.pen
+.cert
+.key
