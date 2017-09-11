@@ -16,12 +16,12 @@ serial            = $dir/serial
 RANDFILE          = $dir/private/.rand
 
 # The root key and root certificate.
-private_key       = $dir/private/intermediate.key.pem
-certificate       = $dir/certs/intermediate.cert.pem
+private_key       = $dir/private/intermediate.key
+certificate       = $dir/certs/intermediate.crt
 
 # For certificate revocation lists.
 crlnumber         = $dir/crlnumber
-crl               = $dir/crl/intermediate.crl.pem
+crl               = $dir/crl/intermediate.crl
 crl_extensions    = crl_ext
 default_crl_days  = 30
 
@@ -60,7 +60,6 @@ emailAddress            = optional
 default_bits        = 2048
 distinguished_name  = req_distinguished_name
 string_mask         = utf8only
-req_extensions      = web_extensions
 
 # SHA-1 is deprecated, so use SHA-2 instead.
 default_md          = sha256
@@ -120,6 +119,7 @@ subjectKeyIdentifier = hash
 authorityKeyIdentifier = keyid,issuer:always
 keyUsage = critical, digitalSignature, keyEncipherment
 extendedKeyUsage = serverAuth
+subjectAltName=@web_subject_alt_names
 
 [ crl_ext ]
 # Extension for CRLs (`man x509v3_config`).
@@ -132,11 +132,6 @@ subjectKeyIdentifier = hash
 authorityKeyIdentifier = keyid,issuer
 keyUsage = critical, digitalSignature
 extendedKeyUsage = critical, OCSPSigning
-
-[web_extensions]
-basicConstraints=CA:FALSE
-subjectAltName=@web_subject_alt_names
-subjectKeyIdentifier = hash
 
 [web_subject_alt_names]
 DNS.1 = *.djuxt.local
