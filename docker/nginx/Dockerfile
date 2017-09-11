@@ -1,4 +1,5 @@
-FROM nginx:latest
+FROM arm32v7/nginx:1.13.5
+
 COPY conf/nginx-ssl.conf /etc/nginx/nginx.conf
 COPY conf/uwsgi_params /home/docker/code/
 

@@ -1,4 +1,4 @@
-FROM node:7.10.1-alpine
+FROM arm32v7/node:6.11.3
 
 MAINTAINER Cristian García <cgardev@gmail.com>
 
