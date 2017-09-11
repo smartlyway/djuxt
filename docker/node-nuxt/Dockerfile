@@ -8,6 +8,6 @@ RUN npm install -g body-parser
 
 WORKDIR /home/docker/code/app/
 
-RUN apk add --update bash && rm -rf /var/cache/apk/*
+#RUN apk add --update bash && rm -rf /var/cache/apk/*
 
 CMD exec /bin/bash -c "trap : TERM INT; sleep 500000 & wait"

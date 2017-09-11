@@ -13,8 +13,12 @@ RUN apt-get update && \
 	python3-dev \
 	python3-setuptools \
 	python3-pip \
+	postgresql \
+	python-psycopg2 \
+	libpq-dev \
 	supervisor && \
 	pip3 install -U pip setuptools && \
+
     rm -rf /var/lib/apt/lists/*
 
 #-------------------------------------------------------------------------------
